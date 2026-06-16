@@ -1,0 +1,41 @@
+{
+  "ignite": {
+    "journey": "/images/ignite/journey.png",
+    "competitive-audit": "/images/ignite/competitive-audit.jpg",
+    "problem-statement": "/images/ignite/problem-statement.png",
+    "lofi-prototype": "/images/ignite/lofi-prototype.png",
+    "onboarding-old": "/images/ignite/onboarding-old.png",
+    "onboarding-new": "/images/ignite/onboarding-new.png",
+    "homepage-old": "/images/ignite/homepage-old.png",
+    "homepage-new": "/images/ignite/homepage-new.png",
+    "purchase-old": "/images/ignite/purchase-old.png",
+    "purchase-new": "/images/ignite/purchase-new.png",
+    "customer-old": "/images/ignite/customer-old.png",
+    "customer-new": "/images/ignite/customer-new.png",
+    "design-system": "/images/ignite/design-system.png",
+    "grow-module": "/images/ignite/grow-module.png",
+    "recruitment-module": "/images/ignite/recruitment-module.png",
+    "contest-module": "/images/ignite/contest-module.png",
+    "in-app-survey": "/images/ignite/in-app-survey.png",
+    "usage-tracking": "/images/ignite/usage-tracking.jpg"
+  },
+  "ai-copilot": {
+    "lifepal-competitor": "/images/ai-copilot/lifepal-competitor.png",
+    "meta-flows-insurance": "/images/ai-copilot/meta-flows-insurance.png",
+    "command-center": "/images/ai-copilot/command-center.png",
+    "customer-profile": "/images/ai-copilot/customer-profile.png",
+    "strategy-partner": "/images/ai-copilot/strategy-partner.png",
+    "comparative-advisor": "/images/ai-copilot/comparative-advisor.png",
+    "automated-scribe": "/images/ai-copilot/automated-scribe.png",
+    "interaction-model": "/images/ai-copilot/interaction-model.png",
+    "design-with-ai": "/images/ai-copilot/design-with-ai.png"
+  },
+  "cmb-cloud": {
+    "dashboard": "/images/cmb-cloud/dashboard.png",
+    "onboarding-tour": "/images/cmb-cloud/onboarding-tour.png",
+    "onboarding-tooltips": "/images/cmb-cloud/onboarding-tooltips.png",
+    "inline-docs": "/images/cmb-cloud/inline-docs.png",
+    "dark-mode": "/images/cmb-cloud/dark-mode.png",
+    "design-system": "/images/cmb-cloud/design-system.png"
+  }
+}
