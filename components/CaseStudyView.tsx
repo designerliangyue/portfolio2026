@@ -10,7 +10,6 @@ import { CaseStudyGallery } from "@/components/CaseStudyGallery";
 import { galleryForSection } from "@/content/case-study-galleries";
 import type { ProjectSlug } from "@/content/images";
 import { ContributionRoles } from "@/components/case-study/ContributionRoles";
-import { ArchitectureExplorer } from "@/components/case-study/ArchitectureExplorer";
 import { WhyWeAreDoingThis } from "@/components/case-study/WhyWeAreDoingThis";
 import { MarketValidation } from "@/components/case-study/MarketValidation";
 import { ProductScopePhases } from "@/components/case-study/ProductScopePhases";
@@ -37,7 +36,15 @@ function CaseStudyInteractive({
     case "Product":
       return <ProductScopePhases />;
     case "System design":
-      return <ArchitectureExplorer />;
+      return (
+        <figure className="mt-12">
+          <img
+            src="/images/ai-copilot/architecture.svg"
+            alt="Four-layer system architecture — omni-channel integration, hybrid orchestration & runtime, smart MCP routing, and MCP servers."
+            className="w-full rounded-[20px] border border-ink/10 bg-white"
+          />
+        </figure>
+      );
     default:
       return null;
   }
