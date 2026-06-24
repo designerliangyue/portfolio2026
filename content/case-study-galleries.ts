@@ -77,12 +77,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
           { kind: "image", id: "grow-module" },
           { kind: "image", id: "recruitment-module" },
           { kind: "image", id: "contest-module" },
-          {
-            kind: "placeholder",
-            assetId: "iteration-module-4",
-            label: "Module — image 4",
-            aspect: "4/3"
-          }
+          { kind: "image", id: "iteration-module-4" }
         ]
       },
       { type: "single", id: "in-app-survey", caption: "In-app survey & feedback loop" },
