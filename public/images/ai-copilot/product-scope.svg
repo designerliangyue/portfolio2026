@@ -68,7 +68,7 @@
     <text x="864" y="439" fill="#6b6b6b">SYSTEM</text>
     <rect x="924" y="430" width="11" height="11" rx="2" fill="#fff5f0" stroke="#ffb38a"/>
     <text x="940" y="439" fill="#6b6b6b">AGENT</text>
-    <rect x="992" y="430" width="11" height="11" rx="2" fill="#ffffff" stroke="#d8d8d3"/>
+    <rect x="992" y="430" width="11" height="11" rx="2" fill="#ffffff" stroke="#c8c8c3" stroke-dasharray="2.5 2"/>
     <text x="1008" y="439" fill="#6b6b6b">CUSTOMER</text>
     <rect x="1086" y="430" width="11" height="11" rx="2" fill="#0a0a0a"/>
     <text x="1102" y="439" fill="#6b6b6b">END</text>
@@ -92,8 +92,8 @@
 
   <!-- QUOTE & FULFILMENT -->
   <text x="592" y="824" text-anchor="middle" class="lbl" font-size="10">QUOTE &amp; FULFILMENT</text>
-  <rect x="362" y="840" width="460" height="42" rx="9" fill="#ffffff" stroke="#d8d8d3"/>
-  <text x="592" y="866" text-anchor="middle" class="step" font-size="13" fill="#4a4a48">Agent interact with WABA to get quote</text>
+  <rect x="362" y="840" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="866" text-anchor="middle" class="step" font-size="13">Agent interact with WABA to get quote</text>
   <line x1="592" y1="882" x2="592" y2="904" stroke="#cbcbc6"/>
   <rect x="362" y="904" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
   <text x="592" y="930" text-anchor="middle" class="step" font-size="13">WABA: Digital quote + Secured Application Links</text>
