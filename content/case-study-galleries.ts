@@ -27,6 +27,13 @@ export type GalleryBlock =
       label: string;
       hint?: string;
       aspect?: "16/9" | "21/9" | "4/3" | "3/2";
+    }
+  | {
+      type: "video";
+      src: string;
+      caption?: string;
+      badge?: string;
+      poster?: string;
     };
 
 /** Gallery blocks keyed by section `kicker` (must match projects.ts). */
@@ -88,22 +95,15 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
     Research: [],
     Product: [
       {
-        type: "placeholder",
-        assetId: "waba-quote-flow",
-        label: "WABA — conversational quoting",
-        aspect: "16/9"
+        type: "video",
+        src: "/images/ai-copilot/waba-demo.mp4",
+        caption: "WABA — conversational quoting & closing flow",
+        badge: "Live demo · test phase"
       },
       {
         type: "grid",
         ids: ["strategy-partner", "comparative-advisor", "automated-scribe", "customer-profile"],
         columns: 2
-      },
-      {
-        type: "placeholder",
-        assetId: "waba-close-flow",
-        label: "WABA — closing & payment hand-off",
-        hint: "WhatsApp Flows, secured links, forward to private chat",
-        aspect: "16/9"
       }
     ]
   },

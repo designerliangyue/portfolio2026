@@ -141,6 +141,33 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
           );
         }
 
+        if (block.type === "video") {
+          return (
+            <figure key={`video-${index}`}>
+              <div className="relative overflow-hidden rounded-[2px] bg-ink/[0.03]">
+                <video
+                  className="w-full"
+                  src={block.src}
+                  poster={block.poster}
+                  controls
+                  playsInline
+                  preload="metadata"
+                />
+                {block.badge ? (
+                  <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-paper backdrop-blur-sm">
+                    {block.badge}
+                  </span>
+                ) : null}
+              </div>
+              {block.caption ? (
+                <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50">
+                  {block.caption}
+                </figcaption>
+              ) : null}
+            </figure>
+          );
+        }
+
         if (block.type === "placeholder") {
           return (
             <CaseStudyMediaPlaceholder
