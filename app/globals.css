@@ -77,15 +77,19 @@ html:lang(zh-Hans) {
     text-wrap: pretty;
   }
 
+  /* Balance only true headings — never long display paragraphs,
+     which must fill the container width (e.g. p.display-3 lead copy). */
   html:lang(en) h1,
   html:lang(en) h2,
   html:lang(en) h3,
-  html:lang(en) h4,
-  html:lang(en) .display-1,
-  html:lang(en) .display-2,
-  html:lang(en) .display-3,
-  html:lang(en) .section-title {
+  html:lang(en) h4 {
     text-wrap: balance;
+  }
+
+  html:lang(en) p.display-1,
+  html:lang(en) p.display-2,
+  html:lang(en) p.display-3 {
+    text-wrap: pretty;
   }
 
   /* Long-form body copy: comfortable measure + leading */
