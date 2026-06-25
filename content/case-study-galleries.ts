@@ -12,7 +12,7 @@ export type GalleryGridCell =
   | { kind: "reserved"; aspect?: "16/9" | "21/9" | "4/3" | "3/2" };
 
 export type GalleryBlock =
-  | { type: "single"; id: string; caption?: string }
+  | { type: "single"; id: string; caption?: string; titleStyle?: boolean }
   | {
       type: "compare";
       oldId: string;
@@ -46,7 +46,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
       { type: "single", id: "lofi-prototype", caption: "Lo-fi interactive prototype" }
     ],
     Craft: [
-      { type: "single", id: "branding", caption: "Aligned UI with the new branding of Ignite." },
+      { type: "single", id: "branding", caption: "Aligned UI with the new branding of Ignite.", titleStyle: true },
       {
         type: "compare",
         oldId: "onboarding-old",

@@ -100,6 +100,22 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
       {blocks.map((block, index) => {
         if (block.type === "single") {
           const caption = resolveCaption(locale, slug, block.id, block.caption);
+          if (block.titleStyle) {
+            return (
+              <figure key={`${block.id}-${index}`}>
+                {caption ? (
+                  <figcaption className="font-display tracking-tightish text-2xl md:text-3xl text-ink mb-5 md:mb-6">
+                    {caption}
+                  </figcaption>
+                ) : null}
+                <CaseStudyImage
+                  slug={slug}
+                  imageId={block.id}
+                  alt={imageAlt(projectTitle, block.id, caption)}
+                />
+              </figure>
+            );
+          }
           return (
             <figure key={`${block.id}-${index}`}>
               <CaseStudyImage
