@@ -78,6 +78,14 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
       { type: "single", id: "design-system", caption: "Regional design system" }
     ],
     Iteration: [
+      {
+        type: "grid",
+        columns: 2,
+        cells: [
+          { kind: "image", id: "usage-tracking", caption: "Usage data tracking" },
+          { kind: "image", id: "usability-study", caption: "Usability study" }
+        ]
+      },
       { type: "single", id: "grow-module", caption: "Grow professional by learning online" },
       {
         type: "single",

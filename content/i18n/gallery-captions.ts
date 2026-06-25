@@ -12,6 +12,7 @@ export const galleryCaptionsZh: Record<string, string> = {
   "iteration-module-4": "打造低成本、高效率的持续改进闭环",
   "in-app-survey": "应用内调研",
   "usage-tracking": "使用数据追踪",
+  "usability-study": "可用性研究",
   dashboard: "交互表格与统一仪表盘",
   "onboarding-tour": "首次登录",
   "onboarding-tooltips": "功能特定提示",
