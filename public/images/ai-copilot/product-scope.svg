@@ -114,5 +114,5 @@
   <text x="592" y="1250" text-anchor="middle" class="step" font-size="13">WABA: Sync status &amp; issue policy</text>
   <line x1="592" y1="1266" x2="592" y2="1288" stroke="#cbcbc6"/>
   <rect x="362" y="1288" width="460" height="42" rx="9" fill="#0a0a0a"/>
-  <text x="592" y="1314" text-anchor="middle" class="step" font-size="13" font-weight="600" fill="#fafaf7">Policy issued</text>
+  <text x="592" y="1314" text-anchor="middle" class="step" font-size="13" font-weight="600" style="fill:#fafaf7">Policy issued</text>
 </svg>
