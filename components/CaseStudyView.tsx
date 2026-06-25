@@ -41,7 +41,7 @@ function CaseStudyInteractive({
           <img
             src="/images/ai-copilot/architecture.svg"
             alt="Four-layer system architecture — omni-channel integration, hybrid orchestration & runtime, smart MCP routing, and MCP servers."
-            className="w-full rounded-[20px] border border-ink/10 bg-white"
+            className="w-full"
           />
         </figure>
       );
