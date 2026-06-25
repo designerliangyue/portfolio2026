@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { useLocale } from "@/components/LocaleProvider";
 import { projectBySlug } from "@/content/projects";
-import { MetricsGrid } from "@/components/MetricsGrid";
 import { ProjectCover } from "@/components/ProjectCover";
 import { CaseStudyGallery } from "@/components/CaseStudyGallery";
 import { galleryForSection } from "@/content/case-study-galleries";
@@ -62,7 +61,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
   const nextProject = project.next ? projectBySlug(project.next, locale) : null;
   const projectSlug = project.slug as ProjectSlug;
   const hasCrossCultural = (project.crossCultural?.length ?? 0) > 0;
-  const sectionStartIndex = hasCrossCultural ? 4 : 3;
+  const sectionStartIndex = hasCrossCultural ? 3 : 2;
   const cs = t.caseStudy;
 
   return (
@@ -137,35 +136,11 @@ export function CaseStudyView({ slug }: { slug: string }) {
         </div>
       </section>
 
-      <section className="container-grid py-16 md:py-24 border-t border-ink/15">
-        <div className="swiss-grid">
-          <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
-            02
-          </div>
-          <div className="case-study-main">
-            <p className="label mb-8">{cs.impact}</p>
-            <h2 className="display-3 mb-10">{cs.impactTitle}</h2>
-            <MetricsGrid metrics={project.metrics} />
-            <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/40">
-              {locale === "zh" ? (
-                cs.impactNote
-              ) : (
-                <>
-                  Placeholder values (e.g. <span className="text-ink/60">+__%</span>) mark KPIs to be
-                  filled with verified launch data — kept visible to signal evidence orientation rather
-                  than vanity metrics.
-                </>
-              )}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {hasCrossCultural ? (
         <section className="container-grid py-16 md:py-24 border-t border-ink/15">
           <div className="swiss-grid">
             <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
-              03
+              02
             </div>
             <div className="case-study-main">
               <p className="label mb-8">{cs.crossCultural}</p>
