@@ -134,24 +134,22 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
 
         if (block.type === "compare") {
           return (
-            <figure key={`${block.oldId}-${block.newId}-${index}`} className="space-y-4">
-              <div className="case-study-split">
-                <div>
-                  <p className="label mb-3">{block.oldLabel ?? "Before"}</p>
-                  <CaseStudyImage
-                    slug={slug}
-                    imageId={block.oldId}
-                    alt={imageAlt(projectTitle, block.oldId, block.oldLabel)}
-                  />
-                </div>
-                <div>
-                  <p className="label mb-3">{block.newLabel ?? "After"}</p>
-                  <CaseStudyImage
-                    slug={slug}
-                    imageId={block.newId}
-                    alt={imageAlt(projectTitle, block.newId, block.newLabel)}
-                  />
-                </div>
+            <figure key={`${block.oldId}-${block.newId}-${index}`} className="space-y-8">
+              <div>
+                <p className="label mb-3">{block.oldLabel ?? "Before"}</p>
+                <CaseStudyImage
+                  slug={slug}
+                  imageId={block.oldId}
+                  alt={imageAlt(projectTitle, block.oldId, block.oldLabel)}
+                />
+              </div>
+              <div>
+                <p className="label mb-3">{block.newLabel ?? "After"}</p>
+                <CaseStudyImage
+                  slug={slug}
+                  imageId={block.newId}
+                  alt={imageAlt(projectTitle, block.newId, block.newLabel)}
+                />
               </div>
             </figure>
           );

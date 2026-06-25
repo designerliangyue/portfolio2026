@@ -78,18 +78,19 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
       { type: "single", id: "design-system", caption: "Regional design system" }
     ],
     Iteration: [
+      { type: "single", id: "grow-module", caption: "Grow professional by learning online" },
       {
-        type: "grid",
-        columns: 2,
-        cells: [
-          { kind: "image", id: "grow-module" },
-          { kind: "image", id: "recruitment-module" },
-          { kind: "image", id: "contest-module" },
-          { kind: "image", id: "iteration-module-4" }
-        ]
+        type: "single",
+        id: "recruitment-module",
+        caption: "Enabling users to invite and recruit downlines with the appealing tool"
       },
-      { type: "single", id: "in-app-survey", caption: "In-app survey & feedback loop" },
-      { type: "single", id: "usage-tracking", caption: "Usage data tracking" }
+      { type: "single", id: "contest-module", caption: "Encourage user to participate in online campaign" },
+      {
+        type: "single",
+        id: "iteration-module-4",
+        caption: "Created a continuous cycle of improvement, low cost but efficient"
+      },
+      { type: "single", id: "in-app-survey", caption: "In-app survey" }
     ]
   },
   "ai-copilot": {
