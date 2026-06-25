@@ -194,6 +194,17 @@ export function CaseStudyView({ slug }: { slug: string }) {
                 <p className="label mb-8">{section.kicker}</p>
                 <h2 className="display-3 mb-10">{section.title}</h2>
 
+                {section.stats?.length ? (
+                  <dl className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t border-ink/15 pt-8">
+                    {section.stats.map((s) => (
+                      <div key={s.label}>
+                        <dt className="display-3 text-ink leading-none">{s.value}</dt>
+                        <dd className="mt-3 text-sm text-ink/60 leading-snug">{s.label}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                ) : null}
+
                 {hasAside ? (
                   <div className="swiss-grid">
                     <div className="col-span-12 md:col-span-7 space-y-6">

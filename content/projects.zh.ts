@@ -79,6 +79,12 @@ export const projectsZh: Project[] = [
         kicker: "迭代",
         kickerKey: "Iteration",
         title: "设计反馈闭环",
+        stats: [
+          { value: "60 天", label: "新版本上线后的调研窗口" },
+          { value: "300+", label: "收集到的回复" },
+          { value: "73.5%", label: "满意度" },
+          { value: "67", label: "NPS 分数" }
+        ],
         body: [
           "我构建了在关键事件后触发的应用内调研系统——完成一笔销售、结束一次培训——并配合使用数据追踪。这意味着每次发布都带有可衡量信号，而非仅有一张截图。",
           "Grow、招募与竞赛三个新模块直接来自这一反馈闭环，各自对应已记录的代理人行为。"

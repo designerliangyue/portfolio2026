@@ -12,6 +12,7 @@ export type CaseStudySection = {
   title: string;
   body: string[];
   bullets?: { heading: string; text: string }[];
+  stats?: { value: string; label: string }[];
 };
 
 export type Project = {
@@ -112,6 +113,12 @@ export const projects: Project[] = [
       {
         kicker: "Iteration",
         title: "Designing the feedback loop",
+        stats: [
+          { value: "60 days", label: "Survey window after new version launched" },
+          { value: "300+", label: "Responses received" },
+          { value: "73.5%", label: "Satisfaction rate" },
+          { value: "67", label: "NPS score" }
+        ],
         body: [
           "I built an in-app survey system that triggers after meaningful events — a completed sale, a finished training — paired with usage data tracking. This means every release lands with a measurable signal, not just a screenshot.",
           "Three new modules — Grow, Recruitment, and Contest — were prioritised directly from this feedback loop, each tying back to a documented agent behaviour."

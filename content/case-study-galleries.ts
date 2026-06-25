@@ -97,8 +97,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
         type: "single",
         id: "iteration-module-4",
         caption: "Created a continuous cycle of improvement, low cost but efficient"
-      },
-      { type: "single", id: "in-app-survey", caption: "In-app survey" }
+      }
     ]
   },
   "ai-copilot": {
