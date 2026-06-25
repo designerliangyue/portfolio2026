@@ -97,7 +97,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
       {
         type: "video",
         src: "/images/ai-copilot/waba-demo.mp4",
-        caption: "WABA — conversational quoting & closing flow",
+        caption: "WABA — conversational quoting flow",
         badge: "Live demo · test phase"
       },
       {
