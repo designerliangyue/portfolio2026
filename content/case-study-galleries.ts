@@ -46,6 +46,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
       { type: "single", id: "lofi-prototype", caption: "Lo-fi interactive prototype" }
     ],
     Craft: [
+      { type: "single", id: "branding", caption: "Aligned UI with the new branding of Ignite." },
       {
         type: "compare",
         oldId: "onboarding-old",

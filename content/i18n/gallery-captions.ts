@@ -1,5 +1,6 @@
 /** Chinese captions for case study gallery images (keyed by image id). */
 export const galleryCaptionsZh: Record<string, string> = {
+  branding: "按 Ignite 全新品牌规范对齐的 UI 样式",
   journey: "改版旅程地图",
   "competitive-audit": "竞品审计 — 7 个区域平台",
   "problem-statement": "问题陈述综合",
