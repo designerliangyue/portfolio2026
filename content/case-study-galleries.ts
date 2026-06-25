@@ -120,11 +120,6 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
         src: "/images/ai-copilot/conversational-quoting.mp4",
         caption: "Conversational quoting flow",
         badge: "Live demo · test phase"
-      },
-      {
-        type: "grid",
-        ids: ["strategy-partner", "comparative-advisor", "automated-scribe", "customer-profile"],
-        columns: 2
       }
     ]
   },

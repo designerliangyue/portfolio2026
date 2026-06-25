@@ -30,7 +30,7 @@ export function CaseStudyImage({ slug, imageId, alt, className = "" }: CaseStudy
   };
 
   return (
-    <div className={`overflow-hidden border border-ink/10 bg-paper ${className}`}>
+    <div className={`overflow-hidden ${className}`}>
       <Image
         key={src}
         src={src}

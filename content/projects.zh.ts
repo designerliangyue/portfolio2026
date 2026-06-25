@@ -3,7 +3,7 @@ import type { Project } from "./projects";
 export const projectsZh: Project[] = [
   {
     slug: "ignite",
-    index: "01",
+    index: "02",
     title: "Ignite",
     subtitle: "为东南亚重塑端到端保险平台",
     period: "2022 — 2024",
@@ -93,11 +93,11 @@ export const projectsZh: Project[] = [
     ],
     outcome:
       "Ignite 作为统一的区域产品交付，配有可扩展的设计体系、四个新增长模块与内置的度量闭环。最重要的是，它让区域团队拥有谈论市场差异的共同语言，而不碎片化产品。",
-    next: "ai-copilot"
+    next: "cmb-cloud"
   },
   {
     slug: "ai-copilot",
-    index: "02",
+    index: "01",
     title: "AI 销售副驾驶",
     subtitle: "面向印尼保险代理人的 WhatsApp 原生销售 AI——跨市场研究、定义与设计",
     period: "2025 — 至今",
@@ -150,7 +150,7 @@ export const projectsZh: Project[] = [
       }
     ],
     outcome: "为印尼打造连贯的 WhatsApp 副驾驶——文化扎根、架构清晰、可分阶段交付。",
-    next: "cmb-cloud"
+    next: "ignite"
   },
   {
     slug: "cmb-cloud",

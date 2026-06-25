@@ -41,7 +41,7 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug: "ignite",
-    index: "01",
+    index: "02",
     title: "Ignite",
     subtitle: "Reimagining an end-to-end insurance platform for Southeast Asia",
     period: "2022 — 2024",
@@ -127,11 +127,11 @@ export const projects: Project[] = [
     ],
     outcome:
       "Ignite shipped as a unified regional product with a scalable design system, four new growth modules, and a built-in measurement loop. Most importantly, it gave the regional team a shared language for talking about market differences without fragmenting the product.",
-    next: "ai-copilot"
+    next: "cmb-cloud"
   },
   {
     slug: "ai-copilot",
-    index: "02",
+    index: "01",
     title: "AI Sales Co-Pilot",
     subtitle:
       "A WhatsApp-native sales AIbot for Indonesian insurance agents — researched, defined, and designed across markets",
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     ],
     outcome:
       "A coherent WhatsApp Co-Pilot for Indonesia — culturally grounded, architecturally explicit, ready for phased ship.",
-    next: "cmb-cloud"
+    next: "ignite"
   },
   {
     slug: "cmb-cloud",
@@ -262,7 +262,8 @@ import { projectsZh } from "./projects.zh";
 export const projectsEn = projects;
 
 export function getProjects(locale: Locale): Project[] {
-  return locale === "zh" ? projectsZh : projects;
+  const list = locale === "zh" ? projectsZh : projects;
+  return [...list].sort((a, b) => a.index.localeCompare(b.index));
 }
 
 export const projectBySlug = (slug: string, locale: Locale = "en") =>
