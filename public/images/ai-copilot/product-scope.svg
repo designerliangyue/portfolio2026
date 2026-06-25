@@ -1,0 +1,118 @@
+<svg viewBox="0 0 1184 1372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <style>
+      .ttl{font-family:Georgia,'Times New Roman',serif;font-weight:400;fill:#0a0a0a;}
+      .lbl{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.16em;fill:#a1a1a1;}
+      .sub{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.14em;fill:#6b6b6b;}
+      .bd{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;fill:#6b6b6b;}
+      .step{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;fill:#2a2a2a;}
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="1183" height="1371" rx="20" fill="#ffffff" stroke="#e4e4df"/>
+
+  <rect x="64" y="46" width="28" height="3" fill="#ff4500"/>
+  <text x="64" y="84" class="ttl" font-size="25">Phases breakdown</text>
+
+  <!-- Phase I -->
+  <rect x="64" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="88" y="152" class="lbl" font-size="10">PHASE I</text>
+  <text x="88" y="178" class="ttl" font-size="16">Content &amp; hand-off</text>
+  <text x="88" y="204" class="bd" font-size="12">Marketing assets and deep</text>
+  <text x="88" y="221" class="bd" font-size="12">links into the agent’s private</text>
+  <text x="88" y="238" class="bd" font-size="12">WhatsApp thread.</text>
+  <line x1="88" y1="262" x2="292" y2="262" stroke="#e4e4df"/>
+  <text x="88" y="288" class="bd" font-size="11" fill="#6e6e6b">· Posters &amp; digital business cards</text>
+  <text x="88" y="308" class="bd" font-size="11" fill="#6e6e6b">· One-click deep links</text>
+
+  <!-- Phase II -->
+  <rect x="332" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="356" y="152" class="lbl" font-size="10">PHASE II</text>
+  <text x="356" y="178" class="ttl" font-size="16">Conversational quoting</text>
+  <text x="356" y="204" class="bd" font-size="12">Quote inside WABA without</text>
+  <text x="356" y="221" class="bd" font-size="12">opening Ignite mid-sale.</text>
+  <line x1="356" y1="262" x2="560" y2="262" stroke="#e4e4df"/>
+  <text x="356" y="288" class="bd" font-size="11" fill="#6e6e6b">· Natural-language motor capture</text>
+  <text x="356" y="308" class="bd" font-size="11" fill="#6e6e6b">· Multimodal vehicle recognition</text>
+
+  <!-- Phase III -->
+  <rect x="600" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="624" y="152" class="lbl" font-size="10">PHASE III</text>
+  <text x="624" y="178" class="ttl" font-size="16">Agent-assisted closing</text>
+  <text x="624" y="204" class="bd" font-size="12">High-stakes steps stay</text>
+  <text x="624" y="221" class="bd" font-size="12">gated by the agent.</text>
+  <line x1="624" y1="262" x2="828" y2="262" stroke="#e4e4df"/>
+  <text x="624" y="288" class="bd" font-size="11" fill="#6e6e6b">· Secured application links</text>
+  <text x="624" y="308" class="bd" font-size="11" fill="#6e6e6b">· Payment package forward to</text>
+  <text x="624" y="325" class="bd" font-size="11" fill="#6e6e6b">  private chat</text>
+
+  <!-- Phase IV -->
+  <rect x="868" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="892" y="152" class="lbl" font-size="10">PHASE IV</text>
+  <text x="892" y="178" class="ttl" font-size="16">Signals &amp; performance</text>
+  <text x="892" y="204" class="bd" font-size="12">Turn passive links into</text>
+  <text x="892" y="221" class="bd" font-size="12">moments to act.</text>
+  <line x1="892" y1="262" x2="1096" y2="262" stroke="#e4e4df"/>
+  <text x="892" y="288" class="bd" font-size="11" fill="#6e6e6b">· H5 engagement → agent alerts</text>
+  <text x="892" y="308" class="bd" font-size="11" fill="#6e6e6b">· In-chat performance inquiry</text>
+
+  <line x1="64" y1="402" x2="1120" y2="402" stroke="#ececea"/>
+
+  <!-- User flow -->
+  <text x="64" y="444" class="ttl" font-size="22">User flow — lead to policy issued</text>
+  <text x="64" y="468" class="sub" font-size="10">SYSTEM · AGENT · CUSTOMER · DECISION</text>
+
+  <!-- legend -->
+  <g font-size="9" font-family="'SF Mono',Menlo,monospace" letter-spacing="0.1em">
+    <rect x="848" y="430" width="11" height="11" rx="2" fill="#f4f4f1" stroke="#d8d8d3"/>
+    <text x="864" y="439" fill="#6b6b6b">SYSTEM</text>
+    <rect x="924" y="430" width="11" height="11" rx="2" fill="#fff5f0" stroke="#ffb38a"/>
+    <text x="940" y="439" fill="#6b6b6b">AGENT</text>
+    <rect x="992" y="430" width="11" height="11" rx="2" fill="#ffffff" stroke="#d8d8d3"/>
+    <text x="1008" y="439" fill="#6b6b6b">CUSTOMER</text>
+    <rect x="1086" y="430" width="11" height="11" rx="2" fill="#0a0a0a"/>
+    <text x="1102" y="439" fill="#6b6b6b">END</text>
+  </g>
+
+  <!-- LEAD ACQUISITION -->
+  <text x="592" y="506" text-anchor="middle" class="lbl" font-size="10">LEAD ACQUISITION</text>
+  <rect x="362" y="520" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="546" text-anchor="middle" class="step" font-size="13">Agent chats with WABA for help driving leads and sales</text>
+  <line x1="592" y1="562" x2="592" y2="584" stroke="#cbcbc6"/>
+  <rect x="362" y="584" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="610" text-anchor="middle" class="step" font-size="13">WABA: Generate marketing material</text>
+  <line x1="592" y1="626" x2="592" y2="648" stroke="#cbcbc6"/>
+  <rect x="362" y="648" width="460" height="42" rx="9" fill="#ffffff" stroke="#c8c8c3" stroke-dasharray="4 3"/>
+  <text x="592" y="674" text-anchor="middle" class="sub" font-size="11">QR SCAN OR LINK CLICK</text>
+
+  <!-- ADVISOR GATE -->
+  <text x="592" y="726" text-anchor="middle" class="lbl" font-size="10">ADVISOR GATE</text>
+  <rect x="362" y="742" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="768" text-anchor="middle" class="step" font-size="13">Consultation via Agent-Customer Private WhatsApp Chat</text>
+
+  <!-- QUOTE & FULFILMENT -->
+  <text x="592" y="824" text-anchor="middle" class="lbl" font-size="10">QUOTE &amp; FULFILMENT</text>
+  <rect x="362" y="840" width="460" height="42" rx="9" fill="#ffffff" stroke="#d8d8d3"/>
+  <text x="592" y="866" text-anchor="middle" class="step" font-size="13" fill="#4a4a48">Agent interact with WABA to get quote</text>
+  <line x1="592" y1="882" x2="592" y2="904" stroke="#cbcbc6"/>
+  <rect x="362" y="904" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="930" text-anchor="middle" class="step" font-size="13">WABA: Digital quote + Secured Application Links</text>
+  <line x1="592" y1="946" x2="592" y2="968" stroke="#cbcbc6"/>
+  <rect x="362" y="968" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="994" text-anchor="middle" class="step" font-size="13">Agent forwards link to customer</text>
+  <line x1="592" y1="1010" x2="592" y2="1032" stroke="#cbcbc6"/>
+  <rect x="362" y="1032" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="1058" text-anchor="middle" class="step" font-size="13">WABA: Customer clicks → sync behaviour &amp; notify agent</text>
+  <line x1="592" y1="1074" x2="592" y2="1096" stroke="#cbcbc6"/>
+  <rect x="362" y="1096" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="1122" text-anchor="middle" class="step" font-size="13">WABA: Update form filling status</text>
+  <line x1="592" y1="1138" x2="592" y2="1160" stroke="#cbcbc6"/>
+  <rect x="362" y="1160" width="460" height="42" rx="9" fill="#ffffff" stroke="#c8c8c3" stroke-dasharray="4 3"/>
+  <text x="592" y="1186" text-anchor="middle" class="sub" font-size="11">PURCHASE: SELF-SERVE OR AGENT-ASSISTED</text>
+  <line x1="592" y1="1202" x2="592" y2="1224" stroke="#cbcbc6"/>
+  <rect x="362" y="1224" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="1250" text-anchor="middle" class="step" font-size="13">WABA: Sync status &amp; issue policy</text>
+  <line x1="592" y1="1266" x2="592" y2="1288" stroke="#cbcbc6"/>
+  <rect x="362" y="1288" width="460" height="42" rx="9" fill="#0a0a0a"/>
+  <text x="592" y="1314" text-anchor="middle" class="step" font-size="13" font-weight="600" fill="#fafaf7">Policy issued</text>
+</svg>

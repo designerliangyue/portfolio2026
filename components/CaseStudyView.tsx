@@ -9,9 +9,15 @@ import { CaseStudyGallery } from "@/components/CaseStudyGallery";
 import { galleryForSection } from "@/content/case-study-galleries";
 import type { ProjectSlug } from "@/content/images";
 import { ContributionRoles } from "@/components/case-study/ContributionRoles";
-import { WhyWeAreDoingThis } from "@/components/case-study/WhyWeAreDoingThis";
-import { MarketValidation } from "@/components/case-study/MarketValidation";
-import { ProductScopePhases } from "@/components/case-study/ProductScopePhases";
+
+function DiagramSvg({ src, alt }: { src: string; alt: string }) {
+  return (
+    <figure className="mt-12">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={src} alt={alt} className="w-full" />
+    </figure>
+  );
+}
 
 function CaseStudyInteractive({
   slug,
@@ -28,21 +34,29 @@ function CaseStudyInteractive({
     case "Research":
       return (
         <>
-          <WhyWeAreDoingThis />
-          <MarketValidation />
+          <DiagramSvg
+            src="/images/ai-copilot/why-we-are-doing-this.svg"
+            alt="Why are we doing this — chat-first market reality, the WhatsApp Flow opportunity, and the unstructured vs. structured interaction modes."
+          />
+          <DiagramSvg
+            src="/images/ai-copilot/market-validation.svg"
+            alt="Market validation — Lifepal and Meta WhatsApp Flows precedents, plus Redbus, JioMart, and HDFC Bank industry benchmarks."
+          />
         </>
       );
     case "Product":
-      return <ProductScopePhases />;
+      return (
+        <DiagramSvg
+          src="/images/ai-copilot/product-scope.svg"
+          alt="Phases breakdown across four phases, and the user flow from lead acquisition to policy issued."
+        />
+      );
     case "System design":
       return (
-        <figure className="mt-12">
-          <img
-            src="/images/ai-copilot/architecture.svg"
-            alt="Four-layer system architecture — omni-channel integration, hybrid orchestration & runtime, smart MCP routing, and MCP servers."
-            className="w-full"
-          />
-        </figure>
+        <DiagramSvg
+          src="/images/ai-copilot/architecture.svg"
+          alt="Four-layer system architecture — omni-channel integration, hybrid orchestration & runtime, smart MCP routing, and MCP servers."
+        />
       );
     default:
       return null;
