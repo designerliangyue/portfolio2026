@@ -96,8 +96,20 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
     Product: [
       {
         type: "video",
-        src: "/images/ai-copilot/waba-demo.mp4",
-        caption: "WABA — conversational quoting flow",
+        src: "/images/ai-copilot/performance-inquiry.mp4",
+        caption: "In-chat performance inquiry",
+        badge: "Live demo · test phase"
+      },
+      {
+        type: "video",
+        src: "/images/ai-copilot/marketing-assets.mp4",
+        caption: "Marketing assets generation",
+        badge: "Live demo · test phase"
+      },
+      {
+        type: "video",
+        src: "/images/ai-copilot/conversational-quoting.mp4",
+        caption: "Conversational quoting flow",
         badge: "Live demo · test phase"
       },
       {
