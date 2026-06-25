@@ -16,13 +16,13 @@
 
   <!-- Section 1 -->
   <text x="64" y="126" class="hd" font-size="15">The Market Reality: Chat-First Economy</text>
-  <text x="64" y="151" class="bd" font-size="13.5">In Southeast Asia, WhatsApp is the dominant operating system for business. However, current Insurtech workflows create friction:</text>
-  <text x="64" y="172" class="bd" font-size="13.5">agents acquire leads on WhatsApp but must switch to a separate mobile app to generate quotes. This “context switching” slows sales velocity.</text>
+  <text x="64" y="151" class="bd" font-size="13.5">In Southeast Asia, WhatsApp is the dominant operating system for business. However, current Insurtech workflows create friction: agents acquire leads on</text>
+  <text x="64" y="172" class="bd" font-size="13.5">WhatsApp but must switch to a separate mobile app to generate quotes. This “context switching” slows down sales velocity.</text>
 
   <!-- Section 2 -->
   <text x="64" y="214" class="hd" font-size="15">The Opportunity</text>
-  <text x="64" y="239" class="bd" font-size="13.5">We aim to implement <tspan fill="#ff4500" font-weight="600">WhatsApp Flow</tspan> together with unstructured conversational AI (NLP / LLM) to embed the entire Quote-to-Issue journey</text>
-  <text x="64" y="260" class="bd" font-size="13.5">in chat — structured UI where precision matters, free text where flexibility matters.</text>
+  <text x="64" y="239" class="bd" font-size="13.5">We aim to implement <tspan fill="#ff4500" font-weight="600">WhatsApp Flow</tspan> together with unstructured conversational AI (NLP / LLM) to embed the entire Quote-to-Issue journey in chat —</text>
+  <text x="64" y="260" class="bd" font-size="13.5">structured UI where precision matters, free text where flexibility matters.</text>
 
   <line x1="64" y1="296" x2="1120" y2="296" stroke="#ececea"/>
   <text x="64" y="330" class="bd" font-size="14" fill="#3a3a3a">End-to-end sales in WhatsApp is a hybrid: neither pure chatbot nor pure forms alone.</text>
