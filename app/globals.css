@@ -11,8 +11,8 @@
   --font-stack-display: var(--font-display-en), ui-serif, Georgia, "Times New Roman", serif;
   --font-stack-mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
 
-  --leading-body: 1.45;
-  --leading-body-lg: 1.45;
+  --leading-body: 1.55;
+  --leading-body-lg: 1.62;
   --tracking-heading: -0.035em;
   --weight-display: 400;
   --weight-body: 400;
@@ -62,6 +62,37 @@ html:lang(zh-Hans) {
     font-weight: var(--weight-display);
     letter-spacing: var(--tracking-heading);
     @apply text-ink;
+  }
+
+  /* ── English: readability tuning (does not affect Chinese) ── */
+  html:lang(en) body {
+    letter-spacing: -0.011em;
+    line-height: var(--leading-body);
+  }
+
+  html:lang(en) p,
+  html:lang(en) li,
+  html:lang(en) dd,
+  html:lang(en) figcaption {
+    text-wrap: pretty;
+  }
+
+  html:lang(en) h1,
+  html:lang(en) h2,
+  html:lang(en) h3,
+  html:lang(en) h4,
+  html:lang(en) .display-1,
+  html:lang(en) .display-2,
+  html:lang(en) .display-3,
+  html:lang(en) .section-title {
+    text-wrap: balance;
+  }
+
+  /* Long-form body copy: comfortable measure + leading */
+  html:lang(en) .lede,
+  html:lang(en) .lede-fill,
+  html:lang(en) [class*="leading-relaxed"] {
+    letter-spacing: -0.006em;
   }
 
   html:lang(zh-Hans) h1,
