@@ -200,6 +200,15 @@ html:lang(zh-Hans) {
     @apply text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.15];
   }
 
+  /* Large display copy must wrap between CJK chars — keep-all (set on
+     zh paragraphs) would otherwise overflow long headlines. */
+  html:lang(zh-Hans) .display-1,
+  html:lang(zh-Hans) .display-2,
+  html:lang(zh-Hans) .display-3,
+  html:lang(zh-Hans) .section-title {
+    word-break: normal;
+  }
+
   html:lang(zh-Hans) .display-1 {
     font-weight: 300;
     letter-spacing: 0.03em;
