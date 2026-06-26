@@ -51,29 +51,29 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
         type: "compare",
         oldId: "onboarding-old",
         newId: "onboarding-new",
-        oldLabel: "Onboarding — before",
-        newLabel: "Onboarding — after"
+        oldLabel: "Onboarding — before - long sign-up form",
+        newLabel: "Onboarding — after - streamlined onboarding"
       },
       {
         type: "compare",
         oldId: "homepage-old",
         newId: "homepage-new",
-        oldLabel: "Homepage — before",
-        newLabel: "Homepage — after"
+        oldLabel: "Homepage — before - Display insurance products only",
+        newLabel: "Homepage — after - informative and intuitive homepage"
       },
       {
         type: "compare",
         oldId: "purchase-old",
         newId: "purchase-new",
-        oldLabel: "Purchase flow — before",
-        newLabel: "Purchase flow — after"
+        oldLabel: "Purchase flow — before - Repeated information, confusing navigation",
+        newLabel: "Purchase flow — after - effective flow with clearer information architecture"
       },
       {
         type: "compare",
         oldId: "customer-old",
         newId: "customer-new",
-        oldLabel: "Customer management — before",
-        newLabel: "Customer management — after"
+        oldLabel: "Customer management — before - Plain list of basic contact information",
+        newLabel: "Customer management — after - Rich customer data for smarter management"
       },
       { type: "single", id: "design-system", caption: "Regional design system" }
     ],
