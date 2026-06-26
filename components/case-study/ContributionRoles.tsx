@@ -12,7 +12,10 @@ export function ContributionRoles() {
       {/* Value to agents */}
       <div className="border border-ink/10 bg-paper p-6 md:p-10 lg:p-12">
         <p className="label mb-6">{c.valueLabel}</p>
-        <p className="font-display tracking-tighter2 leading-[1.08] text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]">
+        <p
+          className="font-display tracking-tighter2 leading-[1.08] text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]"
+          style={{ wordBreak: "normal" }}
+        >
           {c.headline}
         </p>
         <p className="mt-6 text-base md:text-lg text-ink/70 leading-relaxed">{c.body}</p>
