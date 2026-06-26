@@ -74,7 +74,7 @@ export const en = {
       {
         period: "2022 — 2024",
         role: "Product Designer · Ignite (SEA Insurtech)",
-        note: "End-to-end revamp across four Southeast Asian markets. 25 in-language interviews, regional design system, four new modules."
+        note: "End-to-end revamp across four Southeast Asian markets. stakeholder and user interviews, regional design system, continuous iteration."
       },
       {
         period: "2022",
