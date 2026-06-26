@@ -30,37 +30,77 @@ export type ContributionRole = {
   impact: string;
 };
 
-export const contributionValue = {
-  label: "Value to agents",
-  headline: "An always-on sales co-pilot, embedded where agents already sell.",
-  body:
-    "Agents run the full quote-to-close inside WhatsApp — the app their customers already trust — backed by a 24/7 AI assistant. No switching to Ignite, no leaving the chat.",
-  chips: ["24/7 assistant", "Native to WhatsApp", "Zero context-switch"]
-} as const;
+export type ContributionContent = {
+  valueLabel: string;
+  headline: string;
+  body: string;
+  chips: string[];
+  rolesLabel: string;
+  roles: ContributionRole[];
+};
 
-export const contributionRoles: ContributionRole[] = [
-  {
-    id: "research",
-    number: "01",
-    title: "Research lead",
-    impact:
-      "Built the case remotely — the product is blocked on the mainland — validating the thesis through Meta documentation and a live WABA sandbox."
+export const contribution: Record<"en" | "zh", ContributionContent> = {
+  en: {
+    valueLabel: "Value to agents",
+    headline: "An always-on sales co-pilot, embedded where agents already sell.",
+    body:
+      "Agents run the full quote-to-close inside WhatsApp — the app their customers already trust — backed by a 24/7 AI assistant. No switching to Ignite, no leaving the chat.",
+    chips: ["24/7 assistant", "Native to WhatsApp", "Zero context-switch"],
+    rolesLabel: "Three roles, one accountable thread",
+    roles: [
+      {
+        id: "research",
+        number: "01",
+        title: "Research lead",
+        impact:
+          "Built the case remotely — the product is blocked on the mainland — validating the thesis through Meta documentation and a live WABA sandbox."
+      },
+      {
+        id: "product",
+        number: "02",
+        title: "Product strategist",
+        impact:
+          "Owned the agent-initiated journey and four-phase MVP, balancing Meta’s messaging rules against agent trust."
+      },
+      {
+        id: "design",
+        number: "03",
+        title: "Experience designer",
+        impact:
+          "Turned strategy into WhatsApp Flows, conversational UX, and prototypes the team could ship against."
+      }
+    ]
   },
-  {
-    id: "product",
-    number: "02",
-    title: "Product strategist",
-    impact:
-      "Owned the agent-initiated journey and four-phase MVP, balancing Meta’s messaging rules against agent trust."
-  },
-  {
-    id: "design",
-    number: "03",
-    title: "Experience designer",
-    impact:
-      "Turned strategy into WhatsApp Flows, conversational UX, and prototypes the team could ship against."
+  zh: {
+    valueLabel: "对代理人的价值",
+    headline: "一个常驻的销售副驾驶，植入代理人日常销售的场景之中。",
+    body:
+      "代理人无需离开 WhatsApp——客户本就信任的应用——即可完成从报价到成交的全流程，并有 7×24 小时在线的 AI 助手支持。无需切换到 Ignite，无需离开聊天。",
+    chips: ["7×24 在线助手", "原生于 WhatsApp", "零场景切换"],
+    rolesLabel: "三种角色，一条责任链",
+    roles: [
+      {
+        id: "research",
+        number: "01",
+        title: "研究负责人",
+        impact:
+          "在产品于中国大陆受限的情况下远程构建论证——通过 Meta 官方文档与可运行的 WABA 沙盒验证产品假设。"
+      },
+      {
+        id: "product",
+        number: "02",
+        title: "产品策略",
+        impact: "主导以代理人发起的旅程与四阶段 MVP，在 Meta 的消息规则与代理人信任之间取得平衡。"
+      },
+      {
+        id: "design",
+        number: "03",
+        title: "体验设计",
+        impact: "将策略转化为 WhatsApp Flows、对话式体验，以及团队可落地的原型。"
+      }
+    ]
   }
-];
+};
 
 export const agentInitiatedFlow: UserFlow = {
     id: "uc1",
