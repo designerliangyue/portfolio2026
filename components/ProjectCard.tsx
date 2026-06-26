@@ -28,7 +28,7 @@ export function ProjectCard({ project }: { project: Project }) {
             >
               {project.title}
             </h3>
-            <p className="lede-fill max-w-3xl">{project.summary}</p>
+            <p className="lede-fill">{project.summary}</p>
           </div>
 
           <dl className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-5 border-t border-ink/15 pt-6 text-sm">

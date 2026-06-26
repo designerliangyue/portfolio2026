@@ -77,15 +77,8 @@ html:lang(zh-Hans) {
     text-wrap: pretty;
   }
 
-  /* Balance only true headings — never long display paragraphs,
-     which must fill the container width (e.g. p.display-3 lead copy). */
-  html:lang(en) h1,
-  html:lang(en) h2,
-  html:lang(en) h3,
-  html:lang(en) h4 {
-    text-wrap: balance;
-  }
-
+  /* Display paragraphs (hero / subtitle / outcome) fill the width and
+     only tidy their last line — never balance, which strands whitespace. */
   html:lang(en) p.display-1,
   html:lang(en) p.display-2,
   html:lang(en) p.display-3 {
