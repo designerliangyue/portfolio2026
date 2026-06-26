@@ -48,7 +48,7 @@ export const projects: Project[] = [
     role: "UX Researcher · Product Designer (end-to-end)",
     team: "Cross-regional team across SG, ID, VN, MY",
     industry: "Insurtech · SaaS · Mobile",
-    market: "4 Southeast Asian countries",
+    market: "4 Southeast Asian countries · ID, VN, MY, TH",
     tags: ["UX Research", "Mobile App", "Design System", "Cross-cultural"],
     cover: { tone: "warm", emoji: "🤳", label: "Insurtech / SEA" },
     summary:
@@ -58,7 +58,7 @@ export const projects: Project[] = [
     problem:
       "Agents had to juggle complex products, regulatory variation, and trust-driven sales conversations on a fragmented legacy app that treated all four SEA markets as one. The result: low onboarding completion, weak engagement, and a fragile brand for a company expanding regionally.",
     approach:
-      "I led the end-to-end product design from research through hi-fi delivery: stakeholder interviews, in-language remote interviews with agents in Indonesia and Vietnam, a competitive audit of seven regional players, and a scalable mobile design system that lets each country flex while staying visually unified.",
+      "I led the end-to-end product design from research through hi-fi delivery: stakeholder interviews, remote interviews with agents in Indonesia and Vietnam, a competitive audit of seven regional players, and a scalable mobile design system that lets each country flex while staying visually unified.",
     metrics: [
       { value: "4", label: "Southeast Asian markets", note: "ID · VN · plus 2" },
       { value: "25", label: "Agents interviewed in-language", note: "10 Indonesia · 15 Vietnam" },
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       },
       {
         heading: "One system, four flavours",
-        text: "I built a Figma library where the same components can host market-specific product taxonomy, language length variation, and regulatory disclaimers — so Indonesia and Vietnam ship from the same source of truth without one country dictating the other's experience."
+        text: "I built a Figma library where the same components can host market-specific product classification, language length variation, and regulatory disclaimers — so the 4 countries ship from the same source of truth without one country dictating the other's experience."
       },
       {
         heading: "Relationship-driven business culture",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
         kicker: "Research",
         title: "Listening before designing",
         body: [
-          "Before any wireframe, I ran remote interviews with 10 agents in Indonesia and 15 in Vietnam, working with local researchers to keep nuance intact. We added a competitive audit of seven regional platforms, mapping flows, feature sets, and disclosure patterns.",
+          "Before any wireframe, I ran remote interviews with 10 agents in Indonesia and 15 in Vietnam with local researchers. We added a competitive audit of seven regional platforms, mapping flows, feature sets, and disclosure patterns.",
           "Four insights anchored everything that followed: trust is an asset, quality of service is the moat, agents specialise narrowly, and complex products demand heavy training that the previous app was not delivering."
         ]
       },
@@ -106,7 +106,7 @@ export const projects: Project[] = [
         kicker: "Craft",
         title: "Onboarding, homepage, purchase, customer management",
         body: [
-          "Onboarding moved from a long web form to a streamlined mobile-native sequence. The homepage shifted from a passive product list to an informative, personal dashboard. The purchase flow was untangled with a clearer information architecture. Customer management gained richer profiles and contextual actions.",
+          "Onboarding moved from a long web form to a streamlined mobile-native sequence. The homepage shifted from a passive product list to an informative, personal dashboard. The purchase flow was streamlined with a clearer information architecture. Customer management gained richer profiles and contextual actions.",
           "All four flows ship against the same regional design system, so a country-specific change in Vietnam does not silently break Indonesia."
         ]
       },
@@ -134,7 +134,7 @@ export const projects: Project[] = [
     index: "01",
     title: "AI Sales Co-Pilot",
     subtitle:
-      "A WhatsApp-native sales AIbot for Indonesian insurance agents — researched, defined, and designed across markets",
+      "WhatsApp-native conversational commerce for Indonesian insurance agents",
     period: "2025 — present",
     role: "Lead Product Strategy & Design",
     industry: "AI · Insurtech · Conversational commerce",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
     hero:
       "Agents sell on private WhatsApp; the product had to meet them there. I led research, product definition, and design for a WhatsApp Business Co-Pilot that amplifies — not replaces — that habit.",
     problem:
-      "Quoting lived in Ignite; trust lived in private chat. AI only inside the app added another switch when momentum was already fragile.",
+      "Quoting lived in Ignite app; trust lived in private chat. AI only inside the app added another switch when momentum was already fragile.",
     approach:
       "One agent-initiated journey, a four-layer architecture, and a phased MVP — hand-off, quote, close, signals — aligned through prototypes before build.",
     metrics: [
@@ -175,14 +175,14 @@ export const projects: Project[] = [
         kicker: "Product",
         title: "Scope & phases",
         body: [
-          "North star: empowerment without displacement. Phases breakdown, UC1 flow, and WABA screens below — aligned to the WhatsApp MVP programme for Indonesia."
+          "North star: empowerment without displacement. Phases breakdown, User flow, and WABA screens below — aligned to the WhatsApp MVP programme for Indonesia."
         ]
       },
       {
         kicker: "System design",
         title: "Four-layer architecture",
         body: [
-          "From omni-channel gateway to MCP capabilities — select each layer in the stack to see routing logic, ecosystem services, and backend integration."
+          "From omni-channel gateway to MCP capabilities."
         ]
       }
     ],
@@ -221,7 +221,7 @@ export const projects: Project[] = [
     crossCultural: [
       {
         heading: "Enterprise tone for a global audience",
-        text: "Internal banking tools sit at the intersection of compliance and craft. The visual language is restrained, the IA is unforgiving — every label, status, and alert had to read identically to an SRE, a compliance officer, and a fresh hire."
+        text: "Internal banking tools sit at the intersection of compliance and craft. The visual language is restrained, the IA is unforgiving — every label, status, and alert had to read identically to an engineer, a compliance officer, and a fresh hire."
       },
       {
         heading: "Accessibility as a non-negotiable",
@@ -247,7 +247,7 @@ export const projects: Project[] = [
         kicker: "Craft",
         title: "A dark mode designed for the night shift",
         body: [
-          "Operators spend long hours in this product. The dark theme is a complete second skin, not a quick inversion. I tuned contrast ratios to WCAG, redefined semantic colours for alerts, statuses and data visualisations, and audited every component state across both themes for ambiguity."
+          "Operators spend long hours in this product. The dark theme is a complete second skin, not a quick inversion. I tuned contrast ratios to WCAG, redefined semantic colours for alerts, statuses and data visualisations, and audited every component state across both themes."
         ]
       }
     ],
