@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="col-span-12 md:col-span-11 space-y-6">
           <div className="space-y-4">
             <h3
-              className={`display-3 text-[clamp(2.25rem,5vw,4rem)] leading-[1.0] ${
+              className={`display-3 text-[clamp(1.875rem,4vw,3rem)] leading-[1.05] ${
                 locale === "zh" ? "project-card-title" : ""
               }`}
             >
