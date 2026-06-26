@@ -42,7 +42,7 @@ export const projects: Project[] = [
   {
     slug: "ignite",
     index: "02",
-    title: "Ignite - Insurance Sales Platform.",
+    title: "Ignite - Insurance Sales Platform",
     subtitle: "Reimagining an end-to-end insurance platform for Southeast Asia",
     period: "2022 — 2024",
     role: "UX Researcher · Product Designer (end-to-end)",
