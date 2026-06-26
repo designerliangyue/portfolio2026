@@ -22,11 +22,13 @@ export function ProjectCard({ project }: { project: Project }) {
         <div className="col-span-12 md:col-span-11 space-y-6">
           <div className="space-y-4">
             <h3
-              className={`display-3 leading-[1.05] ${locale === "zh" ? "project-card-title" : ""}`}
+              className={`display-3 text-[clamp(2.25rem,5vw,4rem)] leading-[1.0] ${
+                locale === "zh" ? "project-card-title" : ""
+              }`}
             >
               {project.title}
             </h3>
-            <p className="lede-fill">{project.summary}</p>
+            <p className="lede-fill max-w-3xl">{project.summary}</p>
           </div>
 
           <dl className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-5 border-t border-ink/15 pt-6 text-sm">
