@@ -75,7 +75,7 @@ export const zh: Dictionary = {
       {
         period: "2022 — 2024",
         role: "产品设计师 · Ignite（东南亚保险科技）",
-        note: "四个东南亚市场的端到端改版。利益相关方与用户访谈、区域设计体系、持续迭代。"
+        note: "四个东南亚市场的端到端改版——利益相关方与用户访谈、区域设计体系、持续迭代。"
       },
       {
         period: "2022",
@@ -85,7 +85,7 @@ export const zh: Dictionary = {
       {
         period: "2020",
         role: "首席 UI/UX 设计师 · 招行私有云",
-        note: "招商银行内部云平台。整体设计体系、符合 WCAG 的深色模式。"
+        note: "招商银行内部云平台——整体设计体系、符合 WCAG 的深色模式。"
       },
       {
         period: "2020 之前",
