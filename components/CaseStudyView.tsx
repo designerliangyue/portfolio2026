@@ -267,12 +267,10 @@ export function CaseStudyView({ slug }: { slug: string }) {
             <div className="case-study-main">
               <Link href={`/work/${nextProject.slug}`} className="group block">
                 <p className="label mb-6">{cs.nextCase}</p>
-                <div className="flex items-end justify-between gap-6 flex-wrap">
-                  <h2 className="display-2 group-hover:translate-x-2 transition-transform duration-500 ease-swiss">
-                    {nextProject.index} · {nextProject.title} →
-                  </h2>
-                  <p className="text-ink/60">{nextProject.subtitle}</p>
-                </div>
+                <h2 className="display-2 group-hover:translate-x-2 transition-transform duration-500 ease-swiss">
+                  {nextProject.index} · {nextProject.title} →
+                </h2>
+                <p className="text-ink/60 mt-4 md:mt-5 max-w-3xl">{nextProject.subtitle}</p>
               </Link>
             </div>
           </div>
