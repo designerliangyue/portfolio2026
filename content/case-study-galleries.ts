@@ -15,6 +15,7 @@ export type GalleryBlock =
   | { type: "single"; id: string; caption?: string; titleStyle?: boolean }
   | {
       type: "compare";
+      title?: string;
       oldId: string;
       newId: string;
       oldLabel?: string;
@@ -49,33 +50,37 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
       { type: "single", id: "branding", caption: "Aligned UI with the new branding of Ignite.", titleStyle: true },
       {
         type: "compare",
+        title: "Onboarding",
         oldId: "onboarding-old",
         newId: "onboarding-new",
-        oldLabel: "Onboarding — before - long sign-up form",
-        newLabel: "Onboarding — after - streamlined onboarding"
+        oldLabel: "Before — long sign-up form",
+        newLabel: "After — streamlined onboarding"
       },
       {
         type: "compare",
+        title: "Homepage",
         oldId: "homepage-old",
         newId: "homepage-new",
-        oldLabel: "Homepage — before - Display insurance products only",
-        newLabel: "Homepage — after - informative and intuitive homepage"
+        oldLabel: "Before — displays insurance products only",
+        newLabel: "After — informative and intuitive"
       },
       {
         type: "compare",
+        title: "Purchase flow",
         oldId: "purchase-old",
         newId: "purchase-new",
-        oldLabel: "Purchase flow — before - Repeated information, confusing navigation",
-        newLabel: "Purchase flow — after - effective flow with clearer information architecture"
+        oldLabel: "Before — repeated information, confusing navigation",
+        newLabel: "After — clearer information architecture"
       },
       {
         type: "compare",
+        title: "Customer management",
         oldId: "customer-old",
         newId: "customer-new",
-        oldLabel: "Customer management — before - Plain list of basic contact information",
-        newLabel: "Customer management — after - Rich customer data for smarter management"
+        oldLabel: "Before — plain list of basic contact info",
+        newLabel: "After — rich customer data for smarter management"
       },
-      { type: "single", id: "design-system", caption: "Regional design system" }
+      { type: "single", id: "design-system", caption: "Regional design system", titleStyle: true }
     ],
     Iteration: [
       {

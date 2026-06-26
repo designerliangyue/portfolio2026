@@ -2,7 +2,7 @@
 
 import type { GalleryBlock, GalleryGridCell } from "@/content/case-study-galleries";
 import type { ProjectSlug } from "@/content/images";
-import { galleryCaptionsZh, compareLabelsZh } from "@/content/i18n/gallery-captions";
+import { galleryCaptionsZh, compareLabelsZh, compareTitlesZh } from "@/content/i18n/gallery-captions";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
 import { CaseStudyMediaPlaceholder } from "@/components/CaseStudyMediaPlaceholder";
 import { useLocale } from "@/components/LocaleProvider";
@@ -137,23 +137,32 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
             (locale === "zh" ? compareLabelsZh[block.oldId] : undefined) ?? block.oldLabel ?? "Before";
           const newLabel =
             (locale === "zh" ? compareLabelsZh[block.newId] : undefined) ?? block.newLabel ?? "After";
+          const title =
+            (locale === "zh" ? compareTitlesZh[block.oldId] : undefined) ?? block.title;
           return (
-            <figure key={`${block.oldId}-${block.newId}-${index}`} className="space-y-8">
-              <div>
-                <p className="label mb-3">{oldLabel}</p>
-                <CaseStudyImage
-                  slug={slug}
-                  imageId={block.oldId}
-                  alt={imageAlt(projectTitle, block.oldId, oldLabel)}
-                />
-              </div>
-              <div>
-                <p className="label mb-3">{newLabel}</p>
-                <CaseStudyImage
-                  slug={slug}
-                  imageId={block.newId}
-                  alt={imageAlt(projectTitle, block.newId, newLabel)}
-                />
+            <figure key={`${block.oldId}-${block.newId}-${index}`}>
+              {title ? (
+                <h3 className="font-display tracking-tightish text-2xl md:text-3xl text-ink mb-5 md:mb-6">
+                  {title}
+                </h3>
+              ) : null}
+              <div className="space-y-8">
+                <div>
+                  <p className="label mb-3">{oldLabel}</p>
+                  <CaseStudyImage
+                    slug={slug}
+                    imageId={block.oldId}
+                    alt={imageAlt(projectTitle, block.oldId, oldLabel)}
+                  />
+                </div>
+                <div>
+                  <p className="label mb-3">{newLabel}</p>
+                  <CaseStudyImage
+                    slug={slug}
+                    imageId={block.newId}
+                    alt={imageAlt(projectTitle, block.newId, newLabel)}
+                  />
+                </div>
               </div>
             </figure>
           );
