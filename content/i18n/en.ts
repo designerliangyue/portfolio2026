@@ -84,7 +84,7 @@ export const en = {
       {
         period: "2020",
         role: "Lead UI/UX Designer · CMB Private Cloud",
-        note: "Internal cloud platform for China Merchants Bank. Holistic design system, WCAG-grade dark mode."
+        note: "Internal cloud platform for China Merchants Bank — holistic design system, WCAG-grade dark mode."
       },
       {
         period: "Before 2020",
