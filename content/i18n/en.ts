@@ -22,12 +22,12 @@ export const en = {
     languages: "Languages",
     languagesValue: "EN · ZH",
     status: "Status",
-    statusValue: "Actively looking",
+    statusValue: "Open to opportunities",
     workLabel: "Selected Work — three case studies",
     workTitle: ["Cross-cultural scale.", "Strategic foresight.", "Enterprise depth."],
     workSerif: ["Strategic foresight."],
     workLede:
-      "These three projects, in this order, form the narrative I bring to a Senior Product Design role: from a regional insurance platform across four SEA markets, to an AI Sales Co-Pilot built on those very insights, to a private cloud platform for one of China's largest banks.",
+      "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural research across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
     aboutLabel: "About",
     aboutTitle: [
       "A results-focused designer who merges reliability with",
@@ -51,7 +51,7 @@ export const en = {
       "Merging reliability with innovation — a results-focused designer grounded in data and real-world usability.",
     background: "Background",
     backgroundParagraphs: [
-      "My journey began in Landscape Architecture, where I learned to design spaces that inspire and connect people. Today, I bring that same passion to digital design, crafting experiences that are intuitive, engaging, and meaningful. Over the past 7+ years, I've worked across insurtech, cloud computing, banking, and service industries, creating products that solve real problems for real users.",
+      "My journey began in Landscape Architecture, where I learned to design spaces that inspire and connect people. Today, I bring that same passion to digital design, crafting experiences that are intuitive, engaging, and meaningful. Over the past 10 years, I've worked across insurtech, cloud computing, banking, and service industries, creating products that solve real problems for real users.",
       "For me, design is more than pixels and prototypes — it's about understanding people and telling their stories through thoughtful, user-centered solutions.",
       "In the age of AI, I believe design plays a critical role in ensuring technology remains human-centered, ethical, and accessible. I've worked on AI-enhanced interfaces, leveraging data to create intuitive and inclusive experiences that empower users.",
       "I'm exploring Senior Product Designer opportunities with a strong preference for fully remote collaboration — and I'm looking for a team where evidence, craft, and care all sit at the same table."
@@ -107,14 +107,14 @@ export const en = {
       "Data-driven design & A/B testing",
       "Wireframing & prototyping",
       "Design systems & component libraries",
-      "Collaboration tools"
+      "Figma · Notion · Jira · Cursor"
     ]
   },
   footer: {
     connect: "Let's connect",
     title: "Designing what's next, together.",
     lede:
-      "I'm exploring Senior Product Designer opportunities with a preference for fully remote work. I bring 7+ years of cross-cultural product experience across insurtech, banking, and AI-enhanced interfaces.",
+      "I'm exploring Senior Product Designer opportunities with a preference for fully remote work. I bring 10 years of cross-cultural product experience across insurtech, banking, and AI-enhanced interfaces.",
     aboutLink: "Read full background →",
     copyright: (year: number) => `© ${year} Liang Yue. Designed and built in Figma + Next.js.`,
     updated: (date: string) => `Selected work — last updated ${date}`
