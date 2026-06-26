@@ -2,7 +2,7 @@
 
 import type { GalleryBlock, GalleryGridCell } from "@/content/case-study-galleries";
 import type { ProjectSlug } from "@/content/images";
-import { galleryCaptionsZh } from "@/content/i18n/gallery-captions";
+import { galleryCaptionsZh, compareLabelsZh } from "@/content/i18n/gallery-captions";
 import { CaseStudyImage } from "@/components/CaseStudyImage";
 import { CaseStudyMediaPlaceholder } from "@/components/CaseStudyMediaPlaceholder";
 import { useLocale } from "@/components/LocaleProvider";
@@ -133,22 +133,26 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
         }
 
         if (block.type === "compare") {
+          const oldLabel =
+            (locale === "zh" ? compareLabelsZh[block.oldId] : undefined) ?? block.oldLabel ?? "Before";
+          const newLabel =
+            (locale === "zh" ? compareLabelsZh[block.newId] : undefined) ?? block.newLabel ?? "After";
           return (
             <figure key={`${block.oldId}-${block.newId}-${index}`} className="space-y-8">
               <div>
-                <p className="label mb-3">{block.oldLabel ?? "Before"}</p>
+                <p className="label mb-3">{oldLabel}</p>
                 <CaseStudyImage
                   slug={slug}
                   imageId={block.oldId}
-                  alt={imageAlt(projectTitle, block.oldId, block.oldLabel)}
+                  alt={imageAlt(projectTitle, block.oldId, oldLabel)}
                 />
               </div>
               <div>
-                <p className="label mb-3">{block.newLabel ?? "After"}</p>
+                <p className="label mb-3">{newLabel}</p>
                 <CaseStudyImage
                   slug={slug}
                   imageId={block.newId}
-                  alt={imageAlt(projectTitle, block.newId, block.newLabel)}
+                  alt={imageAlt(projectTitle, block.newId, newLabel)}
                 />
               </div>
             </figure>
