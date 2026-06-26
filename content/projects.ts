@@ -161,7 +161,7 @@ export const projects: Project[] = [
         kicker: "Contribution",
         title: "Research · Product · Design",
         body: [
-          "One accountable thread from field insight to shippable WhatsApp Business Account (WABA) experience — explore outputs in the module below."
+          "One accountable thread from field insight to a shippable WhatsApp Business Account (WABA) experience — the value it creates for agents, and the three roles behind it."
         ]
       },
       {

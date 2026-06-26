@@ -124,7 +124,7 @@ export const projectsZh: Project[] = [
         kicker: "贡献",
         kickerKey: "Contribution",
         title: "研究 · 产品 · 设计",
-        body: ["从一线洞察到可交付 WhatsApp Business Account（WABA）体验的一条责任链——在下方模块中探索产出。"]
+        body: ["从一线洞察到可交付 WhatsApp Business Account（WABA）体验的一条责任链——它为代理人创造的价值，以及背后的三个角色。"]
       },
       {
         kicker: "研究",

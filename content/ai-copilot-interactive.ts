@@ -25,42 +25,40 @@ export type ArchitectureLayer = {
 
 export type ContributionRole = {
   id: string;
+  number: string;
   title: string;
-  scope: string;
-  outputs: string[];
+  impact: string;
 };
+
+export const contributionValue = {
+  label: "Value to agents",
+  headline: "An always-on sales co-pilot, embedded where agents already sell.",
+  body:
+    "Agents run the full quote-to-close inside WhatsApp — the app their customers already trust — backed by a 24/7 AI assistant. No switching to Ignite, no leaving the chat.",
+  chips: ["24/7 assistant", "Native to WhatsApp", "Zero context-switch"]
+} as const;
 
 export const contributionRoles: ContributionRole[] = [
   {
     id: "research",
+    number: "01",
     title: "Research lead",
-    scope:
-      "Led discovery for embedding quote-to-issue in WhatsApp while based in mainland China — where the product is restricted — using remote validation, Meta documentation, competitor analysis, and a self-serve WABA sandbox.",
-    outputs: [
-      "Case study: market framing, validation",
-      "Alicloud sandbox for live Flow testing",
-      "Multi-client isolation hypothesis for B2B2C"
-    ]
+    impact:
+      "Built the case remotely — the product is blocked on the mainland — validating the thesis through Meta documentation and a live WABA sandbox."
   },
   {
     id: "product",
+    number: "02",
     title: "Product strategist",
-    scope:
-      "Owned the product narrative end-to-end: scope, phased roadmap, success signals, and trade-offs between Meta messaging rules and agent trust.",
-    outputs: [
-      "Agent-initiated journey & acceptance criteria",
-      "Four-phase MVP sequencing with engineering"
-    ]
+    impact:
+      "Owned the agent-initiated journey and four-phase MVP, balancing Meta’s messaging rules against agent trust."
   },
   {
     id: "design",
+    number: "03",
     title: "Experience designer",
-    scope:
-      "Translated strategy into conversational UX, WhatsApp Flows, templates, and prototypes the team could ship against.",
-    outputs: [
-      "Interaction model & WABA prototypes",
-      "Brand voice for rapid sales chat"
-    ]
+    impact:
+      "Turned strategy into WhatsApp Flows, conversational UX, and prototypes the team could ship against."
   }
 ];
 
