@@ -4,7 +4,7 @@ export const projectsZh: Project[] = [
   {
     slug: "ignite",
     index: "02",
-    title: "Ignite",
+    title: "Ignite — 保险销售平台",
     subtitle: "为东南亚重塑端到端保险平台",
     period: "2022 — 2024",
     role: "UX 研究员 · 产品设计师（端到端）",
