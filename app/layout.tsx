@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   title: "Liang Yue — Senior Product Designer",
   description:
     "Product designer with 10+ years across Southeast Asia, fintech and AI. Selected case studies, cross-cultural research, and measurable outcomes.",
-  metadataBase: new URL("https://liangyue.design"),
+  metadataBase: new URL("https://liangyue.vercel.app"),
   openGraph: {
     title: "Liang Yue — Senior Product Designer",
     description:
