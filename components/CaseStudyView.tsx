@@ -13,8 +13,14 @@ import { ContributionRoles } from "@/components/case-study/ContributionRoles";
 function DiagramSvg({ src, alt }: { src: string; alt: string }) {
   return (
     <figure className="mt-12">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} className="w-full" />
+      <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:overflow-visible md:px-0">
+        {/* On mobile the diagram keeps a legible min width and scrolls horizontally */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={alt} className="w-full min-w-[1040px] md:min-w-0" />
+      </div>
+      <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40 md:hidden">
+        Scroll to read · 滑动查看 →
+      </figcaption>
     </figure>
   );
 }
