@@ -111,7 +111,7 @@ html:lang(zh-Hans) {
   html:lang(zh-Hans) figcaption {
     font-weight: 400;
     line-height: var(--leading-body-lg);
-    word-break: keep-all;
+    word-break: normal;
     text-wrap: pretty;
   }
 
@@ -193,8 +193,8 @@ html:lang(zh-Hans) {
     @apply text-[clamp(1.5rem,3vw,2.5rem)] leading-[1.15];
   }
 
-  /* Large display copy must wrap between CJK chars — keep-all (set on
-     zh paragraphs) would otherwise overflow long headlines. */
+  /* Chinese wraps between any CJK characters (word-break: normal) — never
+     keep-all, which overflows long unspaced runs and breaks early at spaces. */
   html:lang(zh-Hans) .display-1,
   html:lang(zh-Hans) .display-2,
   html:lang(zh-Hans) .display-3,
@@ -311,7 +311,7 @@ html:lang(zh-Hans) {
     font-weight: 400;
     color: var(--ink-muted);
     line-height: 1.8;
-    word-break: keep-all;
+    word-break: normal;
     text-justify: inter-ideograph;
   }
 
@@ -341,7 +341,7 @@ html:lang(zh-Hans) {
   html:lang(zh-Hans) .text-ink\/80,
   html:lang(zh-Hans) .text-ink\/70 {
     color: var(--ink-muted);
-    word-break: keep-all;
+    word-break: normal;
   }
 
   html:lang(zh-Hans) [class*="leading-relaxed"] {
@@ -349,7 +349,7 @@ html:lang(zh-Hans) {
     line-height: 1.8;
     color: var(--ink-muted);
     text-justify: inter-ideograph;
-    word-break: keep-all;
+    word-break: normal;
   }
 
   html:lang(zh-Hans) .tracking-tighter2,
