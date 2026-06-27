@@ -55,17 +55,12 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="swiss-grid mt-6 pb-10">
-        <div className="col-span-12 md:col-start-2 md:col-span-11 flex items-center gap-x-6 gap-y-2 text-xs">
-          <div className="flex min-w-0 flex-1 flex-wrap gap-x-6 gap-y-2">
-            {project.tags.map((tag) => (
-              <span key={tag} className="font-mono uppercase tracking-[0.18em] text-ink/50">
-                {tag}
-              </span>
-            ))}
-          </div>
-          <span className="shrink-0 font-mono text-xs uppercase tracking-[0.18em] text-ink group-hover:translate-x-1 transition-transform duration-300">
-            {labels.readCase}
-          </span>
+        <div className="col-span-12 md:col-start-2 md:col-span-11 flex flex-wrap gap-x-6 gap-y-2 text-xs">
+          {project.tags.map((tag) => (
+            <span key={tag} className="font-mono uppercase tracking-[0.18em] text-ink/50">
+              {tag}
+            </span>
+          ))}
         </div>
       </div>
     </Link>
