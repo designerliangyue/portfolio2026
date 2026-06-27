@@ -109,7 +109,7 @@ export const zh: Dictionary = {
       "数据驱动设计与 A/B 测试",
       "线框与原型",
       "设计体系与组件库",
-      "Figma · Notion · Jira · Cursor"
+      "协作工具：Figma · Notion · Jira · Cursor"
     ]
   },
   resume: {
