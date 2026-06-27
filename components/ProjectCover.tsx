@@ -69,11 +69,11 @@ export function ProjectCover({ project, variant, className = "", hoverLabel }: P
       {showImage && variant === "card" && (
         <>
           <div
-            className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-ink/70 via-ink/15 to-transparent opacity-0 transition-opacity duration-300 ease-swiss group-hover:opacity-100"
+            className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-ink/70 via-ink/15 to-transparent opacity-0 transition-opacity duration-300 ease-swiss group-hover:opacity-100 [@media(hover:none)]:opacity-100"
             aria-hidden
           />
           {hoverLabel && (
-            <div className="pointer-events-none absolute bottom-4 right-4 md:bottom-5 md:right-5 z-[3] flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white opacity-0 translate-y-1 transition-all duration-300 ease-swiss group-hover:opacity-100 group-hover:translate-y-0">
+            <div className="pointer-events-none absolute bottom-4 right-4 md:bottom-5 md:right-5 z-[3] flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white opacity-0 translate-y-1 transition-all duration-300 ease-swiss group-hover:opacity-100 group-hover:translate-y-0 [@media(hover:none)]:opacity-100 [@media(hover:none)]:translate-y-0">
               {hoverLabel}
               <span className="inline-block transition-transform duration-300 ease-swiss group-hover:translate-x-1">
                 →
