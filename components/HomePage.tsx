@@ -73,7 +73,7 @@ export function HomePage() {
 
       <Marquee items={[...t.marquee]} />
 
-      <section id="work" className="container-grid pt-24 md:pt-32 pb-24">
+      <section id="work" className="container-grid pt-20 md:pt-32 pb-16 md:pb-24">
         <div className="swiss-grid mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-1">
             <p className="label">002</p>
@@ -108,7 +108,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="container-grid pt-24 md:pt-32 pb-12 md:pb-16">
+      <section className="container-grid pt-16 md:pt-32 pb-12 md:pb-16">
         <div className="swiss-grid">
           <div className="col-span-12 md:col-span-1">
             <p className="label">003</p>

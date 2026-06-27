@@ -14,7 +14,7 @@ export function Footer() {
   return (
     <footer className="mt-16 border-t border-ink/10">
       <div className="container-grid py-16">
-        <div className="swiss-grid items-end">
+        <div className="swiss-grid items-end gap-y-12">
           <div className="col-span-12 md:col-span-7">
             <p className="label mb-6">{t.footer.connect}</p>
             <h2
