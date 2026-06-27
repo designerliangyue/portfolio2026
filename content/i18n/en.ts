@@ -113,15 +113,14 @@ export const en = {
   },
   resume: {
     back: "← Back to site",
-    role: "Senior Product Designer",
-    summary:
-      "Results-focused senior product designer with 10 years across insurtech, banking, and AI-enhanced interfaces — grounded in cross-cultural research and enterprise-grade craft.",
     print: "Print / Save as PDF",
-    contact: "Contact",
-    location: "Remote-first · Open to opportunities",
+    summaryHeading: "Summary",
+    coreSkills: "Core skills",
     experience: "Experience",
     education: "Education",
-    skills: "Skills"
+    contact: "Contact",
+    availability: "Remote-first · Open to relocation",
+    focus: "Focus"
   },
   footer: {
     connect: "Let's connect",
@@ -218,14 +217,14 @@ export type Dictionary = {
   };
   resume: {
     back: string;
-    role: string;
-    summary: string;
     print: string;
-    contact: string;
-    location: string;
+    summaryHeading: string;
+    coreSkills: string;
     experience: string;
     education: string;
-    skills: string;
+    contact: string;
+    availability: string;
+    focus: string;
   };
   footer: {
     connect: string;

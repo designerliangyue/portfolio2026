@@ -1,0 +1,185 @@
+import type { Locale } from "@/lib/i18n/types";
+
+export type ResumeExperience = {
+  role: string;
+  company: string;
+  location: string;
+  period: string;
+  bullets: string[];
+};
+
+export type ResumeEducation = {
+  degree: string;
+  school: string;
+  location: string;
+  period: string;
+  focus: string;
+};
+
+export type ResumeContent = {
+  title: string;
+  phone: string;
+  summary: string;
+  coreSkills: { group: string; items: string }[];
+  experience: ResumeExperience[];
+  education: ResumeEducation[];
+};
+
+export const resumeEn: ResumeContent = {
+  title: "Senior Product Designer · Interaction & Narrative Experience Architect",
+  phone: "+86 199 8325 1086",
+  summary:
+    "Senior Product Designer with 10 years of experience specialized in architecting complex enterprise systems, AI-enhanced interfaces, and data-intensive platforms. Blending a rigorous foundational background in Landscape Architecture with digital product design to craft highly contextual, emotionally resonant, and seamless multi-dimensional user journeys. Expert in data-driven design, interaction scalability, and cross-cultural product localized optimization.",
+  coreSkills: [
+    {
+      group: "Product Strategy & Design",
+      items:
+        "Enterprise Information Architecture, Scalable Design Systems, AI Workflow Modeling, User Journey Mapping, Data Visualization."
+    },
+    {
+      group: "Research & Evaluation",
+      items:
+        "Cross-Cultural Product Localization, Cognitive Walkthroughs, User Behavior Analytics, Competitive Matrixing."
+    },
+    {
+      group: "Design Execution & Handoff",
+      items:
+        "Figma (Advanced Components, Auto-layout & Library Governance), Interactive Prototyping, Production-ready Specification Design, Cross-functional Developer Collaboration."
+    }
+  ],
+  experience: [
+    {
+      role: "Senior Product Designer",
+      company: "Axinan Ltd. (Igloo Insurance)",
+      location: "Chengdu, China",
+      period: "Apr 2021 — Present",
+      bullets: [
+        "Spearheaded the UX/UI architecture for next-generation AI-driven sales co-pilots and real-time operational analytics dashboards, scaling platforms across multiple Southeast Asian markets.",
+        "Delivered polished visual designs and high-fidelity interactive prototypes for complex web and mobile applications, ensuring a seamless interface experience and precise production handoff.",
+        "Orchestrated targeted user research pipelines and usability benchmarking in multi-cultural contexts, translating deep behavioral insights into intuitive, high-efficiency task flows.",
+        "Architected and governed a centralized design system from the ground up, engineering reusable component tokens that optimized cross-functional design-to-development shipping cycles."
+      ]
+    },
+    {
+      role: "UI/UX Designer",
+      company: "China Merchants Bank",
+      location: "Chengdu, China",
+      period: "Dec 2019 — Apr 2021",
+      bullets: [
+        "Designed intuitive, user-centric interfaces for banking products, translating complex internal requirements into clean, structured digital layouts.",
+        "Focused on product usability and accessibility (WCAG) standards, ensuring digital banking layouts remain clear and intuitive.",
+        "Mapped comprehensive user flows and developed interactive prototypes to translate ambiguous product requirements into concrete, actionable design solutions."
+      ]
+    },
+    {
+      role: "UI/UX Designer",
+      company: "JINGWEI Technology",
+      location: "Chengdu, China",
+      period: "Dec 2017 — Dec 2019",
+      bullets: [
+        "Delivered end-to-end product design consulting for traditional manufacturing industries, defining initial MVP scope, interactive prototyping, and brand identity systems.",
+        "Established user-centered methodologies for clients, transforming vague business hypotheses into tangible wireframes, high-fidelity layouts, and functional spec documentation."
+      ]
+    },
+    {
+      role: "Graphic and UI Designer",
+      company: "UnitedStack",
+      location: "Beijing, China",
+      period: "Sep 2016 — Oct 2017",
+      bullets: [
+        "Designed intuitive user interfaces and established consistent visual identity systems for both web and mobile product lines.",
+        "Designed diverse digital touchpoints and corporate branding assets, collaborating with marketing teams to maintain visual consistency."
+      ]
+    }
+  ],
+  education: [
+    {
+      degree: "Bachelor of Landscape Architecture",
+      school: "Beijing Forestry University",
+      location: "Beijing, China",
+      period: "Sep 2012 — Jun 2016",
+      focus:
+        "Spatial Dynamics, Complex Environmental Systems, Micro-scale Architecture, Narrative Spatial Journeys."
+    }
+  ]
+};
+
+export const resumeZh: ResumeContent = {
+  title: "高级产品设计师 · 交互与叙事体验架构师",
+  phone: "+86 199 8325 1086",
+  summary:
+    "拥有 10 年经验的高级产品设计师，专长于复杂企业系统、AI 增强界面与数据密集型平台的架构设计。将风景园林的扎实基础与数字产品设计相融合，打造高度情境化、富有情感共鸣且无缝衔接的多维用户旅程。精通数据驱动设计、交互可扩展性与跨文化产品本地化优化。",
+  coreSkills: [
+    {
+      group: "产品策略与设计",
+      items: "企业信息架构、可扩展设计体系、AI 工作流建模、用户旅程地图、数据可视化。"
+    },
+    {
+      group: "研究与评估",
+      items: "跨文化产品本地化、认知走查、用户行为分析、竞品矩阵分析。"
+    },
+    {
+      group: "设计执行与交付",
+      items:
+        "Figma（高级组件、自动布局与组件库治理）、交互原型、可交付生产规范设计、跨职能开发协作。"
+    }
+  ],
+  experience: [
+    {
+      role: "高级产品设计师",
+      company: "Axinan Ltd.（Igloo Insurance）",
+      location: "中国 · 成都",
+      period: "2021 年 4 月 — 至今",
+      bullets: [
+        "主导新一代 AI 驱动销售副驾驶与实时运营分析仪表盘的 UX/UI 架构，将平台扩展至多个东南亚市场。",
+        "为复杂的 Web 与移动应用交付精致的视觉设计与高保真交互原型，确保无缝的界面体验与精准的生产交付。",
+        "在多元文化情境中组织有针对性的用户研究与可用性基准测试，将深层行为洞察转化为直观、高效的任务流程。",
+        "从零搭建并治理集中式设计体系，构建可复用的组件 token，优化跨职能的设计到开发交付周期。"
+      ]
+    },
+    {
+      role: "UI/UX 设计师",
+      company: "招商银行",
+      location: "中国 · 成都",
+      period: "2019 年 12 月 — 2021 年 4 月",
+      bullets: [
+        "为银行产品设计直观、以用户为中心的界面，将复杂的内部需求转化为清晰、结构化的数字布局。",
+        "专注于产品可用性与无障碍（WCAG）标准，确保数字银行布局清晰直观。",
+        "梳理完整的用户流程并开发交互原型，将模糊的产品需求转化为具体、可执行的设计方案。"
+      ]
+    },
+    {
+      role: "UI/UX 设计师",
+      company: "JINGWEI Technology",
+      location: "中国 · 成都",
+      period: "2017 年 12 月 — 2019 年 12 月",
+      bullets: [
+        "为传统制造行业提供端到端产品设计咨询，定义初期 MVP 范围、交互原型与品牌识别体系。",
+        "为客户建立以用户为中心的方法论，将模糊的商业假设转化为可触达的线框、高保真布局与功能规范文档。"
+      ]
+    },
+    {
+      role: "平面与 UI 设计师",
+      company: "UnitedStack",
+      location: "中国 · 北京",
+      period: "2016 年 9 月 — 2017 年 10 月",
+      bullets: [
+        "为 Web 与移动产品线设计直观的用户界面，并建立一致的视觉识别体系。",
+        "设计多样的数字触点与企业品牌资产，与市场团队协作以保持视觉一致性。"
+      ]
+    }
+  ],
+  education: [
+    {
+      degree: "风景园林学士",
+      school: "北京林业大学",
+      location: "中国 · 北京",
+      period: "2012 年 9 月 — 2016 年 6 月",
+      focus: "空间动力学、复杂环境系统、微尺度建筑、叙事性空间旅程。"
+    }
+  ]
+};
+
+export function getResume(locale: Locale): ResumeContent {
+  return locale === "zh" ? resumeZh : resumeEn;
+}

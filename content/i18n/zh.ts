@@ -114,15 +114,14 @@ export const zh: Dictionary = {
   },
   resume: {
     back: "← 返回网站",
-    role: "高级产品设计师",
-    summary:
-      "以结果为导向的高级产品设计师，拥有 10 年横跨保险科技、银行与 AI 增强界面的经验——以跨文化研究与企业级工艺为根基。",
     print: "打印 / 存为 PDF",
-    contact: "联系方式",
-    location: "远程优先 · 开放新机会",
+    summaryHeading: "概述",
+    coreSkills: "核心技能",
     experience: "工作经历",
     education: "教育",
-    skills: "技能"
+    contact: "联系方式",
+    availability: "远程优先 · 接受外派",
+    focus: "方向"
   },
   footer: {
     connect: "联系我",
