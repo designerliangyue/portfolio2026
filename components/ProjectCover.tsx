@@ -15,9 +15,10 @@ type ProjectCoverProps = {
   project: Project;
   variant: "card" | "hero";
   className?: string;
+  hoverLabel?: string;
 };
 
-export function ProjectCover({ project, variant, className = "" }: ProjectCoverProps) {
+export function ProjectCover({ project, variant, className = "", hoverLabel }: ProjectCoverProps) {
   const candidates = coverImageCandidates(project.slug);
   const [candidateIndex, setCandidateIndex] = useState(0);
   const [useFallback, setUseFallback] = useState(false);
@@ -49,7 +50,11 @@ export function ProjectCover({ project, variant, className = "" }: ProjectCoverP
           alt={`${project.title} — ${project.cover.label}`}
           fill
           sizes={sizes}
-          className="object-cover"
+          className={`object-cover ${
+            variant === "card"
+              ? "transition-transform duration-[650ms] ease-swiss will-change-transform group-hover:scale-[1.06]"
+              : ""
+          }`}
           onError={tryNext}
         />
       )}
@@ -59,6 +64,23 @@ export function ProjectCover({ project, variant, className = "" }: ProjectCoverP
           className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-t from-ink/35 via-ink/5 to-transparent"
           aria-hidden
         />
+      )}
+
+      {showImage && variant === "card" && (
+        <>
+          <div
+            className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-ink/70 via-ink/15 to-transparent opacity-0 transition-opacity duration-300 ease-swiss group-hover:opacity-100"
+            aria-hidden
+          />
+          {hoverLabel && (
+            <div className="pointer-events-none absolute bottom-4 right-4 md:bottom-5 md:right-5 z-[3] flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white opacity-0 translate-y-1 transition-all duration-300 ease-swiss group-hover:opacity-100 group-hover:translate-y-0">
+              {hoverLabel}
+              <span className="inline-block transition-transform duration-300 ease-swiss group-hover:translate-x-1">
+                →
+              </span>
+            </div>
+          )}
+        </>
       )}
 
       {useFallback && (

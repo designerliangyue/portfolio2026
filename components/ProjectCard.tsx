@@ -49,7 +49,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <ProjectCover
             project={project}
             variant="card"
-            className="transition-transform duration-700 ease-swiss group-hover:scale-[1.01]"
+            hoverLabel={locale === "zh" ? "查看案例" : "View case"}
           />
         </div>
       </div>
