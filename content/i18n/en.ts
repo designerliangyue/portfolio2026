@@ -108,7 +108,7 @@ export const en = {
       "Data-driven design & A/B testing",
       "Wireframing & prototyping",
       "Design systems & component libraries",
-      "Figma · Notion · Jira · Cursor"
+      "Collaboration tools: Figma · Notion · Jira · Cursor"
     ]
   },
   resume: {
