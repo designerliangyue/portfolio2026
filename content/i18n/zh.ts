@@ -1,7 +1,7 @@
 import type { Dictionary } from "./en";
 
 export const zh: Dictionary = {
-  name: "岳靓",
+  name: "岳靓 · 产品设计作品集",
   nav: {
     work: "作品",
     about: "关于",
