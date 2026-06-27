@@ -34,21 +34,23 @@ export function ResumePage() {
           {cv.title}
         </p>
 
-        <dl className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
+        <dl className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
           <div className="min-w-0">
             <dt className="label mb-1">{r.contact}</dt>
-            <dd className="text-sm break-words">
-              <a className="link-underline" href={`mailto:${EMAIL}`}>
+            <dd className="text-sm">
+              <a
+                className="underline decoration-ink/25 underline-offset-4 break-all transition-colors hover:decoration-ink"
+                href={`mailto:${EMAIL}`}
+              >
                 {EMAIL}
               </a>
             </dd>
-            <dd className="text-sm mt-1">{cv.phone}</dd>
           </div>
           <div className="min-w-0">
             <dt className="label mb-1">LinkedIn</dt>
-            <dd className="text-sm break-words">
+            <dd className="text-sm">
               <a
-                className="link-underline"
+                className="underline decoration-ink/25 underline-offset-4 break-all transition-colors hover:decoration-ink"
                 href={`https://www.${LINKEDIN}`}
                 target="_blank"
                 rel="noreferrer"
@@ -57,11 +59,11 @@ export function ResumePage() {
               </a>
             </dd>
           </div>
-          <div>
+          <div className="min-w-0">
             <dt className="label mb-1">{t.about.languages}</dt>
             <dd className="text-sm">{t.about.languagesValue}</dd>
           </div>
-          <div>
+          <div className="min-w-0">
             <dt className="label mb-1">{t.about.openTo}</dt>
             <dd className="text-sm">{r.availability}</dd>
           </div>
@@ -71,7 +73,7 @@ export function ResumePage() {
       {/* Summary */}
       <section className="mt-12 md:mt-16">
         <h2 className="label mb-6">{r.summaryHeading}</h2>
-        <p className="text-base md:text-lg text-ink/80 leading-relaxed max-w-4xl">{cv.summary}</p>
+        <p className="text-base md:text-lg text-ink/80 leading-relaxed">{cv.summary}</p>
       </section>
 
       {/* Core skills */}

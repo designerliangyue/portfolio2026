@@ -66,32 +66,27 @@ export const zh: Dictionary = {
     resume: "获取我的简历",
     resumeLink: "打开在线简历 →",
     resumeHref: "/resume",
-    timeline: "职业经历 · 五个章节",
+    timeline: "职业经历 · 四个章节",
     timelineItems: [
       {
-        period: "2025 — 至今",
-        role: "首席产品设计师 · AI 副驾驶",
-        note: "为保险代理人塑造新的交互范式——对话外壳、确定性 UI、人在回路。"
+        period: "2021 — 至今",
+        role: "高级产品设计师 · Igloo Insurance",
+        note: "AI 销售副驾驶、运营分析与覆盖东南亚的区域设计体系。"
       },
       {
-        period: "2022 — 2024",
-        role: "产品设计师 · Ignite（东南亚保险科技）",
-        note: "四个东南亚市场的端到端改版——利益相关方与用户访谈、区域设计体系、持续迭代。"
+        period: "2019 — 2021",
+        role: "UI/UX 设计师 · 招商银行",
+        note: "内部私有云平台——企业信息架构与符合 WCAG 的深色模式。"
       },
       {
-        period: "2022",
-        role: "产品设计师 · 员工福利平台",
-        note: "三方 SaaS——保险公司、HR、员工——在一个 cohesive 产品中取得平衡。"
+        period: "2017 — 2019",
+        role: "UI/UX 设计师 · JINGWEI Technology",
+        note: "面向制造业的端到端产品咨询——从 MVP 范围到生产规范。"
       },
       {
-        period: "2020",
-        role: "首席 UI/UX 设计师 · 招行私有云",
-        note: "招商银行内部云平台——整体设计体系、符合 WCAG 的深色模式。"
-      },
-      {
-        period: "2020 之前",
-        role: "早期作品 · 移动、网页、视觉",
-        note: "物联网/教育娱乐类 App、水彩与平面设计——一切之下的工艺根基。"
+        period: "2016 — 2017",
+        role: "平面与 UI 设计师 · UnitedStack",
+        note: "横跨 Web 与移动产品线的 UI 与视觉识别体系。"
       }
     ],
     education: "教育",

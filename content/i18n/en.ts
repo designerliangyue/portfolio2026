@@ -65,32 +65,27 @@ export const en = {
     resume: "Get my resume",
     resumeLink: "Open online resume →",
     resumeHref: "/resume",
-    timeline: "Career, in five chapters",
+    timeline: "Career, in four chapters",
     timelineItems: [
       {
-        period: "2025 — present",
-        role: "Lead Product Designer · AI Co-Pilot",
-        note: "Shaping a new interaction primitive for insurance agents — conversational shell, deterministic UI, human-in-the-loop."
+        period: "2021 — Present",
+        role: "Senior Product Designer · Igloo Insurance",
+        note: "AI sales co-pilots, operational analytics, and a regional design system across Southeast Asia."
       },
       {
-        period: "2022 — 2024",
-        role: "Product Designer · Ignite (SEA Insurtech)",
-        note: "End-to-end revamp across four Southeast Asian markets — stakeholder and user interviews, regional design system, continuous iteration."
+        period: "2019 — 2021",
+        role: "UI/UX Designer · China Merchants Bank",
+        note: "Internal private-cloud platform — enterprise IA and a WCAG-grade dark mode."
       },
       {
-        period: "2022",
-        role: "Product Designer · Employee Benefits Platform",
-        note: "Three-stakeholder SaaS — insurer, HR, employee — balanced in one cohesive product."
+        period: "2017 — 2019",
+        role: "UI/UX Designer · JINGWEI Technology",
+        note: "End-to-end product consulting for manufacturing — MVP scope through production specs."
       },
       {
-        period: "2020",
-        role: "Lead UI/UX Designer · CMB Private Cloud",
-        note: "Internal cloud platform for China Merchants Bank — holistic design system, WCAG-grade dark mode."
-      },
-      {
-        period: "Before 2020",
-        role: "Earlier work · Mobile, Web, Visual",
-        note: "Mobile apps for IoT/edutainment, watercolor and graphic design — the craft foundation underneath everything else."
+        period: "2016 — 2017",
+        role: "Graphic & UI Designer · UnitedStack",
+        note: "UI and visual identity systems across web and mobile product lines."
       }
     ],
     education: "Education",
