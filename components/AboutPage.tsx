@@ -82,7 +82,7 @@ export function AboutPage() {
                     <dd>
                       <a
                         className="link-underline"
-                        href="https://docs.google.com/document/d/1sj8sa3i_SgnfBTnX7QtZGsDy1ZXpFMI2ZgIDZ7HoBLQ/edit?usp=sharing"
+                        href={about.resumeHref}
                         target="_blank"
                         rel="noreferrer"
                       >

@@ -63,7 +63,9 @@ export const en = {
     focusAreas: "Focus areas",
     focusAreasValue: "AI experience · Fintech · Design systems",
     resume: "Get my resume",
-    resumeLink: "Open Google Doc →",
+    resumeLink: "Open online resume →",
+    resumeHref:
+      "https://docs.google.com/document/d/1sj8sa3i_SgnfBTnX7QtZGsDy1ZXpFMI2ZgIDZ7HoBLQ/edit?usp=sharing",
     timeline: "Career, in five chapters",
     timelineItems: [
       {
@@ -195,6 +197,7 @@ export type Dictionary = {
     focusAreasValue: string;
     resume: string;
     resumeLink: string;
+    resumeHref: string;
     timeline: string;
     timelineItems: readonly { period: string; role: string; note: string }[];
     education: string;

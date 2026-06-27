@@ -63,8 +63,10 @@ export const zh: Dictionary = {
     openToValue: "全远程 · 混合办公",
     focusAreas: "专注领域",
     focusAreasValue: "AI 体验 · 金融科技 · 设计体系",
-    resume: "简历",
-    resumeLink: "打开 Google 文档 →",
+    resume: "获取我的简历",
+    resumeLink: "打开在线简历 →",
+    resumeHref:
+      "https://docs.google.com/document/d/1sj8sa3i_SgnfBTnX7QtZGsDy1ZXpFMI2ZgIDZ7HoBLQ/edit?usp=sharing",
     timeline: "职业经历 · 五个章节",
     timelineItems: [
       {
