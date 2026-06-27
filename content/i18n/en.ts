@@ -107,8 +107,8 @@ export const en = {
     ]
   },
   resume: {
-    back: "← Back to site",
-    print: "Print / Save as PDF",
+    back: "← Back",
+    print: "Save as PDF",
     summaryHeading: "Summary",
     coreSkills: "Core skills",
     experience: "Experience",

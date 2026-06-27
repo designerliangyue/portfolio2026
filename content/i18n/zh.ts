@@ -108,8 +108,8 @@ export const zh: Dictionary = {
     ]
   },
   resume: {
-    back: "← 返回网站",
-    print: "打印 / 存为 PDF",
+    back: "← 返回",
+    print: "存为 PDF",
     summaryHeading: "概述",
     coreSkills: "核心技能",
     experience: "工作经历",
