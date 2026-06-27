@@ -359,6 +359,21 @@ html:lang(zh-Hans) {
   }
 }
 
+@media print {
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #ffffff;
+  }
+  .noise::before {
+    display: none !important;
+  }
+}
+
 .noise::before {
   content: "";
   position: fixed;

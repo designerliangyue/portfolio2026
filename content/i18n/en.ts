@@ -64,8 +64,7 @@ export const en = {
     focusAreasValue: "AI experience · Fintech · Design systems",
     resume: "Get my resume",
     resumeLink: "Open online resume →",
-    resumeHref:
-      "https://docs.google.com/document/d/1sj8sa3i_SgnfBTnX7QtZGsDy1ZXpFMI2ZgIDZ7HoBLQ/edit?usp=sharing",
+    resumeHref: "/resume",
     timeline: "Career, in five chapters",
     timelineItems: [
       {
@@ -111,6 +110,18 @@ export const en = {
       "Design systems & component libraries",
       "Figma · Notion · Jira · Cursor"
     ]
+  },
+  resume: {
+    back: "← Back to site",
+    role: "Senior Product Designer",
+    summary:
+      "Results-focused senior product designer with 10 years across insurtech, banking, and AI-enhanced interfaces — grounded in cross-cultural research and enterprise-grade craft.",
+    print: "Print / Save as PDF",
+    contact: "Contact",
+    location: "Remote-first · Open to opportunities",
+    experience: "Experience",
+    education: "Education",
+    skills: "Skills"
   },
   footer: {
     connect: "Let's connect",
@@ -204,6 +215,17 @@ export type Dictionary = {
     educationItems: readonly { degree: string; school: string; detail: string }[];
     skills: string;
     skillItems: readonly string[];
+  };
+  resume: {
+    back: string;
+    role: string;
+    summary: string;
+    print: string;
+    contact: string;
+    location: string;
+    experience: string;
+    education: string;
+    skills: string;
   };
   footer: {
     connect: string;

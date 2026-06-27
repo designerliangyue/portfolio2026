@@ -65,8 +65,7 @@ export const zh: Dictionary = {
     focusAreasValue: "AI 体验 · 金融科技 · 设计体系",
     resume: "获取我的简历",
     resumeLink: "打开在线简历 →",
-    resumeHref:
-      "https://docs.google.com/document/d/1sj8sa3i_SgnfBTnX7QtZGsDy1ZXpFMI2ZgIDZ7HoBLQ/edit?usp=sharing",
+    resumeHref: "/resume",
     timeline: "职业经历 · 五个章节",
     timelineItems: [
       {
@@ -112,6 +111,18 @@ export const zh: Dictionary = {
       "设计体系与组件库",
       "Figma · Notion · Jira · Cursor"
     ]
+  },
+  resume: {
+    back: "← 返回网站",
+    role: "高级产品设计师",
+    summary:
+      "以结果为导向的高级产品设计师，拥有 10 年横跨保险科技、银行与 AI 增强界面的经验——以跨文化研究与企业级工艺为根基。",
+    print: "打印 / 存为 PDF",
+    contact: "联系方式",
+    location: "远程优先 · 开放新机会",
+    experience: "工作经历",
+    education: "教育",
+    skills: "技能"
   },
   footer: {
     connect: "联系我",

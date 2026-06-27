@@ -80,14 +80,9 @@ export function AboutPage() {
                   <div>
                     <dt className="label mb-1">{about.resume}</dt>
                     <dd>
-                      <a
-                        className="link-underline"
-                        href={about.resumeHref}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
+                      <Link className="link-underline" href={about.resumeHref}>
                         {about.resumeLink}
-                      </a>
+                      </Link>
                     </dd>
                   </div>
                 </dl>
