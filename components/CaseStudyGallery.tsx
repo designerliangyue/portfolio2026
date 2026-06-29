@@ -170,12 +170,9 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
 
         if (block.type === "label") {
           return (
-            <p
-              key={`label-${index}`}
-              className="-mb-4 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50"
-            >
+            <h3 key={`label-${index}`} className="display-3">
               {block.text}
-            </p>
+            </h3>
           );
         }
 
