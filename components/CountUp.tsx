@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, useReducedMotion } from "framer-motion";
 
+const NUM_RE = /^(.*?)(\d[\d,]*(?:\.\d+)?)(.*)$/s;
+
 /** Counts the numeric part of `value` up from 0 when scrolled into view,
  *  preserving any prefix/suffix (e.g. "73.5%", "300+", "60 days").
  *  Values without a number (e.g. "+__%", "—%") render unchanged. */
@@ -11,19 +13,20 @@ export function CountUp({ value, className }: { value: string; className?: strin
   const inView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
   const reduceMotion = useReducedMotion();
 
-  const match = value.match(/^(.*?)(\d[\d,]*(?:\.\d+)?)(.*)$/s);
-  const [display, setDisplay] = useState(() =>
-    match && !reduceMotion ? `${match[1]}0${match[3]}` : value
-  );
+  const [display, setDisplay] = useState(() => {
+    const m = value.match(NUM_RE);
+    return m && !reduceMotion ? `${m[1]}0${m[3]}` : value;
+  });
 
   useEffect(() => {
-    if (!match || reduceMotion) {
+    const m = value.match(NUM_RE);
+    if (!m || reduceMotion) {
       setDisplay(value);
       return;
     }
     if (!inView) return;
 
-    const [, before, numToken, after] = match;
+    const [, before, numToken, after] = m;
     const target = parseFloat(numToken.replace(/,/g, ""));
     const decimals = numToken.includes(".") ? numToken.split(".")[1].length : 0;
     const grouped = numToken.includes(",");
@@ -43,7 +46,7 @@ export function CountUp({ value, className }: { value: string; className?: strin
 
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [inView, value, reduceMotion, match]);
+  }, [inView, value, reduceMotion]);
 
   return (
     <span ref={ref} className={className}>
