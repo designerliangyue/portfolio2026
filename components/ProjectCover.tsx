@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Project } from "@/content/projects";
 import { COVER_ASPECT_CLASS, coverImageCandidates } from "@/content/covers";
 
@@ -22,6 +22,12 @@ export function ProjectCover({ project, variant, className = "", hoverLabel }: P
   const candidates = coverImageCandidates(project.slug);
   const [candidateIndex, setCandidateIndex] = useState(0);
   const [useFallback, setUseFallback] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (imgRef.current?.complete && imgRef.current.naturalWidth > 0) setLoaded(true);
+  }, [candidateIndex]);
 
   const sizes =
     variant === "card"
@@ -29,6 +35,7 @@ export function ProjectCover({ project, variant, className = "", hoverLabel }: P
       : "(max-width: 768px) 100vw, 90vw";
 
   const tryNext = () => {
+    setLoaded(false);
     if (candidateIndex < candidates.length - 1) {
       setCandidateIndex((i) => i + 1);
       return;
@@ -46,16 +53,18 @@ export function ProjectCover({ project, variant, className = "", hoverLabel }: P
       {showImage && (
         <Image
           key={src}
+          ref={imgRef}
           src={src}
           alt={`${project.title} — ${project.cover.label}`}
           fill
           sizes={sizes}
-          className={`object-cover ${
+          className={`object-cover ${loaded ? "opacity-100" : "opacity-0"} ${
             variant === "card"
-              ? "transition-transform duration-[650ms] ease-swiss will-change-transform group-hover:scale-[1.06]"
-              : ""
+              ? "transition-[opacity,transform] duration-700 ease-swiss will-change-transform group-hover:scale-[1.06]"
+              : "transition-opacity duration-700 ease-swiss"
           }`}
           onError={tryNext}
+          onLoad={() => setLoaded(true)}
         />
       )}
 
