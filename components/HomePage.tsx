@@ -5,6 +5,7 @@ import { useLocale } from "@/components/LocaleProvider";
 import { getProjects } from "@/content/projects";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Marquee } from "@/components/Marquee";
+import { Reveal } from "@/components/Reveal";
 
 export function HomePage() {
   const { locale, t } = useLocale();
@@ -74,7 +75,7 @@ export function HomePage() {
       <Marquee items={[...t.marquee]} />
 
       <section id="work" className="container-grid pt-20 md:pt-32 pb-16 md:pb-24">
-        <div className="swiss-grid mb-16 md:mb-24">
+        <Reveal className="swiss-grid mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-1">
             <p className="label">002</p>
           </div>
@@ -98,18 +99,20 @@ export function HomePage() {
             </h2>
             <p className="lede-fill">{t.home.workLede}</p>
           </div>
-        </div>
+        </Reveal>
 
         <div>
           {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
+            <Reveal key={project.slug}>
+              <ProjectCard project={project} />
+            </Reveal>
           ))}
           <div className="divider-top" />
         </div>
       </section>
 
       <section className="container-grid pt-16 md:pt-32 pb-12 md:pb-16">
-        <div className="swiss-grid">
+        <Reveal className="swiss-grid">
           <div className="col-span-12 md:col-span-1">
             <p className="label">003</p>
           </div>
@@ -143,7 +146,7 @@ export function HomePage() {
               {t.home.aboutLink}
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

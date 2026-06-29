@@ -9,6 +9,8 @@ import { CaseStudyGallery } from "@/components/CaseStudyGallery";
 import { galleryForSection } from "@/content/case-study-galleries";
 import type { ProjectSlug } from "@/content/images";
 import { ContributionRoles } from "@/components/case-study/ContributionRoles";
+import { Reveal } from "@/components/Reveal";
+import { CountUp } from "@/components/CountUp";
 
 function DiagramSvg({ src, alt }: { src: string; alt: string }) {
   const { locale } = useLocale();
@@ -189,10 +191,8 @@ export function CaseStudyView({ slug }: { slug: string }) {
         );
 
         return (
-          <section
-            key={`${galleryKey}-${i}`}
-            className="container-grid py-16 md:py-24 border-t border-ink/15"
-          >
+          <Reveal key={`${galleryKey}-${i}`}>
+          <section className="container-grid py-16 md:py-24 border-t border-ink/15">
             <div className="swiss-grid">
               <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
                 {String(i + sectionStartIndex).padStart(2, "0")}
@@ -205,7 +205,9 @@ export function CaseStudyView({ slug }: { slug: string }) {
                   <dl className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t border-ink/15 pt-8">
                     {section.stats.map((s) => (
                       <div key={s.label}>
-                        <dt className="display-3 text-ink leading-none">{s.value}</dt>
+                        <dt className="display-3 text-ink leading-none">
+                          <CountUp value={s.value} />
+                        </dt>
                         <dd className="mt-3 text-sm text-ink/60 leading-snug">{s.label}</dd>
                       </div>
                     ))}
@@ -246,6 +248,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
               </div>
             </div>
           </section>
+          </Reveal>
         );
       })}
 

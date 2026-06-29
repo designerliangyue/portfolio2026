@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLocale } from "@/components/LocaleProvider";
 import { getResume } from "@/content/resume";
+import { Reveal } from "@/components/Reveal";
 
 const EMAIL = "designer.liangyue@gmail.com";
 const LINKEDIN = "linkedin.com/in/liang-y";
@@ -71,12 +72,15 @@ export function ResumePage() {
       </header>
 
       {/* Summary */}
-      <section className="mt-12 md:mt-16">
-        <h2 className="label mb-6">{r.summaryHeading}</h2>
-        <p className="text-base md:text-lg text-ink/80 leading-relaxed">{cv.summary}</p>
-      </section>
+      <Reveal>
+        <section className="mt-12 md:mt-16">
+          <h2 className="label mb-6">{r.summaryHeading}</h2>
+          <p className="text-base md:text-lg text-ink/80 leading-relaxed">{cv.summary}</p>
+        </section>
+      </Reveal>
 
       {/* Core skills */}
+      <Reveal>
       <section className="mt-12 md:mt-16">
         <h2 className="label mb-8">{r.coreSkills}</h2>
         <dl className="space-y-6">
@@ -90,8 +94,10 @@ export function ResumePage() {
           ))}
         </dl>
       </section>
+      </Reveal>
 
       {/* Experience */}
+      <Reveal>
       <section className="mt-12 md:mt-16">
         <h2 className="label mb-8">{r.experience}</h2>
         <ol className="space-y-10">
@@ -119,8 +125,10 @@ export function ResumePage() {
           ))}
         </ol>
       </section>
+      </Reveal>
 
       {/* Education */}
+      <Reveal>
       <section className="mt-12 md:mt-16 pb-8">
         <h2 className="label mb-8">{r.education}</h2>
         {cv.education.map((e) => (
@@ -144,6 +152,7 @@ export function ResumePage() {
           </div>
         ))}
       </section>
+      </Reveal>
     </article>
   );
 }

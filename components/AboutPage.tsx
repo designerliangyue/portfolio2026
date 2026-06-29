@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useLocale } from "@/components/LocaleProvider";
+import { Reveal } from "@/components/Reveal";
 
 export function AboutPage() {
   const { locale, t } = useLocale();
@@ -45,6 +46,7 @@ export function AboutPage() {
         </div>
       </section>
 
+      <Reveal>
       <section className="mt-20 md:mt-28">
         <div className="swiss-grid">
           <div className="col-span-12 md:col-span-1 font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
@@ -91,7 +93,9 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="mt-20 md:mt-28">
         <div className="swiss-grid">
           <div className="col-span-12 md:col-span-1 font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
@@ -117,7 +121,9 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="mt-20 md:mt-28">
         <div className="swiss-grid">
           <div className="col-span-12 md:col-span-1 font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
@@ -139,7 +145,9 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      </Reveal>
 
+      <Reveal>
       <section className="mt-20 md:mt-28 pb-8">
         <div className="swiss-grid">
           <div className="col-span-12 md:col-span-1 font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
@@ -160,6 +168,7 @@ export function AboutPage() {
           </div>
         </div>
       </section>
+      </Reveal>
     </article>
   );
 }
