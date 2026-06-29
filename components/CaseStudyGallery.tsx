@@ -168,6 +168,17 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
           );
         }
 
+        if (block.type === "label") {
+          return (
+            <p
+              key={`label-${index}`}
+              className="-mb-4 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50"
+            >
+              {block.text}
+            </p>
+          );
+        }
+
         if (block.type === "video") {
           return (
             <figure key={`video-${index}`}>

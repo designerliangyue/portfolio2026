@@ -35,7 +35,8 @@ export type GalleryBlock =
       caption?: string;
       badge?: string;
       poster?: string;
-    };
+    }
+  | { type: "label"; text: string };
 
 /** Gallery blocks keyed by section `kicker` (must match projects.ts). */
 export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]>> = {
@@ -108,26 +109,24 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
   "ai-copilot": {
     Research: [],
     Product: [
+      { type: "label", text: "Live demos · test phase" },
       {
         type: "video",
         src: "/images/ai-copilot/performance-inquiry.mp4",
         poster: "/images/ai-copilot/performance-inquiry-poster.jpg",
-        caption: "In-chat performance inquiry",
-        badge: "Live demo · test phase"
+        caption: "In-chat performance inquiry"
       },
       {
         type: "video",
         src: "/images/ai-copilot/marketing-assets.mp4",
         poster: "/images/ai-copilot/marketing-assets-poster.jpg",
-        caption: "Marketing assets generation",
-        badge: "Live demo · test phase"
+        caption: "Marketing assets generation"
       },
       {
         type: "video",
         src: "/images/ai-copilot/conversational-quoting.mp4",
         poster: "/images/ai-copilot/conversational-quoting-poster.jpg",
-        caption: "Conversational quoting flow",
-        badge: "Live demo · test phase"
+        caption: "Conversational quoting flow"
       }
     ]
   },
