@@ -74,7 +74,7 @@ html:lang(zh-Hans) {
   html:lang(en) li,
   html:lang(en) dd,
   html:lang(en) figcaption {
-    text-wrap: pretty;
+    text-wrap: wrap;
   }
 
   /* Display paragraphs (hero / subtitle / outcome) fill the width and
@@ -82,7 +82,7 @@ html:lang(zh-Hans) {
   html:lang(en) p.display-1,
   html:lang(en) p.display-2,
   html:lang(en) p.display-3 {
-    text-wrap: pretty;
+    text-wrap: wrap;
   }
 
   /* Long-form body copy: comfortable measure + leading */
@@ -112,7 +112,7 @@ html:lang(zh-Hans) {
     font-weight: 400;
     line-height: var(--leading-body-lg);
     word-break: normal;
-    text-wrap: pretty;
+    text-wrap: wrap;
   }
 
   html:lang(zh-Hans) p {
