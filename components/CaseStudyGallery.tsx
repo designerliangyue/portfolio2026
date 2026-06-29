@@ -178,8 +178,14 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
                   poster={block.poster}
                   controls
                   playsInline
-                  preload="metadata"
+                  preload="none"
                 />
+                {!block.poster ? (
+                  <span
+                    className="pointer-events-none absolute inset-0 -z-10 bg-ink/[0.04]"
+                    aria-hidden
+                  />
+                ) : null}
                 {block.badge ? (
                   <span className="pointer-events-none absolute left-3 top-3 rounded-full bg-ink/80 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.16em] text-paper backdrop-blur-sm">
                     {block.badge}
