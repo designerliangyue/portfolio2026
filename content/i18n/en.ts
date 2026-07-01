@@ -18,7 +18,7 @@ export const en = {
     based: "Based",
     basedValue: "Remote-first",
     focus: "Focus",
-    focusValue: "Product · AI · Fintech",
+    focusValue: "Systems · AI · Fintech",
     languages: "Languages",
     languagesValue: "EN · ZH",
     status: "Status",
