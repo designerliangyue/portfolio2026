@@ -20,7 +20,7 @@ export const zh: Dictionary = {
     based: "所在地",
     basedValue: "远程优先",
     focus: "方向",
-    focusValue: "产品 · AI · 金融科技",
+    focusValue: "系统架构 · AI · 金融科技",
     languages: "语言",
     languagesValue: "中 · 英",
     status: "状态",
