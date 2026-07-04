@@ -70,7 +70,7 @@ export const zh: Dictionary = {
     timelineItems: [
       {
         period: "2021 — 至今",
-        role: "高级产品设计师 · Igloo Insurance",
+        role: "高级产品设计师 · 雅信安",
         note: "AI 销售副驾驶、运营分析与覆盖东南亚的区域设计体系。"
       },
       {
@@ -80,7 +80,7 @@ export const zh: Dictionary = {
       },
       {
         period: "2017 — 2019",
-        role: "UI/UX 设计师 · JINGWEI Technology",
+        role: "UI/UX 设计师 · 精为科技",
         note: "面向制造业的端到端产品咨询——从 MVP 范围到生产规范。"
       },
       {
