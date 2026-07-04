@@ -124,7 +124,7 @@ export const resumeZh: ResumeContent = {
   experience: [
     {
       role: "高级产品设计师",
-      company: "Axinan Ltd.（Igloo Insurance）",
+      company: "成都雅信安科技服务有限公司",
       location: "中国 · 成都",
       period: "2021 年 4 月 — 至今",
       bullets: [
@@ -136,7 +136,7 @@ export const resumeZh: ResumeContent = {
     },
     {
       role: "UI/UX 设计师",
-      company: "招商银行",
+      company: "招银网络科技有限公司",
       location: "中国 · 成都",
       period: "2019 年 12 月 — 2021 年 4 月",
       bullets: [
@@ -147,7 +147,7 @@ export const resumeZh: ResumeContent = {
     },
     {
       role: "UI/UX 设计师",
-      company: "JINGWEI Technology",
+      company: "成都精为科技有限公司",
       location: "中国 · 成都",
       period: "2017 年 12 月 — 2019 年 12 月",
       bullets: [
@@ -157,7 +157,7 @@ export const resumeZh: ResumeContent = {
     },
     {
       role: "平面与 UI 设计师",
-      company: "UnitedStack",
+      company: "UNITEDSTACK(北京) 科技有限公司",
       location: "中国 · 北京",
       period: "2016 年 9 月 — 2017 年 10 月",
       bullets: [
