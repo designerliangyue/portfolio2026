@@ -36,7 +36,7 @@ export type GalleryBlock =
       badge?: string;
       poster?: string;
     }
-  | { type: "label"; text: string };
+  | { type: "label"; text: string; textZh?: string };
 
 /** Gallery blocks keyed by section `kicker` (must match projects.ts). */
 export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]>> = {
@@ -109,7 +109,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
   "ai-copilot": {
     Research: [],
     Product: [
-      { type: "label", text: "Live demos · test phase" },
+      { type: "label", text: "Live demos · test phase", textZh: "测试阶段的录屏" },
       {
         type: "video",
         src: "/images/ai-copilot/performance-inquiry.mp4",

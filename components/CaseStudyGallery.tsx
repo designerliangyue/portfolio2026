@@ -171,7 +171,7 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
         if (block.type === "label") {
           return (
             <h3 key={`label-${index}`} className="display-3">
-              {block.text}
+              {locale === "zh" && block.textZh ? block.textZh : block.text}
             </h3>
           );
         }
