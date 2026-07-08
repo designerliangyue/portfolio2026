@@ -21,7 +21,9 @@ export function Reveal({ children, className, delay = 0, y = 16 }: RevealProps) 
 
   return (
     <motion.div
-      className={className}
+      // Force visible when printing — otherwise un-scrolled sections stay at
+      // opacity:0 and come out blank in the PDF / print output.
+      className={`${className ? `${className} ` : ""}print:!opacity-100 print:!transform-none`}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px 0px -120px 0px" }}
