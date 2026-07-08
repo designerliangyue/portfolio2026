@@ -30,7 +30,7 @@ export function ResumePage() {
 
       {/* Header */}
       <header className="mt-12 md:mt-16 border-b border-ink/15 pb-10">
-        <h1 className="display-2">{locale === "zh" ? "岳靓 · Liang Yue" : "Liang Yue"}</h1>
+        <h1 className="display-2">{locale === "zh" ? "岳靓" : "Liang Yue"}</h1>
         <p className="display-3 text-ink/60 mt-3" style={{ wordBreak: "normal" }}>
           {cv.title}
         </p>
