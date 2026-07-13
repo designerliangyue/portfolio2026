@@ -82,20 +82,27 @@ export function HomePage() {
           <div className="col-span-12 md:col-span-11 space-y-6">
             <p className="label">{t.home.workLabel}</p>
             <h2 className={locale === "zh" ? "section-title section-title-zh" : "section-title"}>
-              {locale === "zh" ? (
-                <>
-                  <span className="zh-highlight">跨文化规模</span>
-                  <span className="zh-slash">/</span>
-                  <span className="zh-highlight">战略前瞻</span>
-                  <span className="zh-slash">/</span>
-                  <span className="zh-highlight">企业级深度</span>
-                </>
-              ) : (
-                <>
-                  Cross-cultural scale.{" "}
-                  <span className="serif-em">Strategic foresight.</span> Enterprise depth.
-                </>
-              )}
+              {/* Title order & emphasis come from the dictionary (workTitle / workSerif),
+                  so editing en.ts / zh.ts changes what renders here. Chinese is shown as
+                  slash-separated highlights (trailing 。 stripped); English joins with
+                  spaces and italicises the segment listed in workSerif. */}
+              {locale === "zh"
+                ? t.home.workTitle.map((seg, i) => (
+                    <span key={seg}>
+                      {i > 0 && <span className="zh-slash">/</span>}
+                      <span className="zh-highlight">{seg.replace(/[。.]\s*$/, "")}</span>
+                    </span>
+                  ))
+                : t.home.workTitle.map((seg, i) => (
+                    <span key={seg}>
+                      {t.home.workSerif.includes(seg) ? (
+                        <span className="serif-em">{seg}</span>
+                      ) : (
+                        seg
+                      )}
+                      {i < t.home.workTitle.length - 1 ? " " : ""}
+                    </span>
+                  ))}
             </h2>
             <p className="lede-fill">{t.home.workLede}</p>
           </div>
