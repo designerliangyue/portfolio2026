@@ -8,6 +8,21 @@ import { Reveal } from "@/components/Reveal";
 const EMAIL = "designer.liangyue@gmail.com";
 const LINKEDIN = "linkedin.com/in/liang-y";
 
+function SectionBadge({ label }: { label: string }) {
+  return (
+    <p
+      className="studio-label mb-8 inline-flex items-center gap-2 rounded-full px-4 py-2"
+      style={{ background: "var(--studio-accent-soft)" }}
+    >
+      <span
+        className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+        style={{ background: "var(--studio-accent)" }}
+      />
+      {label}
+    </p>
+  );
+}
+
 export function ResumePage() {
   const { locale, t } = useLocale();
   const r = t.resume;
@@ -16,142 +31,146 @@ export function ResumePage() {
   return (
     <article className="container-grid py-12 md:py-20">
       <div className="flex items-center justify-between gap-4 no-print">
-        <Link href="/" className="font-mono text-xs uppercase tracking-[0.18em] link-underline">
+        <Link
+          href="/"
+          className="studio-chip inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
+        >
           {r.back}
         </Link>
         <button
           type="button"
           onClick={() => window.print()}
-          className="font-mono text-xs uppercase tracking-[0.18em] border border-ink/20 rounded-full px-4 py-2 hover:bg-ink hover:text-paper transition-colors"
+          className="rounded-full px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] transition-opacity hover:opacity-90"
+          style={{ background: "var(--studio-accent)", color: "var(--studio-card)" }}
         >
           {r.print}
         </button>
       </div>
 
       {/* Header */}
-      <header className="mt-12 md:mt-16 border-b border-ink/15 pb-10">
+      <header className="mt-12 md:mt-16">
         <h1 className="display-2">{locale === "zh" ? "岳靓" : "Liang Yue"}</h1>
         <p className="display-3 text-ink/60 mt-3" style={{ wordBreak: "normal" }}>
           {cv.title}
         </p>
 
-        <dl className="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
-          <div className="min-w-0">
-            <dt className="label mb-1">{r.contact}</dt>
-            <dd className="text-sm">
-              <a
-                className="underline decoration-ink/25 underline-offset-4 break-all transition-colors hover:decoration-ink"
-                href={`mailto:${EMAIL}`}
-              >
-                {EMAIL}
-              </a>
-            </dd>
-          </div>
-          <div className="min-w-0">
-            <dt className="label mb-1">LinkedIn</dt>
-            <dd className="text-sm">
-              <a
-                className="underline decoration-ink/25 underline-offset-4 break-all transition-colors hover:decoration-ink"
-                href={`https://www.${LINKEDIN}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {LINKEDIN}
-              </a>
-            </dd>
-          </div>
-          <div className="min-w-0">
-            <dt className="label mb-1">{t.about.languages}</dt>
-            <dd className="text-sm">{t.about.languagesValue}</dd>
-          </div>
-          <div className="min-w-0">
-            <dt className="label mb-1">{t.about.openTo}</dt>
-            <dd className="text-sm">{r.availability}</dd>
-          </div>
-        </dl>
+        <div className="resume-contact mt-8 flex flex-wrap gap-3">
+          <a
+            href={`mailto:${EMAIL}`}
+            className="rounded-full px-4 py-2 font-mono text-xs tracking-[0.08em] transition-opacity hover:opacity-90"
+            style={{ background: "var(--studio-accent)", color: "var(--studio-card)" }}
+          >
+            {EMAIL}
+          </a>
+          <a
+            href={`https://www.${LINKEDIN}`}
+            target="_blank"
+            rel="noreferrer"
+            className="studio-chip rounded-full px-4 py-2 font-mono text-xs tracking-[0.08em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
+          >
+            {LINKEDIN} ↗
+          </a>
+          <p className="studio-chip inline-flex items-baseline gap-2 rounded-full px-4 py-2">
+            <span className="studio-label !text-[0.6rem]">{t.about.languages}</span>
+            <span className="text-sm text-ink">{t.about.languagesValue}</span>
+          </p>
+          <p className="studio-chip inline-flex items-baseline gap-2 rounded-full px-4 py-2">
+            <span className="studio-label !text-[0.6rem]">{t.about.openTo}</span>
+            <span className="text-sm text-ink">{r.availability}</span>
+          </p>
+        </div>
       </header>
 
       {/* Summary */}
       <Reveal>
         <section className="mt-12 md:mt-16">
-          <h2 className="label mb-6">{r.summaryHeading}</h2>
+          <SectionBadge label={r.summaryHeading} />
           <p className="text-base md:text-lg text-ink/80 leading-relaxed">{cv.summary}</p>
         </section>
       </Reveal>
 
       {/* Core skills */}
       <Reveal>
-      <section className="mt-12 md:mt-16">
-        <h2 className="label mb-8">{r.coreSkills}</h2>
-        <dl className="space-y-6">
-          {cv.coreSkills.map((s) => (
-            <div key={s.group} className="grid grid-cols-12 gap-x-6 border-t border-ink/15 pt-5">
-              <dt className="col-span-12 md:col-span-4 font-display tracking-tightish text-lg">
-                {s.group}
-              </dt>
-              <dd className="col-span-12 md:col-span-8 text-ink/70 leading-relaxed">{s.items}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+        <section className="mt-12 md:mt-16">
+          <SectionBadge label={r.coreSkills} />
+          <dl className="space-y-3">
+            {cv.coreSkills.map((s) => (
+              <div
+                key={s.group}
+                className="studio-chip grid grid-cols-1 gap-y-2 rounded-2xl p-5 md:grid-cols-12 md:gap-x-6 md:p-6"
+              >
+                <dt className="text-lg font-medium text-ink md:col-span-4">{s.group}</dt>
+                <dd className="text-ink/70 leading-relaxed md:col-span-8">{s.items}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       </Reveal>
 
       {/* Experience */}
       <Reveal>
-      <section className="mt-12 md:mt-16">
-        <h2 className="label mb-8">{r.experience}</h2>
-        <ol className="space-y-10">
-          {cv.experience.map((job) => (
-            <li key={job.company + job.period} className="grid grid-cols-12 gap-x-6 gap-y-4 border-t border-ink/15 pt-6">
-              <div className="col-span-12 md:col-span-4">
-                <p className="font-display tracking-tightish text-xl">{job.role}</p>
-                <p className="mt-1 text-ink/80">{job.company}</p>
-                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink/50">
-                  {job.period}
-                </p>
-                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/40">
-                  {job.location}
-                </p>
-              </div>
-              <ul className="col-span-12 md:col-span-8 space-y-3">
-                {job.bullets.map((b) => (
-                  <li key={b} className="flex gap-3 text-sm md:text-base text-ink/75 leading-relaxed">
-                    <span className="text-accent mt-1.5 shrink-0">·</span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ol>
-      </section>
+        <section className="resume-experience mt-12 md:mt-16">
+          <SectionBadge label={r.experience} />
+          <ol className="space-y-4">
+            {cv.experience.map((job) => (
+              <li
+                key={job.company + job.period}
+                className="studio-chip grid grid-cols-1 gap-y-4 rounded-2xl p-6 md:grid-cols-12 md:gap-x-6 md:p-8"
+              >
+                <div className="md:col-span-4">
+                  <p className="text-xl font-medium text-ink">{job.role}</p>
+                  <p className="mt-1 text-ink/80">{job.company}</p>
+                  <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink/50">
+                    {job.period}
+                  </p>
+                  <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/40">
+                    {job.location}
+                  </p>
+                </div>
+                <ul className="space-y-3 md:col-span-8">
+                  {job.bullets.map((b) => (
+                    <li key={b} className="flex gap-3 text-sm md:text-base text-ink/75 leading-relaxed">
+                      <span className="mt-1.5 shrink-0" style={{ color: "var(--studio-accent)" }}>
+                        ·
+                      </span>
+                      <span>{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ol>
+        </section>
       </Reveal>
 
       {/* Education */}
       <Reveal>
-      <section className="mt-12 md:mt-16 pb-8">
-        <h2 className="label mb-8">{r.education}</h2>
-        {cv.education.map((e) => (
-          <div key={e.degree} className="grid grid-cols-12 gap-x-6 gap-y-2 border-t border-ink/15 pt-6">
-            <div className="col-span-12 md:col-span-4">
-              <p className="font-display tracking-tightish text-xl">{e.degree}</p>
-              <p className="mt-1 text-ink/80">{e.school}</p>
-              <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink/50">
-                {e.period}
-              </p>
-              <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/40">
-                {e.location}
+        <section className="mt-12 md:mt-16 pb-8">
+          <SectionBadge label={r.education} />
+          {cv.education.map((e) => (
+            <div
+              key={e.degree}
+              className="studio-chip grid grid-cols-1 gap-y-2 rounded-2xl p-6 md:grid-cols-12 md:gap-x-6 md:p-8"
+            >
+              <div className="md:col-span-4">
+                <p className="text-xl font-medium text-ink">{e.degree}</p>
+                <p className="mt-1 text-ink/80">{e.school}</p>
+                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.16em] text-ink/50">
+                  {e.period}
+                </p>
+                <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/40">
+                  {e.location}
+                </p>
+              </div>
+              <p className="text-ink/70 leading-relaxed md:col-span-8">
+                <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/45 mr-2">
+                  {r.focus}
+                </span>
+                {e.focus}
               </p>
             </div>
-            <p className="col-span-12 md:col-span-8 text-ink/70 leading-relaxed">
-              <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-ink/45 mr-2">
-                {r.focus}
-              </span>
-              {e.focus}
-            </p>
-          </div>
-        ))}
-      </section>
+          ))}
+        </section>
       </Reveal>
     </article>
   );

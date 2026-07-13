@@ -11,17 +11,17 @@ const config: Config = {
       },
       colors: {
         ink: {
-          DEFAULT: "#0a0a0a",
-          roman: "#0a0a0a",
-          em: "rgba(10, 10, 10, 0.34)",
-          70: "#3a3a3a",
-          50: "#6b6b6b",
-          30: "#a1a1a1",
-          15: "#d4d4d4",
-          5: "#ededed"
+          DEFAULT: "rgb(var(--ink-rgb) / <alpha-value>)",
+          roman: "#292219",
+          em: "rgba(41, 34, 25, 0.38)",
+          70: "#4c4438",
+          50: "#7b7163",
+          30: "#a99f8e",
+          15: "#d9d1c2",
+          5: "#ede7da"
         },
-        paper: "#fafaf7",
-        accent: "#ff4500"
+        paper: "rgb(var(--paper-rgb) / <alpha-value>)",
+        accent: "#b6552f"
       },
       letterSpacing: {
         tightish: "-0.02em",

@@ -12,57 +12,67 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/work/${project.slug}`}
-      className="group block border-t border-ink/15 pt-8 transition-colors hover:bg-ink/[0.015]"
+      className="studio-project-card group block rounded-3xl p-6 md:p-10"
     >
-      <div className="swiss-grid gap-y-8">
-        <div className="col-span-12 md:col-span-1 font-mono text-sm uppercase tracking-[0.18em] text-ink/50">
+      <div className="mb-5 flex flex-wrap items-center gap-3 md:mb-6">
+        <span
+          className="font-mono text-xs tracking-[0.14em] rounded-full px-3 py-1.5"
+          style={{ background: "var(--studio-accent-soft)", color: "var(--studio-accent)" }}
+        >
           {project.index}
-        </div>
-
-        <div className="col-span-12 md:col-span-11 space-y-6">
-          <div className="space-y-4">
-            <h3
-              className={`display-3 text-[clamp(1.875rem,4vw,3rem)] leading-[1.05] ${
-                locale === "zh" ? "project-card-title" : ""
-              }`}
-            >
-              {project.title}
-            </h3>
-            <p className="lede-fill">{project.summary}</p>
-          </div>
-
-          <dl className="grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-5 border-t border-ink/15 pt-6 text-sm">
-            <div>
-              <dt className="label mb-1">{labels.period}</dt>
-              <dd>{project.period}</dd>
-            </div>
-            <div>
-              <dt className="label mb-1">{labels.role}</dt>
-              <dd>{project.role}</dd>
-            </div>
-            <div>
-              <dt className="label mb-1">{labels.market}</dt>
-              <dd>{project.market}</dd>
-            </div>
-          </dl>
-
-          <ProjectCover
-            project={project}
-            variant="card"
-            hoverLabel={locale === "zh" ? "查看案例" : "View case"}
-          />
-        </div>
+        </span>
+        <span className="studio-label !text-[0.7rem]">{project.period}</span>
       </div>
 
-      <div className="swiss-grid mt-6 pb-10">
-        <div className="col-span-12 md:col-start-2 md:col-span-11 flex flex-wrap gap-x-6 gap-y-2 text-xs">
-          {project.tags.map((tag) => (
-            <span key={tag} className="font-mono uppercase tracking-[0.18em] text-ink/50">
-              {tag}
-            </span>
-          ))}
-        </div>
+      <h3
+        className={`display-3 text-[clamp(1.875rem,4vw,3rem)] leading-[1.05] ${
+          locale === "zh" ? "project-card-title" : ""
+        }`}
+      >
+        {project.title}
+      </h3>
+      <p className="lede-fill mt-4">{project.summary}</p>
+
+      <ProjectCover
+        project={project}
+        variant="card"
+        className="mt-6 rounded-2xl md:mt-8"
+      />
+
+      <div className="mt-6 flex flex-wrap gap-x-8 gap-y-3 md:mt-8">
+        <p className="text-sm text-ink">
+          <span className="studio-label mr-2 !text-[0.65rem]">{labels.role}</span>
+          {project.role}
+        </p>
+        <p className="text-sm text-ink">
+          <span className="studio-label mr-2 !text-[0.65rem]">{labels.market}</span>
+          {project.market}
+        </p>
       </div>
+
+      <div className="mt-5 flex flex-wrap gap-2 md:mt-6">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="studio-chip rounded-full px-3 py-1.5 font-mono text-[0.65rem] uppercase tracking-[0.12em] text-ink/60"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <p
+        className="mt-6 flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.18em] md:mt-8"
+        style={{ color: "var(--studio-accent)" }}
+      >
+        {labels.readCase.replace("→", "").trim()}
+        <span
+          aria-hidden
+          className="inline-block transition-transform duration-300 ease-swiss group-hover:translate-x-1"
+        >
+          →
+        </span>
+      </p>
     </Link>
   );
 }

@@ -3,19 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --ink: #0a0a0a;
-  --ink-muted: #666666;
-  --paper: #fafaf7;
+  --ink: #292219;
+  --ink-rgb: 41 34 25;
+  --ink-muted: #6f6659;
+  --paper: #f6f1e7;
+  --paper-rgb: 246 241 231;
 
-  --font-stack-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-stack-display: var(--font-display-en), ui-serif, Georgia, "Times New Roman", serif;
-  --font-stack-mono: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+  /* var() fallbacks matter: if a next/font variable fails to load, a bare
+     var() makes the whole declaration invalid and the browser silently
+     falls back to Times — not to the fonts listed after it. */
+  --font-stack-sans: var(--font-inter, -apple-system), -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-stack-display: var(--font-display-en, Georgia), Georgia, "Times New Roman", serif;
+  --font-stack-mono: var(--font-mono, ui-monospace), ui-monospace, "SFMono-Regular", monospace;
 
   --leading-body: 1.55;
   --leading-body-lg: 1.62;
   --tracking-heading: -0.035em;
   --weight-display: 400;
   --weight-body: 400;
+
+  /* ── Warm Minimal Studio: soft neutral palette, boutique-studio calm. ── */
+  --studio-card: #fffdf8;
+  --studio-border: rgba(41, 34, 25, 0.12);
+  --studio-accent: #b6552f;
+  --studio-accent-soft: rgba(182, 85, 47, 0.1);
+  --studio-green: #6f7f52;
+  --studio-photo-1: #bdb3a5;
+  --studio-photo-2: #8f8578;
+  --studio-shadow: 0 18px 45px rgba(60, 48, 35, 0.14), 0 2px 8px rgba(60, 48, 35, 0.06);
+  --studio-shadow-soft: 0 2px 10px rgba(60, 48, 35, 0.06);
 }
 
 html,
@@ -25,6 +42,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 ::selection {
@@ -213,7 +231,7 @@ html:lang(zh-Hans) {
     font-weight: 700;
     letter-spacing: 0.02em;
     line-height: 1.2;
-    color: #000000;
+    color: var(--ink);
   }
 
   html:lang(zh-Hans) .display-3 {
@@ -222,18 +240,60 @@ html:lang(zh-Hans) {
     line-height: 1.35;
   }
 
+  /* Hero headline — warm editorial serif, calm and generous. */
+  .hero-title {
+    font-family: var(--font-stack-display);
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    line-height: 1.06;
+    color: var(--ink);
+    @apply text-[clamp(2.75rem,5.4vw,5.5rem)];
+  }
+
+  html:lang(zh-Hans) .hero-title {
+    font-family: var(--font-stack-sans);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1.35;
+    word-break: normal;
+    color: var(--ink);
+    @apply text-[clamp(2rem,4vw,3.7rem)];
+  }
+
+  /* Hero emphasis — italic serif in terracotta (EN); bold terracotta sans (ZH). */
+  .studio-em {
+    font-family: var(--font-stack-display);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--studio-accent);
+  }
+
+  /* Color-only emphasis for Chinese — inheriting the surrounding weight keeps
+     the line rhythm calm instead of chopping it with extrabold chunks. */
+  html:lang(zh-Hans) .studio-em {
+    font-family: var(--font-stack-sans);
+    font-style: normal;
+    font-weight: inherit;
+    color: var(--studio-accent);
+  }
+
+  /* Section titles sit one step below the hero in the type scale —
+     same family/weight/color as the hero, only smaller. */
   .section-title {
     font-family: var(--font-stack-display);
     font-weight: var(--weight-display);
     letter-spacing: var(--tracking-heading);
-    @apply text-ink text-[clamp(2rem,5.5vw,3.75rem)] leading-[1.05];
+    @apply text-ink text-[clamp(1.9rem,3.6vw,3.25rem)] leading-[1.15];
   }
 
   html:lang(zh-Hans) .section-title {
-    font-weight: 300;
+    font-family: var(--font-stack-sans);
+    font-weight: 600;
     letter-spacing: 0.02em;
-    line-height: 1.3;
-    color: var(--ink-muted);
+    line-height: 1.5;
+    color: var(--ink);
+    @apply text-[clamp(1.6rem,2.9vw,2.5rem)];
   }
 
   /* English: serif italic emphasis */
@@ -241,7 +301,7 @@ html:lang(zh-Hans) {
     font-family: var(--font-stack-display);
     font-style: italic;
     font-weight: 400;
-    color: rgba(10, 10, 10, 0.34);
+    color: var(--ink-em, rgba(41, 34, 25, 0.38));
     letter-spacing: 0.02em;
   }
 
@@ -251,7 +311,7 @@ html:lang(zh-Hans) {
     font-family: var(--font-stack-sans);
     font-style: normal;
     font-weight: 800;
-    color: #000000;
+    color: var(--ink);
     letter-spacing: 0.02em;
   }
 
@@ -264,7 +324,7 @@ html:lang(zh-Hans) {
   html:lang(zh-Hans) .zh-slash {
     @apply inline-block px-3 md:px-5;
     font-weight: 300;
-    color: rgba(10, 10, 10, 0.35);
+    color: rgba(41, 34, 25, 0.35);
   }
 
   html:lang(zh-Hans) .section-title-zh {
@@ -274,7 +334,7 @@ html:lang(zh-Hans) {
 
   html:lang(zh-Hans) .section-title-zh .zh-highlight {
     font-weight: 800;
-    color: #000000;
+    color: var(--ink);
   }
 
   html:lang(zh-Hans) .display-1-hero {
@@ -284,12 +344,12 @@ html:lang(zh-Hans) {
 
   html:lang(zh-Hans) article .display-1:not(.display-1-hero) {
     font-weight: 800;
-    color: #000000;
+    color: var(--ink);
   }
 
   html:lang(zh-Hans) .project-card-title {
     font-weight: 800;
-    color: #000000;
+    color: var(--ink);
     letter-spacing: 0.02em;
   }
 
@@ -298,7 +358,7 @@ html:lang(zh-Hans) {
     font-weight: 700;
     letter-spacing: 0.06em;
     line-height: 1.25;
-    color: #000000;
+    color: var(--ink);
   }
 
   .lede {
@@ -357,6 +417,59 @@ html:lang(zh-Hans) {
   html:lang(zh-Hans) .tracking-\[-0\.025em\] {
     letter-spacing: 0.02em;
   }
+
+  /* ── Warm Minimal Studio components ── */
+  .studio-label {
+    @apply font-mono text-xs uppercase tracking-[0.18em];
+    color: var(--ink-muted);
+  }
+
+  html:lang(zh-Hans) .studio-label {
+    font-family: var(--font-stack-sans);
+    text-transform: none;
+    letter-spacing: 0.04em;
+  }
+
+  .studio-chip {
+    background: var(--studio-card);
+    border: 1px solid var(--studio-border);
+    box-shadow: var(--studio-shadow-soft);
+  }
+
+  .studio-float {
+    background: var(--studio-card);
+    border: 1px solid var(--studio-border);
+    box-shadow: var(--studio-shadow);
+  }
+
+  .studio-project-card {
+    background: var(--studio-card);
+    border: 1px solid var(--studio-border);
+    box-shadow: var(--studio-shadow-soft);
+    transition:
+      box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .studio-project-card:hover {
+    box-shadow: var(--studio-shadow);
+    transform: translateY(-4px);
+  }
+
+  .marquee-ribbon {
+    background: #ece5d6;
+    color: var(--ink-muted);
+  }
+
+  .spin-slow {
+    animation: spin-slow 14s linear infinite;
+  }
+
+  @keyframes spin-slow {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 @media print {
@@ -371,6 +484,62 @@ html:lang(zh-Hans) {
   }
   .noise::before {
     display: none !important;
+  }
+
+  /* Tighten the page — screen padding wastes a whole sheet in print */
+  article {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Flatten studio surfaces: soft box-shadows print as gray halos, and
+     tinted fills either drop out or muddy the page. Reduce to hairlines. */
+  .studio-chip,
+  .studio-float,
+  .studio-project-card {
+    box-shadow: none !important;
+    background: transparent !important;
+    border: 1px solid rgba(41, 34, 25, 0.16) !important;
+    padding: 0.9rem 1.15rem !important;
+  }
+
+  /* Keep each entry whole — never slice a card across a page boundary */
+  section,
+  li,
+  .studio-chip,
+  .studio-float,
+  dl > div {
+    break-inside: avoid;
+  }
+
+  /* Tinted section badges: drop the pill fill and indent, keep the label */
+  .studio-label[style] {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  /* Filled CTAs (email / Save-as-PDF) carry near-white text on a colored
+     fill; the fill won't print, so flatten to accent-colored text instead. */
+  [style*="--studio-card"] {
+    background: transparent !important;
+    color: var(--studio-accent) !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Header contact: drop the pill borders so it reads as one plain line. */
+  .resume-contact {
+    gap: 0.3rem 1.5rem !important;
+  }
+  .resume-contact .studio-chip,
+  .resume-contact a {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  /* Start Experience on a fresh page. */
+  .resume-experience {
+    break-before: page;
   }
 }
 

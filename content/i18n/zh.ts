@@ -25,11 +25,16 @@ export const zh: Dictionary = {
     languagesValue: "中 · 英",
     status: "状态",
     statusValue: "开放新机会",
+    heroStats: [
+      { value: "10+", label: "年深耕东南亚、金融科技与 AI" },
+      { value: "7", label: "个国家的设计落地项目" },
+      { value: "3", label: "个精选案例" }
+    ],
     workLabel: "精选作品 — 三个案例",
     workTitle: ["战略前瞻。", "跨文化规模。", "企业级深度。"],
     workSerif: ["跨文化规模。"],
     workLede:
-      "三个项目，一条贯穿主线：一个需要我先定义产品、再着手设计的 AI 副驾驶——根植于四年的东南亚跨文化设计，并在中国大型银行之一中以企业级深度得到验证。",
+      "三个项目，一条贯穿主线：一个需要我先定义产品、再着手设计的 AI 副驾驶——根植于四年的东南亚跨文化研究，并在中国大型银行之一中以企业级深度得到验证。",
     aboutLabel: "关于",
     aboutTitle: [
       "一位以结果为导向的设计师——在可靠性与",

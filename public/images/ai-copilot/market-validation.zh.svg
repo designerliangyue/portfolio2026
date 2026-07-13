@@ -1,16 +1,16 @@
 <svg viewBox="0 0 1184 520" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Segoe UI', Roboto, sans-serif">
   <defs>
     <style>
-      .ttl{font-family:'Songti SC','Noto Serif SC',Georgia,serif;font-weight:600;fill:#0a0a0a;}
-      .hd{font-family:-apple-system,'PingFang SC','Segoe UI',Roboto,sans-serif;font-weight:600;fill:#0a0a0a;}
-      .lbl{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.16em;fill:#a1a1a1;}
-      .bd{font-family:-apple-system,'PingFang SC','Segoe UI',Roboto,sans-serif;fill:#5a5a58;}
+      .ttl{font-family:'Songti SC','Noto Serif SC',Georgia,serif;font-weight:600;fill:#292219;}
+      .hd{font-family:-apple-system,'PingFang SC','Segoe UI',Roboto,sans-serif;font-weight:600;fill:#292219;}
+      .lbl{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.16em;fill:#a39781;}
+      .bd{font-family:-apple-system,'PingFang SC','Segoe UI',Roboto,sans-serif;fill:#6f6659;}
     </style>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1183" height="519" rx="20" fill="#ffffff" stroke="#e4e4df"/>
+  <rect x="0.5" y="0.5" width="1183" height="519" rx="20" fill="#fffdf8" stroke="#e5ddca"/>
 
-  <rect x="64" y="46" width="28" height="3" fill="#ff4500"/>
+  <rect x="64" y="46" width="28" height="3" fill="#b6552f"/>
   <text x="64" y="84" class="ttl" font-size="25">市场验证</text>
 
   <!-- Section 1 -->
@@ -19,24 +19,24 @@
 
   <!-- Section 2 -->
   <text x="64" y="189" class="hd" font-size="15">Meta WhatsApp Flows</text>
-  <text x="64" y="214" class="bd" font-size="13.5">Meta 将<tspan fill="#ff4500" font-weight="600">保险报价</tspan>列为受支持的行业——原生“获取报价”模板与我们所需的表单逻辑一致。</text>
+  <text x="64" y="214" class="bd" font-size="13.5">Meta 将<tspan fill="#b6552f" font-weight="600">保险报价</tspan>列为受支持的行业——原生“获取报价”模板与我们所需的表单逻辑一致。</text>
 
-  <line x1="64" y1="250" x2="1120" y2="250" stroke="#ececea"/>
+  <line x1="64" y1="250" x2="1120" y2="250" stroke="#eae2cf"/>
   <text x="64" y="284" class="hd" font-size="15">行业标杆</text>
-  <text x="64" y="308" class="bd" font-size="13.5" fill="#3a3a3a">WhatsApp Flow 在保险以外的行业已经成熟——这些模式可以复用。</text>
+  <text x="64" y="308" class="bd" font-size="13.5" fill="#42392c">WhatsApp Flow 在保险以外的行业已经成熟——这些模式可以复用。</text>
 
   <!-- Benchmark cards -->
-  <rect x="64" y="336" width="338" height="148" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <rect x="64" y="336" width="338" height="148" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
   <text x="88" y="376" class="ttl" font-size="17">Redbus</text>
   <text x="88" y="406" class="bd" font-size="13">出发地 → 目的地 → 日期，对应</text>
   <text x="88" y="426" class="bd" font-size="13">车型 → 年份 → 保障范围。</text>
 
-  <rect x="422" y="336" width="338" height="148" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <rect x="422" y="336" width="338" height="148" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
   <text x="446" y="376" class="ttl" font-size="17">JioMart</text>
   <text x="446" y="406" class="bd" font-size="13">完整的商品目录与支付闭环</text>
   <text x="446" y="426" class="bd" font-size="13">都在 WhatsApp 内完成。</text>
 
-  <rect x="780" y="336" width="338" height="148" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <rect x="780" y="336" width="338" height="148" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
   <text x="804" y="376" class="ttl" font-size="17">HDFC Bank</text>
   <text x="804" y="406" class="bd" font-size="13">敏感金融数据在聊天内</text>
   <text x="804" y="426" class="bd" font-size="13">安全处理。</text>

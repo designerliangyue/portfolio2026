@@ -10,7 +10,7 @@ export function ContributionRoles() {
   return (
     <div className="mt-12 space-y-10 md:space-y-12">
       {/* Value to agents */}
-      <div className="border border-ink/10 bg-paper p-6 md:p-10 lg:p-12">
+      <div className="studio-chip rounded-3xl p-6 md:p-10 lg:p-12">
         <p className="label mb-6">{c.valueLabel}</p>
         <p
           className="font-display tracking-tighter2 leading-[1.08] text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]"
@@ -23,7 +23,7 @@ export function ContributionRoles() {
           {c.chips.map((chip) => (
             <li
               key={chip}
-              className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink/60 border border-ink/15 rounded-full px-3 py-1.5"
+              className="studio-chip font-mono text-[10px] uppercase tracking-[0.18em] text-ink/60 rounded-full px-3 py-1.5"
             >
               {chip}
             </li>
@@ -34,9 +34,9 @@ export function ContributionRoles() {
       {/* Three roles, one accountable thread */}
       <div>
         <p className="label mb-6">{c.rolesLabel}</p>
-        <div className="grid md:grid-cols-3 gap-px bg-ink/10 border border-ink/10">
+        <div className="grid md:grid-cols-3 gap-4">
           {c.roles.map((role) => (
-            <div key={role.id} className="bg-paper p-6 md:p-8">
+            <div key={role.id} className="studio-chip rounded-2xl p-6 md:p-8">
               <p className="font-mono text-sm text-accent tracking-[0.1em] mb-5">{role.number}</p>
               <h4 className="font-display text-xl md:text-2xl tracking-tightish text-ink mb-3">
                 {role.title}

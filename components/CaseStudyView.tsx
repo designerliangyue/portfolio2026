@@ -12,10 +12,19 @@ import { ContributionRoles } from "@/components/case-study/ContributionRoles";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
 
+function SectionBadge({ index }: { index: string }) {
+  return (
+    <span
+      className="inline-block rounded-full px-3 py-1.5 font-mono text-xs tracking-[0.14em]"
+      style={{ background: "var(--studio-accent-soft)", color: "var(--studio-accent)" }}
+    >
+      {index}
+    </span>
+  );
+}
+
 function DiagramSvg({ src, alt }: { src: string; alt: string }) {
   const { locale } = useLocale();
-  // Swap in the Chinese illustration (e.g. architecture.svg → architecture.zh.svg)
-  // when the site is in Chinese; fall back to the English diagram otherwise.
   const localizedSrc = locale === "zh" ? src.replace(/\.svg$/, ".zh.svg") : src;
   return (
     <figure className="mt-12">
@@ -95,65 +104,63 @@ export function CaseStudyView({ slug }: { slug: string }) {
       <section className="container-grid pt-12 md:pt-20 pb-16 md:pb-24">
         <Link
           href="/#work"
-          className="font-mono text-xs uppercase tracking-[0.18em] link-underline"
+          className="studio-chip inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
         >
           {cs.allWork}
         </Link>
 
-        <div className="mt-10 swiss-grid">
-          <div className="case-study-index font-mono text-sm uppercase tracking-[0.18em] text-ink/50">
-            {project.index}
-          </div>
-          <div className="case-study-main">
-            <p className="label mb-6">{project.industry}</p>
-            <h1 className="display-1">{project.title}</h1>
-            <p className="display-3 text-ink/60 mt-6">{project.subtitle}</p>
-          </div>
+        <div className="mt-10 md:mt-14">
+          <p
+            className="studio-label inline-flex items-center gap-2 rounded-full px-4 py-2"
+            style={{ background: "var(--studio-accent-soft)" }}
+          >
+            <span
+              className="font-mono"
+              style={{ color: "var(--studio-accent)" }}
+            >
+              {project.index}
+            </span>
+            — {project.industry}
+          </p>
+          <h1 className="display-1 mt-6">{project.title}</h1>
+          <p className="display-3 text-ink/60 mt-6">{project.subtitle}</p>
         </div>
 
-        <div className="mt-16 swiss-grid">
-          <div className="case-study-main">
-            <dl className="grid grid-cols-2 md:grid-cols-3 gap-y-8 gap-x-6 border-t border-ink/15 pt-8">
-              <div>
-                <dt className="label mb-2">{cs.period}</dt>
-                <dd className="text-sm">{project.period}</dd>
-              </div>
-              <div>
-                <dt className="label mb-2">{cs.role}</dt>
-                <dd className="text-sm">{project.role}</dd>
-              </div>
-              <div>
-                <dt className="label mb-2">{cs.market}</dt>
-                <dd className="text-sm">{project.market}</dd>
-              </div>
-            </dl>
-          </div>
+        <div className="mt-10 flex flex-wrap gap-3 md:mt-12">
+          {(
+            [
+              [cs.period, project.period],
+              [cs.role, project.role],
+              [cs.market, project.market]
+            ] as const
+          ).map(([label, value]) => (
+            <p key={label} className="studio-chip inline-flex items-baseline gap-2 rounded-full px-4 py-2">
+              <span className="studio-label !text-[0.65rem]">{label}</span>
+              <span className="text-sm font-medium text-ink">{value}</span>
+            </p>
+          ))}
         </div>
       </section>
 
       <section className="container-grid pb-16 md:pb-24">
-        <div className="swiss-grid">
-          <div className="case-study-main">
-            <ProjectCover project={project} variant="hero" />
-          </div>
-        </div>
+        <ProjectCover project={project} variant="hero" className="rounded-3xl" />
       </section>
 
       <section className="container-grid py-16 md:py-24">
         <div className="swiss-grid">
-          <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
-            01
+          <div className="case-study-index">
+            <SectionBadge index="01" />
           </div>
           <div className="case-study-main">
             <p className="label mb-8">{cs.overview}</p>
             <p className="display-3 text-ink">{project.hero}</p>
 
             <div className="mt-16 case-study-split">
-              <div>
+              <div className="studio-chip rounded-2xl p-6 md:p-8">
                 <p className="label mb-4">{cs.problem}</p>
                 <p className="text-base md:text-lg text-ink/80 leading-relaxed">{project.problem}</p>
               </div>
-              <div>
+              <div className="studio-chip rounded-2xl p-6 md:p-8">
                 <p className="label mb-4">{cs.approach}</p>
                 <p className="text-base md:text-lg text-ink/80 leading-relaxed">{project.approach}</p>
               </div>
@@ -163,16 +170,16 @@ export function CaseStudyView({ slug }: { slug: string }) {
       </section>
 
       {hasCrossCultural ? (
-        <section className="container-grid py-16 md:py-24 border-t border-ink/15">
+        <section className="container-grid py-16 md:py-24 border-t border-ink/10">
           <div className="swiss-grid">
-            <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
-              02
+            <div className="case-study-index">
+              <SectionBadge index="02" />
             </div>
             <div className="case-study-main">
               <p className="label mb-8">{cs.crossCultural}</p>
               <div className="case-study-split">
                 {project.crossCultural!.map((cc) => (
-                  <div key={cc.heading} className="border-t border-ink/15 pt-6">
+                  <div key={cc.heading} className="studio-chip rounded-2xl p-6 md:p-8">
                     <h3 className="display-3 text-xl md:text-2xl mb-4">{cc.heading}</h3>
                     <p className="text-ink/80 leading-relaxed text-base md:text-lg">{cc.text}</p>
                   </div>
@@ -195,20 +202,20 @@ export function CaseStudyView({ slug }: { slug: string }) {
 
         return (
           <Reveal key={`${galleryKey}-${i}`}>
-          <section className="container-grid py-16 md:py-24 border-t border-ink/15">
+          <section className="container-grid py-16 md:py-24 border-t border-ink/10">
             <div className="swiss-grid">
-              <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
-                {String(i + sectionStartIndex).padStart(2, "0")}
+              <div className="case-study-index">
+                <SectionBadge index={String(i + sectionStartIndex).padStart(2, "0")} />
               </div>
               <div className="case-study-main">
                 <p className="label mb-8">{section.kicker}</p>
                 <h2 className="display-3 mb-10">{section.title}</h2>
 
                 {section.stats?.length ? (
-                  <dl className="mb-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8 border-t border-ink/15 pt-8">
+                  <dl className="mb-12 grid grid-cols-2 gap-3 md:grid-cols-4">
                     {section.stats.map((s) => (
-                      <div key={s.label}>
-                        <dt className="display-3 text-ink leading-none">
+                      <div key={s.label} className="studio-chip rounded-2xl p-5">
+                        <dt className="display-3 leading-none" style={{ color: "var(--studio-accent)" }}>
                           <CountUp value={s.value} />
                         </dt>
                         <dd className="mt-3 text-sm text-ink/60 leading-snug">{s.label}</dd>
@@ -222,9 +229,9 @@ export function CaseStudyView({ slug }: { slug: string }) {
                     <div className="col-span-12 md:col-span-7 space-y-6">
                       {section.body.map(bodyParagraph)}
                     </div>
-                    <div className="col-span-12 md:col-start-9 md:col-span-4 mt-8 md:mt-0 space-y-8">
+                    <div className="col-span-12 md:col-start-9 md:col-span-4 mt-8 md:mt-0 space-y-4">
                       {section.bullets!.map((b) => (
-                        <div key={b.heading} className="border-t border-ink/15 pt-4">
+                        <div key={b.heading} className="studio-chip rounded-2xl p-5">
                           <h4 className="font-mono text-xs uppercase tracking-[0.18em] text-ink mb-2">
                             {b.heading}
                           </h4>
@@ -255,10 +262,10 @@ export function CaseStudyView({ slug }: { slug: string }) {
         );
       })}
 
-      <section className="container-grid py-16 md:py-24 border-t border-ink/15">
+      <section className="container-grid py-16 md:py-24 border-t border-ink/10">
         <div className="swiss-grid">
-          <div className="case-study-index font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
-            {String(sectionStartIndex + project.sections.length).padStart(2, "0")}
+          <div className="case-study-index">
+            <SectionBadge index={String(sectionStartIndex + project.sections.length).padStart(2, "0")} />
           </div>
           <div className="case-study-main">
             <p className="label mb-8">{cs.outcome}</p>
@@ -268,31 +275,32 @@ export function CaseStudyView({ slug }: { slug: string }) {
       </section>
 
       {nextProject ? (
-        <section className="container-grid py-16 md:py-24 border-t border-ink/15">
-          <div className="swiss-grid">
-            <div className="case-study-main">
-              <Link href={`/work/${nextProject.slug}`} className="group block">
-                <p className="label mb-6">{cs.nextCase}</p>
-                <h2 className="display-2 group-hover:translate-x-2 transition-transform duration-500 ease-swiss">
-                  {nextProject.index} · {nextProject.title} →
-                </h2>
-                <p className="text-ink/60 mt-4 md:mt-5 max-w-3xl">{nextProject.subtitle}</p>
-              </Link>
-            </div>
-          </div>
+        <section className="container-grid pb-16 md:pb-24">
+          <Link
+            href={`/work/${nextProject.slug}`}
+            className="studio-project-card group block rounded-3xl p-8 md:p-12"
+          >
+            <p className="label mb-6">{cs.nextCase}</p>
+            <h2 className="display-2 group-hover:translate-x-2 transition-transform duration-500 ease-swiss">
+              {nextProject.index} · {nextProject.title}{" "}
+              <span aria-hidden style={{ color: "var(--studio-accent)" }}>
+                →
+              </span>
+            </h2>
+            <p className="text-ink/60 mt-4 md:mt-5">{nextProject.subtitle}</p>
+          </Link>
         </section>
       ) : (
-        <section className="container-grid py-16 md:py-24 border-t border-ink/15">
-          <div className="swiss-grid">
-            <div className="case-study-main">
-              <Link href="/#work" className="group block">
-                <p className="label mb-6">{cs.endOfWork}</p>
-                <h2 className="display-2 group-hover:translate-x-2 transition-transform duration-500 ease-swiss">
-                  {cs.backToWork}
-                </h2>
-              </Link>
-            </div>
-          </div>
+        <section className="container-grid pb-16 md:pb-24">
+          <Link
+            href="/#work"
+            className="studio-project-card group block rounded-3xl p-8 md:p-12"
+          >
+            <p className="label mb-6">{cs.endOfWork}</p>
+            <h2 className="display-2 group-hover:translate-x-2 transition-transform duration-500 ease-swiss">
+              {cs.backToWork}
+            </h2>
+          </Link>
         </section>
       )}
     </article>

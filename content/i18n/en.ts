@@ -23,11 +23,16 @@ export const en = {
     languagesValue: "EN · ZH",
     status: "Status",
     statusValue: "Open to opportunities",
+    heroStats: [
+      { value: "10+", label: "Years across SEA, fintech & AI" },
+      { value: "7", label: "Countries with shipped work" },
+      { value: "3", label: "Selected case studies" }
+    ],
     workLabel: "Selected Work — three case studies",
     workTitle: ["Strategic foresight.", "Cross-cultural scale.", "Enterprise depth."],
     workSerif: ["Cross-cultural scale."],
     workLede:
-      "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural design across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
+      "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural research across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
     aboutLabel: "About",
     aboutTitle: [
       "A results-focused designer who merges reliability with",
@@ -177,6 +182,7 @@ export type Dictionary = {
     languagesValue: string;
     status: string;
     statusValue: string;
+    heroStats: readonly { value: string; label: string }[];
     workLabel: string;
     workTitle: readonly string[];
     workSerif: readonly string[];

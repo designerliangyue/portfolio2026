@@ -8,13 +8,15 @@ export function LanguageSwitcher() {
 
   return (
     <div
-      className="flex items-center gap-1 font-mono text-xs uppercase tracking-[0.18em]"
+      className="flex shrink-0 items-center gap-1 whitespace-nowrap font-mono text-xs uppercase tracking-[0.18em]"
       role="group"
       aria-label="Language"
     >
       {(["en", "zh"] as Locale[]).map((code, index) => (
         <span key={code} className="flex items-center gap-1">
-          {index > 0 ? <span className="text-ink/25 select-none">/</span> : null}
+          {index > 0 ? (
+            <span className="select-none text-ink/25">/</span>
+          ) : null}
           <button
             type="button"
             onClick={() => setLocale(code)}

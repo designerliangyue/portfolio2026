@@ -12,49 +12,58 @@ export function Footer() {
   });
 
   return (
-    <footer className="mt-16 border-t border-ink/10">
-      <div className="container-grid py-16">
-        <div className="swiss-grid items-end gap-y-12">
-          <div className="col-span-12 md:col-span-7">
-            <p className="label mb-6">{t.footer.connect}</p>
-            <h2
-              className={
-                locale === "zh"
-                  ? "display-2 footer-title-zh md:whitespace-nowrap"
-                  : "display-2 md:whitespace-nowrap"
-              }
-            >
-              {t.footer.title}
-            </h2>
-            <p className="lede mt-8">{t.footer.lede}</p>
-          </div>
-          <div className="col-span-12 md:col-start-9 md:col-span-4 text-left md:text-right">
-            <ul className="space-y-4 text-lg md:ml-auto md:w-fit">
-              <li>
-                <a className="link-underline" href="mailto:designer.liangyue@gmail.com">
+    <footer className="mt-16">
+      <div className="container-grid pb-10 pt-4 md:pb-14">
+        <div className="studio-float rounded-3xl p-8 md:p-14">
+          <div className="grid grid-cols-1 items-end gap-10 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-7">
+              <p
+                className="studio-label inline-flex items-center gap-2 rounded-full px-4 py-2"
+                style={{ background: "var(--studio-accent-soft)" }}
+              >
+                <span
+                  className="inline-block h-1.5 w-1.5 shrink-0 rounded-full"
+                  style={{ background: "var(--studio-green)" }}
+                />
+                {t.footer.connect}
+              </p>
+              <h2
+                className={`mt-6 display-2 ${locale === "zh" ? "footer-title-zh" : ""}`}
+              >
+                {t.footer.title}
+              </h2>
+              <p className="lede mt-6">{t.footer.lede}</p>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="flex flex-col items-start gap-3 lg:items-end">
+                <a
+                  href="mailto:designer.liangyue@gmail.com"
+                  className="rounded-full px-6 py-3 font-mono text-xs uppercase tracking-[0.16em] transition-opacity hover:opacity-90"
+                  style={{ background: "var(--studio-accent)", color: "var(--studio-card)" }}
+                >
                   designer.liangyue@gmail.com
                 </a>
-              </li>
-              <li>
                 <a
-                  className="link-underline"
                   href="https://www.linkedin.com/in/liang-y"
                   target="_blank"
                   rel="noreferrer"
+                  className="studio-chip rounded-full px-6 py-3 font-mono text-xs uppercase tracking-[0.16em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
                 >
-                  linkedin.com/in/liang-y
+                  linkedin.com/in/liang-y ↗
                 </a>
-              </li>
-              <li>
-                <Link className="link-underline" href="/about">
-                  {t.footer.aboutLink}
+                <Link
+                  href="/about"
+                  className="studio-chip rounded-full px-6 py-3 font-mono text-xs uppercase tracking-[0.16em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
+                >
+                  {t.footer.aboutLink.replace("→", "").trim()} →
                 </Link>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="rule mt-16" />
-        <div className="mt-6 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+
+        <div className="mt-8 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
             {t.footer.copyright(year)}
           </p>

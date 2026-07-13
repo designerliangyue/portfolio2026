@@ -5,19 +5,21 @@ import { motion } from "framer-motion";
 export function Marquee({ items }: { items: string[] }) {
   const loop = [...items, ...items];
   return (
-    <div className="relative overflow-hidden border-y border-ink/15 py-6">
+    <div className="marquee-ribbon relative overflow-hidden py-4">
       <motion.div
-        className="flex whitespace-nowrap gap-12"
+        className="flex items-center whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
       >
         {loop.map((item, i) => (
           <span
             key={i}
-            className="font-display tracking-tighter2 text-4xl md:text-5xl text-ink/80"
+            className="flex items-center font-mono text-xs font-medium uppercase tracking-[0.16em] md:text-sm"
           >
             {item}
-            <span className="mx-12 text-ink/20">/</span>
+            <span className="mx-6 md:mx-8" aria-hidden style={{ color: "var(--studio-accent)" }}>
+              ✦
+            </span>
           </span>
         ))}
       </motion.div>
