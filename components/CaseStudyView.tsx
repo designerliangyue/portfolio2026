@@ -14,12 +14,15 @@ import { CountUp } from "@/components/CountUp";
 
 function DiagramSvg({ src, alt }: { src: string; alt: string }) {
   const { locale } = useLocale();
+  // Swap in the Chinese illustration (e.g. architecture.svg → architecture.zh.svg)
+  // when the site is in Chinese; fall back to the English diagram otherwise.
+  const localizedSrc = locale === "zh" ? src.replace(/\.svg$/, ".zh.svg") : src;
   return (
     <figure className="mt-12">
       <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:overflow-visible md:px-0">
         {/* On mobile the diagram keeps a legible min width and scrolls horizontally */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src} alt={alt} className="w-full min-w-[1040px] md:min-w-0" />
+        <img src={localizedSrc} alt={alt} className="w-full min-w-[1040px] md:min-w-0" />
       </div>
       <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40 md:hidden">
         {locale === "zh" ? "滑动查看 →" : "Scroll to read →"}

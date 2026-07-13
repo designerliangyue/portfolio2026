@@ -1,0 +1,117 @@
+<svg viewBox="0 0 1184 1372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <style>
+      .ttl{font-family:'Songti SC','Noto Serif SC',Georgia,serif;font-weight:600;fill:#0a0a0a;}
+      .lbl{font-family:'SF Mono',Menlo,ui-monospace,'PingFang SC',monospace;letter-spacing:0.16em;fill:#a1a1a1;}
+      .sub{font-family:'SF Mono',Menlo,ui-monospace,'PingFang SC',monospace;letter-spacing:0.14em;fill:#6b6b6b;}
+      .bd{font-family:-apple-system,'PingFang SC','Segoe UI',Roboto,sans-serif;fill:#6b6b6b;}
+      .step{font-family:-apple-system,'PingFang SC','Segoe UI',Roboto,sans-serif;fill:#2a2a2a;}
+    </style>
+  </defs>
+
+  <rect x="0.5" y="0.5" width="1183" height="1371" rx="20" fill="#ffffff" stroke="#e4e4df"/>
+
+  <rect x="64" y="46" width="28" height="3" fill="#ff4500"/>
+  <text x="64" y="84" class="ttl" font-size="25">阶段拆解</text>
+
+  <!-- Phase I -->
+  <rect x="64" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="88" y="152" class="lbl" font-size="10">第一阶段</text>
+  <text x="88" y="178" class="ttl" font-size="16">内容与交接</text>
+  <text x="88" y="204" class="bd" font-size="12">营销素材与深链，引流至</text>
+  <text x="88" y="221" class="bd" font-size="12">代理人的私人 WhatsApp</text>
+  <text x="88" y="238" class="bd" font-size="12">会话。</text>
+  <line x1="88" y1="262" x2="292" y2="262" stroke="#e4e4df"/>
+  <text x="88" y="288" class="bd" font-size="11" fill="#6e6e6b">· 海报与数字名片</text>
+  <text x="88" y="308" class="bd" font-size="11" fill="#6e6e6b">· 一键深链</text>
+
+  <!-- Phase II -->
+  <rect x="332" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="356" y="152" class="lbl" font-size="10">第二阶段</text>
+  <text x="356" y="178" class="ttl" font-size="16">对话式报价</text>
+  <text x="356" y="204" class="bd" font-size="12">在 WABA 内直接报价，</text>
+  <text x="356" y="221" class="bd" font-size="12">销售途中无需打开 Ignite。</text>
+  <line x1="356" y1="262" x2="560" y2="262" stroke="#e4e4df"/>
+  <text x="356" y="288" class="bd" font-size="11" fill="#6e6e6b">· 自然语言车险信息采集</text>
+  <text x="356" y="308" class="bd" font-size="11" fill="#6e6e6b">· 多模态车辆识别</text>
+
+  <!-- Phase III -->
+  <rect x="600" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="624" y="152" class="lbl" font-size="10">第三阶段</text>
+  <text x="624" y="178" class="ttl" font-size="16">代理人协助成交</text>
+  <text x="624" y="204" class="bd" font-size="12">高风险环节仍由</text>
+  <text x="624" y="221" class="bd" font-size="12">代理人把关。</text>
+  <line x1="624" y1="262" x2="828" y2="262" stroke="#e4e4df"/>
+  <text x="624" y="288" class="bd" font-size="11" fill="#6e6e6b">· 安全投保链接</text>
+  <text x="624" y="308" class="bd" font-size="11" fill="#6e6e6b">· 支付资料转发至私聊</text>
+
+  <!-- Phase IV -->
+  <rect x="868" y="118" width="252" height="248" rx="14" fill="#fafaf7" stroke="#e4e4df"/>
+  <text x="892" y="152" class="lbl" font-size="10">第四阶段</text>
+  <text x="892" y="178" class="ttl" font-size="16">信号与业绩</text>
+  <text x="892" y="204" class="bd" font-size="12">把被动的链接变成</text>
+  <text x="892" y="221" class="bd" font-size="12">可以行动的时机。</text>
+  <line x1="892" y1="262" x2="1096" y2="262" stroke="#e4e4df"/>
+  <text x="892" y="288" class="bd" font-size="11" fill="#6e6e6b">· H5 互动 → 代理人提醒</text>
+  <text x="892" y="308" class="bd" font-size="11" fill="#6e6e6b">· 聊天内业绩查询</text>
+
+  <line x1="64" y1="402" x2="1120" y2="402" stroke="#ececea"/>
+
+  <!-- User flow -->
+  <text x="64" y="444" class="ttl" font-size="22">用户流程——从获客到保单签发</text>
+  <text x="64" y="468" class="sub" font-size="10">系统 · 代理人 · 客户 · 决策</text>
+
+  <!-- legend -->
+  <g font-size="9" font-family="'SF Mono',Menlo,'PingFang SC',monospace" letter-spacing="0.1em">
+    <rect x="848" y="430" width="11" height="11" rx="2" fill="#f4f4f1" stroke="#d8d8d3"/>
+    <text x="864" y="439" fill="#6b6b6b">系统</text>
+    <rect x="924" y="430" width="11" height="11" rx="2" fill="#fff5f0" stroke="#ffb38a"/>
+    <text x="940" y="439" fill="#6b6b6b">代理人</text>
+    <rect x="992" y="430" width="11" height="11" rx="2" fill="#ffffff" stroke="#cbcbc6" stroke-dasharray="2.5 2"/>
+    <text x="1008" y="439" fill="#6b6b6b">客户</text>
+    <rect x="1086" y="430" width="11" height="11" rx="2" fill="#0a0a0a"/>
+    <text x="1102" y="439" fill="#6b6b6b">结束</text>
+  </g>
+
+  <!-- LEAD ACQUISITION -->
+  <text x="592" y="506" text-anchor="middle" class="lbl" font-size="10">获客</text>
+  <rect x="362" y="520" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="546" text-anchor="middle" class="step" font-size="13">代理人与 WABA 对话，寻求获客与销售支持</text>
+  <line x1="592" y1="562" x2="592" y2="584" stroke="#c8c8c3"/>
+  <rect x="362" y="584" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="610" text-anchor="middle" class="step" font-size="13">WABA：生成营销素材</text>
+  <line x1="592" y1="626" x2="592" y2="648" stroke="#c8c8c3"/>
+  <rect x="362" y="648" width="460" height="42" rx="9" fill="#ffffff" stroke="#cbcbc6" stroke-dasharray="4 3"/>
+  <text x="592" y="674" text-anchor="middle" class="sub" font-size="11">扫码或点击链接</text>
+
+  <!-- ADVISOR GATE -->
+  <text x="592" y="726" text-anchor="middle" class="lbl" font-size="10">顾问环节</text>
+  <rect x="362" y="742" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="768" text-anchor="middle" class="step" font-size="13">通过代理人与客户的私人 WhatsApp 会话进行咨询</text>
+
+  <!-- QUOTE & FULFILMENT -->
+  <text x="592" y="824" text-anchor="middle" class="lbl" font-size="10">报价与履约</text>
+  <rect x="362" y="840" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="866" text-anchor="middle" class="step" font-size="13">代理人与 WABA 互动获取报价</text>
+  <line x1="592" y1="882" x2="592" y2="904" stroke="#c8c8c3"/>
+  <rect x="362" y="904" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="930" text-anchor="middle" class="step" font-size="13">WABA：数字报价 + 安全投保链接</text>
+  <line x1="592" y1="946" x2="592" y2="968" stroke="#c8c8c3"/>
+  <rect x="362" y="968" width="460" height="42" rx="9" fill="#fff5f0" stroke="#ffb38a"/>
+  <text x="592" y="994" text-anchor="middle" class="step" font-size="13">代理人将链接转发给客户</text>
+  <line x1="592" y1="1010" x2="592" y2="1032" stroke="#c8c8c3"/>
+  <rect x="362" y="1032" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="1058" text-anchor="middle" class="step" font-size="13">WABA：客户点击 → 同步行为并通知代理人</text>
+  <line x1="592" y1="1074" x2="592" y2="1096" stroke="#c8c8c3"/>
+  <rect x="362" y="1096" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="1122" text-anchor="middle" class="step" font-size="13">WABA：更新表单填写状态</text>
+  <line x1="592" y1="1138" x2="592" y2="1160" stroke="#c8c8c3"/>
+  <rect x="362" y="1160" width="460" height="42" rx="9" fill="#ffffff" stroke="#cbcbc6" stroke-dasharray="4 3"/>
+  <text x="592" y="1186" text-anchor="middle" class="sub" font-size="11">购买：自助完成或代理人协助</text>
+  <line x1="592" y1="1202" x2="592" y2="1224" stroke="#c8c8c3"/>
+  <rect x="362" y="1224" width="460" height="42" rx="9" fill="#f4f4f1" stroke="#d8d8d3"/>
+  <text x="592" y="1250" text-anchor="middle" class="step" font-size="13">WABA：同步状态并签发保单</text>
+  <line x1="592" y1="1266" x2="592" y2="1288" stroke="#c8c8c3"/>
+  <rect x="362" y="1288" width="460" height="42" rx="9" fill="#0a0a0a"/>
+  <text x="592" y="1314" text-anchor="middle" class="step" font-size="13" font-weight="600" style="fill:#fafaf7">保单签发</text>
+</svg>
