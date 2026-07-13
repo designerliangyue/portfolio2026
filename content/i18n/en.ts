@@ -27,7 +27,7 @@ export const en = {
     workTitle: ["Cross-cultural scale.", "Strategic foresight.", "Enterprise depth."],
     workSerif: ["Strategic foresight."],
     workLede:
-      "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural research across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
+      "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural design across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
     aboutLabel: "About",
     aboutTitle: [
       "A results-focused designer who merges reliability with",
