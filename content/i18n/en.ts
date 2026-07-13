@@ -24,8 +24,8 @@ export const en = {
     status: "Status",
     statusValue: "Open to opportunities",
     workLabel: "Selected Work — three case studies",
-    workTitle: ["Cross-cultural scale.", "Strategic foresight.", "Enterprise depth."],
-    workSerif: ["Strategic foresight."],
+    workTitle: ["Strategic foresight.", "Cross-cultural scale.", "Enterprise depth."],
+    workSerif: ["Cross-cultural scale."],
     workLede:
       "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural design across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
     aboutLabel: "About",
