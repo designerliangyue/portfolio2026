@@ -49,7 +49,9 @@ export function MoreWork() {
 
               <div className="flex flex-col justify-center">
                 <p className="studio-label !text-[0.65rem]">{item.meta}</p>
-                <h3 className="mt-2 text-2xl font-medium text-ink">{item.title}</h3>
+                <h3 className="display-3 mt-3 text-[clamp(1.7rem,3vw,2.5rem)] leading-[1.1] transition-colors duration-300 group-hover:text-[var(--studio-accent)]">
+                  {item.title}
+                </h3>
                 <p className="mt-3 text-ink/70 leading-relaxed">{item.blurb}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
