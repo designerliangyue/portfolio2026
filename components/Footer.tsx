@@ -47,7 +47,7 @@ export function Footer() {
               <div className="flex flex-col items-start gap-3 lg:items-end">
                 <a
                   href="mailto:designer.liangyue@gmail.com"
-                  className="rounded-full px-6 py-3 font-mono text-xs uppercase tracking-[0.16em] transition-opacity hover:opacity-90"
+                  className="max-w-full break-all rounded-full px-4 py-3 text-center font-mono text-[0.65rem] uppercase tracking-[0.08em] transition-opacity hover:opacity-90 sm:px-6 sm:text-xs sm:tracking-[0.16em]"
                   style={{ background: "var(--studio-accent)", color: "var(--studio-card)" }}
                 >
                   designer.liangyue@gmail.com
@@ -56,7 +56,7 @@ export function Footer() {
                   href="https://www.linkedin.com/in/liang-y"
                   target="_blank"
                   rel="noreferrer"
-                  className="studio-chip rounded-full px-6 py-3 font-mono text-xs uppercase tracking-[0.16em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
+                  className="studio-chip max-w-full whitespace-nowrap rounded-full px-4 py-3 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-ink/80 transition-colors hover:text-[var(--studio-accent)] sm:px-6 sm:text-xs sm:tracking-[0.16em]"
                 >
                   linkedin.com/in/liang-y ↗
                 </a>
