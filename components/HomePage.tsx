@@ -98,7 +98,7 @@ export function HomePage() {
                   alt={t.name}
                   fill
                   sizes="(max-width: 1024px) 90vw, 480px"
-                  className="object-cover object-top"
+                  className="-translate-x-[10%] object-cover object-top"
                   priority
                 />
               </div>
