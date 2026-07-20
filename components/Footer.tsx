@@ -70,6 +70,14 @@ export function Footer() {
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
             {t.footer.updated(updated)}
           </p>
+          <a
+            href="https://beian.miit.gov.cn"
+            target="_blank"
+            rel="noreferrer"
+            className="whitespace-nowrap font-mono text-xs tracking-[0.12em] text-ink/50 transition-colors hover:text-[var(--studio-accent)]"
+          >
+            蜀ICP备2026040343号
+          </a>
         </div>
       </div>
     </footer>
