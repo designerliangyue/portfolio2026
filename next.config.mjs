@@ -7,7 +7,8 @@ const nextConfig = {
   // Aliyun OSS + CDN. The Vercel build is unaffected.
   ...(isStaticExport ? { output: "export" } : {}),
   images: {
-    ...(isStaticExport ? { unoptimized: true } : {}),
+    // No server-side image optimizer on EdgeOne Pages — serve files as-is.
+    unoptimized: true,
     remotePatterns: [
       { protocol: "https", hostname: "**.amazonaws.com" },
       { protocol: "https", hostname: "**.notion.so" }
