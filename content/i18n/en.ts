@@ -129,7 +129,7 @@ export const en = {
       "I'm exploring Senior Product Designer opportunities with a preference for fully remote work. I bring 10 years of cross-cultural product experience across insurtech, banking, and AI-enhanced interfaces.",
     aboutLink: "Read full background →",
     copyright: (year: number) => `© ${year} Liang Yue. Designed and built in Figma + Next.js.`,
-    updated: (date: string) => `Selected work — last updated ${date}`
+    updated: (date: string) => `Last updated ${date}`
   },
   projectCard: {
     role: "Role",

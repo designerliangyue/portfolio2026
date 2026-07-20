@@ -1,10 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useLocale } from "@/components/LocaleProvider";
 
 export function Footer() {
   const { locale, t } = useLocale();
+  // The ICP filing number is tied to yue-design.studio, so only that
+  // hostname shows it (resolved on the client — the export is static).
+  const [showIcp, setShowIcp] = useState(false);
+  useEffect(() => {
+    const host = window.location.hostname;
+    setShowIcp(host === "yue-design.studio" || host.endsWith(".yue-design.studio"));
+  }, []);
   const year = new Date().getFullYear();
   const updated = new Date().toLocaleDateString(locale === "zh" ? "zh-CN" : "en-GB", {
     month: "short",
@@ -70,14 +78,16 @@ export function Footer() {
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
             {t.footer.updated(updated)}
           </p>
-          <a
-            href="https://beian.miit.gov.cn"
-            target="_blank"
-            rel="noreferrer"
-            className="whitespace-nowrap font-mono text-xs tracking-[0.12em] text-ink/50 transition-colors hover:text-[var(--studio-accent)]"
-          >
-            蜀ICP备2026040343号
-          </a>
+          {showIcp && (
+            <a
+              href="https://beian.miit.gov.cn"
+              target="_blank"
+              rel="noreferrer"
+              className="whitespace-nowrap font-mono text-xs tracking-[0.12em] text-ink/50 transition-colors hover:text-[var(--studio-accent)]"
+            >
+              蜀ICP备2026040343号
+            </a>
+          )}
         </div>
       </div>
     </footer>

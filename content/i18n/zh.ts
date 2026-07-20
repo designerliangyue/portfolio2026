@@ -130,7 +130,7 @@ export const zh: Dictionary = {
       "我正在寻找高级产品设计师机会，更倾向全远程工作。拥有 10 年跨文化产品经验，深耕保险科技、银行与 AI 增强界面设计。",
     aboutLink: "阅读完整背景 →",
     copyright: (year: number) => `© ${year} 岳靓。使用 Figma + Next.js 设计与构建。`,
-    updated: (date: string) => `精选作品 — 更新于 ${date}`
+    updated: (date: string) => `更新于 ${date}`
   },
   projectCard: {
     role: "角色",
