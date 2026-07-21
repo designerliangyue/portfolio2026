@@ -6,12 +6,12 @@ import { useLocale } from "@/components/LocaleProvider";
 
 export function Footer() {
   const { locale, t } = useLocale();
-  // The ICP filing number is tied to yue-design.studio, so only that
-  // hostname shows it (resolved on the client — the export is static).
-  const [showIcp, setShowIcp] = useState(false);
+  // The ICP + 公安 filing numbers are tied to yue-design.studio, so only
+  // that hostname shows them (resolved on the client — the export is static).
+  const [showBeian, setShowBeian] = useState(false);
   useEffect(() => {
     const host = window.location.hostname;
-    setShowIcp(host === "yue-design.studio" || host.endsWith(".yue-design.studio"));
+    setShowBeian(host === "yue-design.studio" || host.endsWith(".yue-design.studio"));
   }, []);
   const year = new Date().getFullYear();
   const updated = new Date().toLocaleDateString(locale === "zh" ? "zh-CN" : "en-GB", {
@@ -78,15 +78,25 @@ export function Footer() {
           <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
             {t.footer.updated(updated)}
           </p>
-          {showIcp && (
-            <a
-              href="https://beian.miit.gov.cn"
-              target="_blank"
-              rel="noreferrer"
-              className="whitespace-nowrap font-mono text-xs tracking-[0.12em] text-ink/50 transition-colors hover:text-[var(--studio-accent)]"
-            >
-              蜀ICP备2026040343号
-            </a>
+          {showBeian && (
+            <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+              <a
+                href="https://beian.miit.gov.cn"
+                target="_blank"
+                rel="noreferrer"
+                className="whitespace-nowrap font-mono text-xs tracking-[0.12em] text-ink/50 transition-colors hover:text-[var(--studio-accent)]"
+              >
+                蜀ICP备2026040343号
+              </a>
+              <a
+                href="https://beian.mps.gov.cn/#/query/webSearch"
+                target="_blank"
+                rel="noreferrer"
+                className="whitespace-nowrap font-mono text-xs tracking-[0.12em] text-ink/50 transition-colors hover:text-[var(--studio-accent)]"
+              >
+                川公网安备51019002010004号
+              </a>
+            </div>
           )}
         </div>
       </div>
