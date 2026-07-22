@@ -50,7 +50,7 @@ export const resumeEn: ResumeContent = {
       role: "Senior Product Designer",
       company: "Axinan Ltd. (Igloo Insurance)",
       location: "Chengdu, China",
-      period: "Apr 2021 — Present",
+      period: "Apr 2021 — Jul 2026",
       bullets: [
         "Spearheaded the UX/UI architecture for next-generation AI-driven sales co-pilots and real-time operational analytics dashboards, scaling platforms across multiple Southeast Asian markets.",
         "Delivered polished visual designs and high-fidelity interactive prototypes for complex web and mobile applications, ensuring a seamless interface experience and precise production handoff.",
@@ -126,7 +126,7 @@ export const resumeZh: ResumeContent = {
       role: "高级产品设计师",
       company: "成都雅信安科技服务有限公司",
       location: "中国 · 成都",
-      period: "2021 年 4 月 — 至今",
+      period: "2021 年 4 月 — 2026 年 7 月",
       bullets: [
         "主导新一代 AI 驱动销售副驾驶与实时运营分析仪表盘的 UX/UI 架构，将平台扩展至多个东南亚市场。",
         "为复杂的 Web 与移动应用交付精致的视觉设计与高保真交互原型，确保无缝的界面体验与精准的生产交付。",

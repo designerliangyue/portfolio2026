@@ -100,7 +100,7 @@ export const projectsZh: Project[] = [
     index: "01",
     title: "AI 销售副驾驶",
     subtitle: "面向印尼保险代理人的 WhatsApp 原生对话式商务",
-    period: "2025 — 至今",
+    period: "2025 — 2026",
     role: "首席产品策略与设计",
     industry: "AI · 保险科技 · 对话式商务",
     market: "印度尼西亚",

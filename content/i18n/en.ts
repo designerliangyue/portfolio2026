@@ -73,7 +73,7 @@ export const en = {
     timeline: "Career, in four chapters",
     timelineItems: [
       {
-        period: "2021 — Present",
+        period: "2021 — 2026",
         role: "Senior Product Designer · Igloo Insurance",
         note: "AI sales co-pilots, operational analytics, and a regional design system across Southeast Asia."
       },

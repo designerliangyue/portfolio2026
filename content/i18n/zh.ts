@@ -74,7 +74,7 @@ export const zh: Dictionary = {
     timeline: "职业经历 · 四个章节",
     timelineItems: [
       {
-        period: "2021 — 至今",
+        period: "2021 — 2026",
         role: "高级产品设计师 · 雅信安",
         note: "AI 销售副驾驶、运营分析与覆盖东南亚的区域设计体系。"
       },

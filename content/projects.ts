@@ -135,7 +135,7 @@ export const projects: Project[] = [
     title: "AI Sales Co-Pilot",
     subtitle:
       "WhatsApp-native conversational commerce for Indonesian insurance agents",
-    period: "2025 — present",
+    period: "2025 — 2026",
     role: "Lead Product Strategy & Design",
     industry: "AI · Insurtech · Conversational commerce",
     market: "Indonesia",
