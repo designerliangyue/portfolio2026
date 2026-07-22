@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Favicon: the nav's sparkle mark, reversed out of a terracotta tile.
+       Points are thicker than the nav logo (inner/outer 0.34 vs 0.24) so the
+       star still reads at 16px. -->
+  <rect width="64" height="64" rx="14" fill="#b6552f"/>
+  <path d="M32 12 38.8 25.2 52 32 38.8 38.8 32 52 25.2 38.8 12 32 25.2 25.2Z" fill="#f6f1e7"/>
+</svg>
