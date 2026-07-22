@@ -34,10 +34,16 @@ export function HomePage() {
 
               <h1 className="hero-title mt-8 md:mt-10">
                 {locale === "zh" ? (
+                  // CJK breaks between any two characters, so the phrases are
+                  // kept atomic: wide screens read as two lines, narrow ones
+                  // wrap between phrases instead of orphaning "处，".
                   <>
-                    在文化与技术的交界处，
+                    <span className="whitespace-nowrap">在文化与技术的</span>
+                    <span className="whitespace-nowrap">交界处，</span>
                     <br />
-                    设计<span className="studio-em">可靠的产品</span>。
+                    <span className="whitespace-nowrap">
+                      设计<span className="studio-em">可靠的产品</span>。
+                    </span>
                   </>
                 ) : (
                   <>
