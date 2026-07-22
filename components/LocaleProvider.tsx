@@ -26,10 +26,26 @@ type LocaleContextValue = {
 
 const LocaleContext = createContext<LocaleContextValue | null>(null);
 
+// Browsers that block site data (strict privacy settings, enterprise policy,
+// some extensions) throw SecurityError on any localStorage access. Reading it
+// unguarded inside an effect crashes the whole tree via the error boundary,
+// so both call sites degrade to "preference simply isn't persisted".
 function readStoredLocale(): Locale {
   if (typeof window === "undefined") return DEFAULT_LOCALE;
-  const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-  return stored === "zh" ? "zh" : DEFAULT_LOCALE;
+  try {
+    const stored = window.localStorage.getItem(LOCALE_STORAGE_KEY);
+    return stored === "zh" ? "zh" : DEFAULT_LOCALE;
+  } catch {
+    return DEFAULT_LOCALE;
+  }
+}
+
+function writeStoredLocale(locale: Locale) {
+  try {
+    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+  } catch {
+    // Storage unavailable — switching still works for this session.
+  }
 }
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
@@ -44,7 +60,7 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (!ready) return;
     document.documentElement.lang = locale === "zh" ? "zh-Hans" : "en";
-    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    writeStoredLocale(locale);
   }, [locale, ready]);
 
   const setLocale = useCallback((next: Locale) => {
