@@ -25,7 +25,7 @@ export type ResumeContent = {
 };
 
 export const resumeEn: ResumeContent = {
-  title: "Senior Product Designer · Interaction & Narrative Experience Architect",
+  title: "Senior Product Designer — Enterprise · AI · Cross-cultural",
   summary:
     "Senior Product Designer with 10 years of experience specialized in architecting complex enterprise systems, AI-enhanced interfaces, and data-intensive platforms. Blending a rigorous foundational background in Landscape Architecture with digital product design to craft highly contextual, emotionally resonant, and seamless multi-dimensional user journeys. Expert in data-driven design, interaction scalability, and cross-cultural product localized optimization.",
   coreSkills: [
@@ -103,7 +103,7 @@ export const resumeEn: ResumeContent = {
 };
 
 export const resumeZh: ResumeContent = {
-  title: "高级产品设计师 · 交互与叙事体验架构师",
+  title: "高级产品设计师 — 企业级 · AI · 跨文化",
   summary:
     "拥有 10 年经验的高级产品设计师，专长于复杂企业系统、AI 增强界面与数据密集型平台的架构设计。将风景园林的扎实基础与数字产品设计相融合，打造高度情境化、富有情感共鸣且无缝衔接的多维用户旅程。精通数据驱动设计、交互可扩展性与跨文化产品本地化优化。",
   coreSkills: [
