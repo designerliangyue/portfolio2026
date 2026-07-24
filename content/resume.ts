@@ -50,7 +50,7 @@ export const resumeEn: ResumeContent = {
       role: "Senior Product Designer",
       company: "Axinan Ltd. (Igloo Insurance)",
       location: "Chengdu, China",
-      period: "Apr 2021 — Present",
+      period: "Apr 2021 — Jul 2026",
       bullets: [
         "Led the end-to-end redesign of Ignite, Igloo's insurance sales platform, serving agent networks across Southeast Asian markets — from lead acquisition and quoting through policy issuance.",
         "Designed the AI Sales Co-Pilot: embedded the quote-to-issue journey inside WhatsApp, blending structured UI (WhatsApp Flows) with conversational AI — intelligent customer profiles, real-time talking-point suggestions, and automated form filling with the agent in control",
@@ -126,7 +126,7 @@ export const resumeZh: ResumeContent = {
       role: "高级产品设计师",
       company: "成都雅信安科技服务有限公司",
       location: "中国 · 成都",
-      period: "2021 年 4 月 — 至今",
+      period: "2021 年 4 月 — 2026 年 7 月",
       bullets: [
         "主导 Ignite 保险销售平台的端到端体验重构，服务东南亚市场的代理人网络，从获客、报价到出单的完整旅程。",
         "设计 AI 销售副驾驶：将报价-出单全流程嵌入 WhatsApp，融合结构化 UI 与对话式 AI。",
