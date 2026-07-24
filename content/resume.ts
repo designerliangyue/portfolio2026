@@ -52,10 +52,10 @@ export const resumeEn: ResumeContent = {
       location: "Chengdu, China",
       period: "Apr 2021 — Present",
       bullets: [
-        "Spearheaded the UX/UI architecture for next-generation AI-driven sales co-pilots and real-time operational analytics dashboards, scaling platforms across multiple Southeast Asian markets.",
-        "Delivered polished visual designs and high-fidelity interactive prototypes for complex web and mobile applications, ensuring a seamless interface experience and precise production handoff.",
-        "Orchestrated targeted user research pipelines and usability benchmarking in multi-cultural contexts, translating deep behavioral insights into intuitive, high-efficiency task flows.",
-        "Architected and governed a centralized design system from the ground up, engineering reusable component tokens that optimized cross-functional design-to-development shipping cycles."
+        "Led the end-to-end redesign of Ignite, Igloo's insurance sales platform, serving agent networks across Southeast Asian markets — from lead acquisition and quoting through policy issuance.",
+        "Designed the AI Sales Co-Pilot: embedded the quote-to-issue journey inside WhatsApp, blending structured UI (WhatsApp Flows) with conversational AI — intelligent customer profiles, real-time talking-point suggestions, and automated form filling with the agent in control",
+        "Designed the Employee Benefits Platform, a three-stakeholder SaaS (insurers, HR admins, employees), with each surface tuned to how that role actually works.",
+        "Ran targeted user research and usability benchmarking across multi-cultural contexts, translating behavioral insights into high-efficiency task flows."
       ]
     },
     {
@@ -64,9 +64,9 @@ export const resumeEn: ResumeContent = {
       location: "Chengdu, China",
       period: "Dec 2019 — Apr 2021",
       bullets: [
-        "Designed intuitive, user-centric interfaces for banking products, translating complex internal requirements into clean, structured digital layouts.",
-        "Focused on product usability and accessibility (WCAG) standards, ensuring digital banking layouts remain clear and intuitive.",
-        "Mapped comprehensive user flows and developed interactive prototypes to translate ambiguous product requirements into concrete, actionable design solutions."
+        "Designed enterprise products including the CMB Private Cloud console, translating complex internal requirements into clear, structured interfaces.",
+        "Upheld usability and accessibility (WCAG) standards; mapped comprehensive user flows and prototypes to turn ambiguous requirements into actionable designs.",
+        "Built and governed a centralized design system from the ground up, with reusable components that shortened design-to-development cycles."
       ]
     },
     {
@@ -128,10 +128,9 @@ export const resumeZh: ResumeContent = {
       location: "中国 · 成都",
       period: "2021 年 4 月 — 至今",
       bullets: [
-        "主导新一代 AI 驱动销售副驾驶与实时运营分析仪表盘的 UX/UI 架构，将平台扩展至多个东南亚市场。",
-        "为复杂的 Web 与移动应用交付精致的视觉设计与高保真交互原型，确保无缝的界面体验与精准的生产交付。",
-        "在多元文化情境中组织有针对性的用户研究与可用性基准测试，将深层行为洞察转化为直观、高效的任务流程。",
-        "从零搭建并治理集中式设计体系，构建可复用的组件 token，优化跨职能的设计到开发交付周期。"
+        "主导 Ignite 保险销售平台的端到端体验重构，服务东南亚市场的代理人网络，从获客、报价到出单的完整旅程。",
+        "设计 AI 销售副驾驶：将报价-出单全流程嵌入 WhatsApp，融合结构化 UI 与对话式 AI。",
+        "主导员工福利平台：面向保险方、HR 与员工三类角色的 SaaS 平台，按各角色真实工作方式定制界面。",
       ]
     },
     {
@@ -140,9 +139,9 @@ export const resumeZh: ResumeContent = {
       location: "中国 · 成都",
       period: "2019 年 12 月 — 2021 年 4 月",
       bullets: [
-        "为银行产品设计直观、以用户为中心的界面，将复杂的内部需求转化为清晰、结构化的数字布局。",
+        "负责招商银行私有云控制台等企业级产品设计，将复杂内部需求转化为清晰、结构化的界面。",
         "专注于产品可用性与无障碍（WCAG）标准，确保数字银行布局清晰直观。",
-        "梳理完整的用户流程并开发交互原型，将模糊的产品需求转化为具体、可执行的设计方案。"
+        "从零搭建并治理集中式设计体系，以可复用组件优化设计-开发交付周期。"
       ]
     },
     {
