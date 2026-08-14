@@ -18,13 +18,13 @@ export const zh: Dictionary = {
     lede:
       "我是岳靓。过去十年，我为东南亚用户构建产品，主导企业金融科技设计体系，近期则为保险从业者塑造 AI 体验。本网站精选三个案例，面向高级产品设计师岗位。",
     based: "所在地",
-    basedValue: "远程优先",
+    basedValue: "成都· 接受调动",
     focus: "方向",
     focusValue: "系统架构 · AI · 金融科技",
     languages: "语言",
     languagesValue: "中 · 英",
     status: "状态",
-    statusValue: "开放新机会",
+    statusValue: "考虑新机会",
     heroStats: [
       { value: "10+", label: "年深耕东南亚、金融科技与 AI" },
       { value: "7", label: "个国家的设计落地项目" },
