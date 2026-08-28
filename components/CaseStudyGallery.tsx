@@ -11,6 +11,8 @@ type CaseStudyGalleryProps = {
   slug: ProjectSlug;
   blocks: GalleryBlock[];
   projectTitle: string;
+  crossCultural?: { heading: string; text: string }[];
+  crossCulturalLabel?: string;
 };
 
 const aspectClass = {
@@ -91,7 +93,13 @@ function GridCell({
   );
 }
 
-export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGalleryProps) {
+export function CaseStudyGallery({
+  slug,
+  blocks,
+  projectTitle,
+  crossCultural,
+  crossCulturalLabel
+}: CaseStudyGalleryProps) {
   const { locale } = useLocale();
   if (!blocks.length) return null;
 
@@ -173,6 +181,25 @@ export function CaseStudyGallery({ slug, blocks, projectTitle }: CaseStudyGaller
             <h3 key={`label-${index}`} className="display-3">
               {locale === "zh" && block.textZh ? block.textZh : block.text}
             </h3>
+          );
+        }
+
+        if (block.type === "cross-cultural") {
+          if (!crossCultural?.length) return null;
+          return (
+            <div key={`cross-cultural-${index}`} className="space-y-6">
+              {crossCulturalLabel ? (
+                <p className="label">{crossCulturalLabel}</p>
+              ) : null}
+              <div className="case-study-split">
+                {crossCultural.map((item) => (
+                  <div key={item.heading} className="studio-chip rounded-2xl p-6 md:p-8">
+                    <h3 className="display-3 text-xl md:text-2xl mb-4">{item.heading}</h3>
+                    <p className="text-base md:text-lg leading-relaxed text-ink/80">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           );
         }
 

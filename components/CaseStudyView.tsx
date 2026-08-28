@@ -96,7 +96,8 @@ export function CaseStudyView({ slug }: { slug: string }) {
   const nextProject = project.next ? projectBySlug(project.next, locale) : null;
   const projectSlug = project.slug as ProjectSlug;
   const hasCrossCultural = (project.crossCultural?.length ?? 0) > 0;
-  const sectionStartIndex = hasCrossCultural ? 3 : 2;
+  const hasStandaloneCrossCultural = hasCrossCultural && projectSlug !== "ignite";
+  const sectionStartIndex = hasStandaloneCrossCultural ? 3 : 2;
   const cs = t.caseStudy;
 
   return (
@@ -169,7 +170,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
         </div>
       </section>
 
-      {hasCrossCultural ? (
+      {hasStandaloneCrossCultural ? (
         <section className="container-grid py-16 md:py-24 border-t border-ink/10">
           <div className="swiss-grid">
             <div className="case-study-index">
@@ -254,6 +255,8 @@ export function CaseStudyView({ slug }: { slug: string }) {
                   slug={projectSlug}
                   blocks={galleryBlocks}
                   projectTitle={project.title}
+                  crossCultural={project.crossCultural}
+                  crossCulturalLabel={cs.crossCultural}
                 />
               </div>
             </div>

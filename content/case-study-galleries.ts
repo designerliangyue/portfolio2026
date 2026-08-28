@@ -36,7 +36,8 @@ export type GalleryBlock =
       badge?: string;
       poster?: string;
     }
-  | { type: "label"; text: string; textZh?: string };
+  | { type: "label"; text: string; textZh?: string }
+  | { type: "cross-cultural" };
 
 /** Gallery blocks keyed by section `kicker` (must match projects.ts). */
 export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]>> = {
@@ -44,7 +45,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
     Research: [
       { type: "single", id: "journey", caption: "Redesign journey map" },
       { type: "single", id: "competitive-audit", caption: "Competitive audit — 7 regional platforms" },
-      { type: "single", id: "problem-statement", caption: "Problem statement synthesis" },
+      { type: "cross-cultural" },
       { type: "single", id: "lofi-prototype", caption: "Lo-fi interactive prototype" }
     ],
     Craft: [
