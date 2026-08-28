@@ -180,6 +180,9 @@ html:lang(zh-Hans) {
   .label {
     @apply font-mono text-xs uppercase tracking-[0.18em] text-ink/50;
   }
+  .case-section-label {
+    @apply flex min-h-10 items-center;
+  }
 
   html:lang(zh-Hans) .label {
     font-family: var(--font-stack-sans);

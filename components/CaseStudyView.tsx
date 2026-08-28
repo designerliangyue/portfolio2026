@@ -15,7 +15,7 @@ import { CountUp } from "@/components/CountUp";
 function SectionBadge({ index }: { index: string }) {
   return (
     <span
-      className="inline-block rounded-full px-3 py-1.5 font-mono text-xs tracking-[0.14em]"
+      className="inline-flex h-10 items-center rounded-full px-3 font-mono text-xs tracking-[0.14em]"
       style={{ background: "var(--studio-accent-soft)", color: "var(--studio-accent)" }}
     >
       {index}
@@ -98,6 +98,9 @@ export function CaseStudyView({ slug }: { slug: string }) {
   const hasCrossCultural = (project.crossCultural?.length ?? 0) > 0;
   const hasStandaloneCrossCultural = hasCrossCultural && projectSlug !== "ignite";
   const sectionStartIndex = hasStandaloneCrossCultural ? 3 : 2;
+  const visibleSections = project.sections.filter(
+    (section) => !(projectSlug === "ignite" && sectionGalleryKey(section.kicker, section.kickerKey) === "Strategy")
+  );
   const cs = t.caseStudy;
 
   return (
@@ -153,7 +156,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
             <SectionBadge index="01" />
           </div>
           <div className="case-study-main">
-            <p className="label mb-8">{cs.overview}</p>
+            <p className="case-section-label label mb-8">{cs.overview}</p>
             <p className="display-3 text-ink">{project.hero}</p>
 
             <div className="mt-16 case-study-split">
@@ -177,7 +180,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
               <SectionBadge index="02" />
             </div>
             <div className="case-study-main">
-              <p className="label mb-8">{cs.crossCultural}</p>
+              <p className="case-section-label label mb-8">{cs.crossCultural}</p>
               <div className="case-study-split">
                 {project.crossCultural!.map((cc) => (
                   <div key={cc.heading} className="studio-chip rounded-2xl p-6 md:p-8">
@@ -191,7 +194,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
         </section>
       ) : null}
 
-      {project.sections.map((section, i) => {
+      {visibleSections.map((section, i) => {
         const galleryKey = sectionGalleryKey(section.kicker, section.kickerKey);
         const galleryBlocks = galleryForSection(projectSlug, galleryKey);
         const hasAside = Boolean(section.bullets?.length);
@@ -209,7 +212,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
                 <SectionBadge index={String(i + sectionStartIndex).padStart(2, "0")} />
               </div>
               <div className="case-study-main">
-                <p className="label mb-8">{section.kicker}</p>
+                <p className="case-section-label label mb-8">{section.kicker}</p>
                 <h2 className="display-3 mb-10">{section.title}</h2>
 
                 {section.stats?.length ? (
@@ -268,10 +271,10 @@ export function CaseStudyView({ slug }: { slug: string }) {
       <section className="container-grid py-16 md:py-24 border-t border-ink/10">
         <div className="swiss-grid">
           <div className="case-study-index">
-            <SectionBadge index={String(sectionStartIndex + project.sections.length).padStart(2, "0")} />
+            <SectionBadge index={String(sectionStartIndex + visibleSections.length).padStart(2, "0")} />
           </div>
           <div className="case-study-main">
-            <p className="label mb-8">{cs.outcome}</p>
+            <p className="case-section-label label mb-8">{cs.outcome}</p>
             <p className="display-3 text-ink">{project.outcome}</p>
           </div>
         </div>

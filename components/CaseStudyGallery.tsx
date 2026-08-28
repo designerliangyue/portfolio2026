@@ -187,9 +187,9 @@ export function CaseStudyGallery({
         if (block.type === "cross-cultural") {
           if (!crossCultural?.length) return null;
           return (
-            <div key={`cross-cultural-${index}`} className="space-y-6">
+            <div key={`cross-cultural-${index}`}>
               {crossCulturalLabel ? (
-                <p className="label">{crossCulturalLabel}</p>
+                <h2 className="display-3 mb-10">{crossCulturalLabel}</h2>
               ) : null}
               <div className="case-study-split">
                 {crossCultural.map((item) => (
