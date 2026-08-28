@@ -90,7 +90,7 @@ export const projects: Project[] = [
         kicker: "Research",
         title: "Listening before designing",
         body: [
-          "Before any wireframe, I ran remote interviews with 10 agents in Indonesia and 15 in Vietnam with local researchers. We added a competitive audit of seven regional platforms, mapping flows, feature sets, and disclosure patterns.",
+          "Before any wireframe, I ran remote interviews with 10 agents in Indonesia and 15 in Vietnam with local researchers. We added a competitive audit of seven regional platforms, mapping flows, feature sets, and UX patterns.",
           "Four insights anchored everything that followed: trust is an asset, quality of service is the moat, agents specialise narrowly, and complex products demand heavy training that the previous app was not delivering."
         ]
       },
