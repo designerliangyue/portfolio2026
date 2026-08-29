@@ -73,7 +73,7 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
   },
   zh: {
     valueLabel: "对代理人的价值",
-    headline: "一个常驻的销售副驾驶，植入代理人日常销售的场景之中。",
+    headline: "一个融入代理人日常销售场景的常驻销售副驾驶。",
     body:
       "代理人无需离开 WhatsApp——客户本就信任的应用——即可完成从报价到成交的全流程，并有 7×24 小时在线的 AI 助手支持。无需切换到 Ignite，无需离开聊天。",
     chips: ["7×24 在线助手", "原生于 WhatsApp", "零场景切换"],
