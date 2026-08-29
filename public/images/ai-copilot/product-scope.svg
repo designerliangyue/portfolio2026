@@ -1,118 +1,111 @@
-<svg viewBox="0 0 1184 1372" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
+<svg viewBox="0 0 1184 1080" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
   <defs>
     <style>
       .ttl{font-family:Georgia,'Times New Roman',serif;font-weight:400;fill:#292219;}
-      .lbl{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.16em;fill:#a39781;}
-      .sub{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.14em;fill:#6f6659;}
-      .bd{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;fill:#6f6659;}
-      .step{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;fill:#332b1f;}
+      .hd{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-weight:650;fill:#292219;}
+      .bd{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;fill:#665d50;}
+      .muted{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;fill:#8d8270;}
+      .lbl{font-family:'SF Mono',Menlo,ui-monospace,monospace;letter-spacing:0.14em;fill:#a39781;}
+      .num{font-family:'SF Mono',Menlo,ui-monospace,monospace;font-weight:700;fill:#b6552f;}
+      .step{font-family:-apple-system,'Segoe UI',Roboto,sans-serif;font-weight:600;fill:#332b1f;}
     </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b6552f"/>
+    </marker>
+    <marker id="arrowSoft" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cfc5b3"/>
+    </marker>
   </defs>
 
-  <rect x="0.5" y="0.5" width="1183" height="1371" rx="20" fill="#fffdf8" stroke="#e5ddca"/>
+  <rect x="0.5" y="0.5" width="1183" height="1079" rx="20" fill="#fffdf8" stroke="#e5ddca"/>
 
   <rect x="64" y="46" width="28" height="3" fill="#b6552f"/>
-  <text x="64" y="84" class="ttl" font-size="25">Phases breakdown</text>
+  <text x="64" y="84" class="ttl" font-size="25">Scope and phases</text>
+  <text x="64" y="116" class="bd" font-size="14">North star: strengthen the agent’s WhatsApp sales habit first, then connect quote, close, and feedback into one path.</text>
 
-  <!-- Phase I -->
-  <rect x="64" y="118" width="252" height="248" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="88" y="152" class="lbl" font-size="10">PHASE I</text>
-  <text x="88" y="178" class="ttl" font-size="16">Content &amp; hand-off</text>
-  <text x="88" y="204" class="bd" font-size="12">Marketing assets and deep</text>
-  <text x="88" y="221" class="bd" font-size="12">links into the agent’s private</text>
-  <text x="88" y="238" class="bd" font-size="12">WhatsApp thread.</text>
-  <line x1="88" y1="262" x2="292" y2="262" stroke="#e5ddca"/>
-  <text x="88" y="288" class="bd" font-size="11" fill="#7a7061">· Posters &amp; digital business cards</text>
-  <text x="88" y="308" class="bd" font-size="11" fill="#7a7061">· One-click deep links</text>
+  <text x="64" y="168" class="lbl" font-size="10">PHASED MVP</text>
+  <text x="64" y="194" class="hd" font-size="16">Four phases, from lead support to a measurable sales loop</text>
 
-  <!-- Phase II -->
-  <rect x="332" y="118" width="252" height="248" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="356" y="152" class="lbl" font-size="10">PHASE II</text>
-  <text x="356" y="178" class="ttl" font-size="16">Conversational quoting</text>
-  <text x="356" y="204" class="bd" font-size="12">Quote inside WABA without</text>
-  <text x="356" y="221" class="bd" font-size="12">opening Ignite mid-sale.</text>
-  <line x1="356" y1="262" x2="560" y2="262" stroke="#e5ddca"/>
-  <text x="356" y="288" class="bd" font-size="11" fill="#7a7061">· Natural-language motor capture</text>
-  <text x="356" y="308" class="bd" font-size="11" fill="#7a7061">· Multimodal vehicle recognition</text>
+  <rect x="64" y="224" width="252" height="168" rx="16" fill="#f6f1e7" stroke="#e5ddca"/>
+  <text x="88" y="258" class="num" font-size="13">01</text>
+  <text x="88" y="286" class="ttl" font-size="17">Content &amp; hand-off</text>
+  <text x="88" y="318" class="bd" font-size="13">Generate posters, cards, and</text>
+  <text x="88" y="340" class="bd" font-size="13">deep links into private chat.</text>
+  <text x="88" y="368" class="muted" font-size="12">Goal: smoother lead entry.</text>
 
-  <!-- Phase III -->
-  <rect x="600" y="118" width="252" height="248" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="624" y="152" class="lbl" font-size="10">PHASE III</text>
-  <text x="624" y="178" class="ttl" font-size="16">Agent-assisted closing</text>
-  <text x="624" y="204" class="bd" font-size="12">High-stakes steps stay</text>
-  <text x="624" y="221" class="bd" font-size="12">gated by the agent.</text>
-  <line x1="624" y1="262" x2="828" y2="262" stroke="#e5ddca"/>
-  <text x="624" y="288" class="bd" font-size="11" fill="#7a7061">· Secured application links</text>
-  <text x="624" y="308" class="bd" font-size="11" fill="#7a7061">· Payment package forward to</text>
-  <text x="624" y="325" class="bd" font-size="11" fill="#7a7061">  private chat</text>
+  <line x1="318" y1="308" x2="328" y2="308" stroke="#cfc5b3" stroke-width="2" marker-end="url(#arrowSoft)"/>
 
-  <!-- Phase IV -->
-  <rect x="868" y="118" width="252" height="248" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="892" y="152" class="lbl" font-size="10">PHASE IV</text>
-  <text x="892" y="178" class="ttl" font-size="16">Signals &amp; performance</text>
-  <text x="892" y="204" class="bd" font-size="12">Turn passive links into</text>
-  <text x="892" y="221" class="bd" font-size="12">moments to act.</text>
-  <line x1="892" y1="262" x2="1096" y2="262" stroke="#e5ddca"/>
-  <text x="892" y="288" class="bd" font-size="11" fill="#7a7061">· H5 engagement → agent alerts</text>
-  <text x="892" y="308" class="bd" font-size="11" fill="#7a7061">· In-chat performance inquiry</text>
+  <rect x="332" y="224" width="252" height="168" rx="16" fill="#fff8ef" stroke="#d7835f" stroke-width="1.5"/>
+  <text x="356" y="258" class="num" font-size="13">02</text>
+  <text x="356" y="286" class="ttl" font-size="17">Conversational quoting</text>
+  <text x="356" y="318" class="bd" font-size="13">Agents quote through natural</text>
+  <text x="356" y="340" class="bd" font-size="13">language without app switching.</text>
+  <text x="356" y="368" class="muted" font-size="12">Goal: reduce context switching.</text>
 
-  <line x1="64" y1="402" x2="1120" y2="402" stroke="#eae2cf"/>
+  <line x1="586" y1="308" x2="596" y2="308" stroke="#cfc5b3" stroke-width="2" marker-end="url(#arrowSoft)"/>
 
-  <!-- User flow -->
-  <text x="64" y="444" class="ttl" font-size="22">User flow — lead to policy issued</text>
-  <text x="64" y="468" class="sub" font-size="10">SYSTEM · AGENT · CUSTOMER · DECISION</text>
+  <rect x="600" y="224" width="252" height="168" rx="16" fill="#f6f1e7" stroke="#e5ddca"/>
+  <text x="624" y="258" class="num" font-size="13">03</text>
+  <text x="624" y="286" class="ttl" font-size="17">Agent-assisted close</text>
+  <text x="624" y="318" class="bd" font-size="13">High-stakes steps remain gated</text>
+  <text x="624" y="340" class="bd" font-size="13">by the agent via secure links.</text>
+  <text x="624" y="368" class="muted" font-size="12">Goal: preserve trust and control.</text>
 
-  <!-- legend -->
-  <g font-size="9" font-family="'SF Mono',Menlo,monospace" letter-spacing="0.1em">
-    <rect x="848" y="430" width="11" height="11" rx="2" fill="#f1ebdc" stroke="#ddd4bf"/>
-    <text x="864" y="439" fill="#6f6659">SYSTEM</text>
-    <rect x="924" y="430" width="11" height="11" rx="2" fill="#f7e8dd" stroke="#d9a98f"/>
-    <text x="940" y="439" fill="#6f6659">AGENT</text>
-    <rect x="992" y="430" width="11" height="11" rx="2" fill="#fffdf8" stroke="#cfc5ac" stroke-dasharray="2.5 2"/>
-    <text x="1008" y="439" fill="#6f6659">CUSTOMER</text>
-    <rect x="1086" y="430" width="11" height="11" rx="2" fill="#292219"/>
-    <text x="1102" y="439" fill="#6f6659">END</text>
+  <line x1="854" y1="308" x2="864" y2="308" stroke="#cfc5b3" stroke-width="2" marker-end="url(#arrowSoft)"/>
+
+  <rect x="868" y="224" width="252" height="168" rx="16" fill="#f6f1e7" stroke="#e5ddca"/>
+  <text x="892" y="258" class="num" font-size="13">04</text>
+  <text x="892" y="286" class="ttl" font-size="17">Signals &amp; results</text>
+  <text x="892" y="318" class="bd" font-size="13">Turn passive links into</text>
+  <text x="892" y="340" class="bd" font-size="13">moments for agent follow-up.</text>
+  <text x="892" y="368" class="muted" font-size="12">Goal: keep improving the loop.</text>
+
+  <line x1="64" y1="446" x2="1120" y2="446" stroke="#eae2cf"/>
+
+  <text x="64" y="494" class="lbl" font-size="10">USER FLOW</text>
+  <text x="64" y="520" class="hd" font-size="16">Lead to policy issued: move key actions back into WhatsApp</text>
+
+  <g font-size="10" font-family="'SF Mono',Menlo,monospace" letter-spacing="0.1em">
+    <rect x="828" y="492" width="11" height="11" rx="2" fill="#f1ebdc" stroke="#ddd4bf"/>
+    <text x="844" y="501" fill="#6f6659">SYSTEM / WABA</text>
+    <rect x="960" y="492" width="11" height="11" rx="2" fill="#f7e8dd" stroke="#d9a98f"/>
+    <text x="976" y="501" fill="#6f6659">AGENT</text>
+    <rect x="1038" y="492" width="11" height="11" rx="2" fill="#fffdf8" stroke="#cfc5ac" stroke-dasharray="2.5 2"/>
+    <text x="1054" y="501" fill="#6f6659">CUSTOMER</text>
   </g>
 
-  <!-- LEAD ACQUISITION -->
-  <text x="592" y="506" text-anchor="middle" class="lbl" font-size="10">LEAD ACQUISITION</text>
-  <rect x="362" y="520" width="460" height="42" rx="9" fill="#f7e8dd" stroke="#d9a98f"/>
-  <text x="592" y="546" text-anchor="middle" class="step" font-size="13">Agent chats with WABA for help driving leads and sales</text>
-  <line x1="592" y1="562" x2="592" y2="584" stroke="#c9bfa6"/>
-  <rect x="362" y="584" width="460" height="42" rx="9" fill="#f1ebdc" stroke="#ddd4bf"/>
-  <text x="592" y="610" text-anchor="middle" class="step" font-size="13">WABA: Generate marketing material</text>
-  <line x1="592" y1="626" x2="592" y2="648" stroke="#c9bfa6"/>
-  <rect x="362" y="648" width="460" height="42" rx="9" fill="#fffdf8" stroke="#cfc5ac" stroke-dasharray="4 3"/>
-  <text x="592" y="674" text-anchor="middle" class="sub" font-size="11">QR SCAN OR LINK CLICK</text>
+  <rect x="64" y="560" width="1056" height="118" rx="18" fill="#fbf7ef" stroke="#e5ddca"/>
+  <text x="92" y="598" class="lbl" font-size="10">01 LEAD</text>
+  <rect x="228" y="586" width="248" height="54" rx="12" fill="#f7e8dd" stroke="#d9a98f"/>
+  <text x="352" y="618" text-anchor="middle" class="step" font-size="13">Agent requests lead support</text>
+  <line x1="486" y1="613" x2="552" y2="613" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="562" y="586" width="248" height="54" rx="12" fill="#f1ebdc" stroke="#ddd4bf"/>
+  <text x="686" y="618" text-anchor="middle" class="step" font-size="13">WABA generates assets</text>
+  <line x1="820" y1="613" x2="886" y2="613" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="896" y="586" width="184" height="54" rx="12" fill="#fffdf8" stroke="#cfc5ac" stroke-dasharray="4 3"/>
+  <text x="988" y="618" text-anchor="middle" class="step" font-size="13">Customer clicks</text>
 
-  <!-- ADVISOR GATE -->
-  <text x="592" y="726" text-anchor="middle" class="lbl" font-size="10">ADVISOR GATE</text>
-  <rect x="362" y="742" width="460" height="42" rx="9" fill="#f7e8dd" stroke="#d9a98f"/>
-  <text x="592" y="768" text-anchor="middle" class="step" font-size="13">Consultation via Agent-Customer Private WhatsApp Chat</text>
+  <rect x="64" y="706" width="1056" height="118" rx="18" fill="#fbf7ef" stroke="#e5ddca"/>
+  <text x="92" y="744" class="lbl" font-size="10">02 ADVISE</text>
+  <rect x="228" y="732" width="350" height="54" rx="12" fill="#f7e8dd" stroke="#d9a98f"/>
+  <text x="403" y="764" text-anchor="middle" class="step" font-size="13">Agent consults with customer in private chat</text>
+  <line x1="588" y1="759" x2="654" y2="759" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="664" y="732" width="350" height="54" rx="12" fill="#f7e8dd" stroke="#d9a98f"/>
+  <text x="839" y="764" text-anchor="middle" class="step" font-size="13">Agent gets quote through WABA</text>
 
-  <!-- QUOTE & FULFILMENT -->
-  <text x="592" y="824" text-anchor="middle" class="lbl" font-size="10">QUOTE &amp; FULFILMENT</text>
-  <rect x="362" y="840" width="460" height="42" rx="9" fill="#f7e8dd" stroke="#d9a98f"/>
-  <text x="592" y="866" text-anchor="middle" class="step" font-size="13">Agent interact with WABA to get quote</text>
-  <line x1="592" y1="882" x2="592" y2="904" stroke="#c9bfa6"/>
-  <rect x="362" y="904" width="460" height="42" rx="9" fill="#f1ebdc" stroke="#ddd4bf"/>
-  <text x="592" y="930" text-anchor="middle" class="step" font-size="13">WABA: Digital quote + Secured Application Links</text>
-  <line x1="592" y1="946" x2="592" y2="968" stroke="#c9bfa6"/>
-  <rect x="362" y="968" width="460" height="42" rx="9" fill="#f7e8dd" stroke="#d9a98f"/>
-  <text x="592" y="994" text-anchor="middle" class="step" font-size="13">Agent forwards link to customer</text>
-  <line x1="592" y1="1010" x2="592" y2="1032" stroke="#c9bfa6"/>
-  <rect x="362" y="1032" width="460" height="42" rx="9" fill="#f1ebdc" stroke="#ddd4bf"/>
-  <text x="592" y="1058" text-anchor="middle" class="step" font-size="13">WABA: Customer clicks → sync behaviour &amp; notify agent</text>
-  <line x1="592" y1="1074" x2="592" y2="1096" stroke="#c9bfa6"/>
-  <rect x="362" y="1096" width="460" height="42" rx="9" fill="#f1ebdc" stroke="#ddd4bf"/>
-  <text x="592" y="1122" text-anchor="middle" class="step" font-size="13">WABA: Update form filling status</text>
-  <line x1="592" y1="1138" x2="592" y2="1160" stroke="#c9bfa6"/>
-  <rect x="362" y="1160" width="460" height="42" rx="9" fill="#fffdf8" stroke="#cfc5ac" stroke-dasharray="4 3"/>
-  <text x="592" y="1186" text-anchor="middle" class="sub" font-size="11">PURCHASE: SELF-SERVE OR AGENT-ASSISTED</text>
-  <line x1="592" y1="1202" x2="592" y2="1224" stroke="#c9bfa6"/>
-  <rect x="362" y="1224" width="460" height="42" rx="9" fill="#f1ebdc" stroke="#ddd4bf"/>
-  <text x="592" y="1250" text-anchor="middle" class="step" font-size="13">WABA: Sync status &amp; issue policy</text>
-  <line x1="592" y1="1266" x2="592" y2="1288" stroke="#c9bfa6"/>
-  <rect x="362" y="1288" width="460" height="42" rx="9" fill="#292219"/>
-  <text x="592" y="1314" text-anchor="middle" class="step" font-size="13" font-weight="600" style="fill:#f6f1e7">Policy issued</text>
+  <rect x="64" y="852" width="1056" height="154" rx="18" fill="#fbf7ef" stroke="#e5ddca"/>
+  <text x="92" y="890" class="lbl" font-size="10">03 CLOSE + SIGNALS</text>
+  <rect x="228" y="878" width="212" height="54" rx="12" fill="#f1ebdc" stroke="#ddd4bf"/>
+  <text x="334" y="910" text-anchor="middle" class="step" font-size="13">Quote + secure link</text>
+  <line x1="450" y1="905" x2="506" y2="905" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="516" y="878" width="182" height="54" rx="12" fill="#f7e8dd" stroke="#d9a98f"/>
+  <text x="607" y="910" text-anchor="middle" class="step" font-size="13">Agent forwards</text>
+  <line x1="708" y1="905" x2="764" y2="905" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="774" y="878" width="144" height="54" rx="12" fill="#fffdf8" stroke="#cfc5ac" stroke-dasharray="4 3"/>
+  <text x="846" y="910" text-anchor="middle" class="step" font-size="13">Customer applies</text>
+  <line x1="928" y1="905" x2="984" y2="905" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="994" y="878" width="82" height="54" rx="12" fill="#292219"/>
+  <text x="1035" y="910" text-anchor="middle" fill="#fffdf8" font-size="13" font-weight="700">Issued</text>
+  <rect x="228" y="948" width="848" height="34" rx="10" fill="#fff8ef" stroke="#d7835f"/>
+  <text x="652" y="970" text-anchor="middle" class="bd" font-size="12.5">Click, form, and close signals sync back to WABA for agent follow-up and performance inquiry.</text>
 </svg>

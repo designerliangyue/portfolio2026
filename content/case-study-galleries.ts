@@ -34,6 +34,7 @@ export type GalleryBlock =
       type: "video";
       src: string;
       caption?: string;
+      captionZh?: string;
       badge?: string;
       poster?: string;
     }
@@ -116,19 +117,22 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
         type: "video",
         src: "/images/ai-copilot/performance-inquiry.mp4",
         poster: "/images/ai-copilot/performance-inquiry-poster.jpg",
-        caption: "In-chat performance inquiry"
+        caption: "In-chat performance inquiry",
+        captionZh: "聊天内业绩查询"
       },
       {
         type: "video",
         src: "/images/ai-copilot/marketing-assets.mp4",
         poster: "/images/ai-copilot/marketing-assets-poster.jpg",
-        caption: "Marketing assets generation"
+        caption: "Marketing assets generation",
+        captionZh: "营销素材生成"
       },
       {
         type: "video",
         src: "/images/ai-copilot/conversational-quoting.mp4",
         poster: "/images/ai-copilot/conversational-quoting-poster.jpg",
-        caption: "Conversational quoting flow"
+        caption: "Conversational quoting flow",
+        captionZh: "对话式报价流程"
       }
     ]
   },

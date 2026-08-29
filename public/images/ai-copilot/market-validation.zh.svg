@@ -27,17 +27,17 @@
 
   <!-- Benchmark cards -->
   <rect x="64" y="336" width="338" height="148" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="88" y="376" class="ttl" font-size="17">Redbus</text>
-  <text x="88" y="406" class="bd" font-size="13">出发地 → 目的地 → 日期，对应</text>
-  <text x="88" y="426" class="bd" font-size="13">车型 → 年份 → 保障范围。</text>
+  <text x="92" y="376" class="ttl" font-size="17">Redbus</text>
+  <text x="92" y="410" class="bd" font-size="14">出发地、目的地、日期</text>
+  <text x="92" y="434" class="bd" font-size="14">映射到车型、年份与保障范围。</text>
 
   <rect x="422" y="336" width="338" height="148" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="446" y="376" class="ttl" font-size="17">JioMart</text>
-  <text x="446" y="406" class="bd" font-size="13">完整的商品目录与支付闭环</text>
-  <text x="446" y="426" class="bd" font-size="13">都在 WhatsApp 内完成。</text>
+  <text x="450" y="376" class="ttl" font-size="17">JioMart</text>
+  <text x="450" y="410" class="bd" font-size="14">商品目录、下单与支付</text>
+  <text x="450" y="434" class="bd" font-size="14">都可以在 WhatsApp 内完成。</text>
 
   <rect x="780" y="336" width="338" height="148" rx="14" fill="#f6f1e7" stroke="#e5ddca"/>
-  <text x="804" y="376" class="ttl" font-size="17">HDFC Bank</text>
-  <text x="804" y="406" class="bd" font-size="13">敏感金融数据在聊天内</text>
-  <text x="804" y="426" class="bd" font-size="13">安全处理。</text>
+  <text x="808" y="376" class="ttl" font-size="17">HDFC Bank</text>
+  <text x="808" y="410" class="bd" font-size="14">敏感金融数据</text>
+  <text x="808" y="434" class="bd" font-size="14">也能在聊天场景中安全处理。</text>
 </svg>

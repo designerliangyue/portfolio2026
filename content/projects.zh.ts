@@ -108,7 +108,7 @@ export const projectsZh: Project[] = [
     cover: { tone: "cool", emoji: "🤖", label: "WhatsApp / AI" },
     summary: "印尼 WhatsApp 销售副驾驶——研究、产品范围与体验设计由一人牵头。",
     hero:
-      "代理人通过私人 WhatsApp 开展销售，产品就应该融入这个场景。我牵头研究、产品定义与设计，打造强化而非改变这一工作习惯的 WhatsApp Business 副驾驶。",
+      "代理人通过私人 WhatsApp 开展销售，产品就应该融入这个场景。我牵头研究、产品定义与设计，打造强化，而非取代固有工作流程的 WhatsApp AI 副驾驶。",
     problem: "报价发生在 Ignite 应用里，信任却建立在私人聊天中。如果 AI 只存在于应用内，就会让本就容易中断的销售节奏再多一次切换。",
     approach:
       "围绕代理人主导的销售流程，我定义了四层架构与分阶段 MVP——交接、报价、成交、反馈——并在开发前通过原型完成团队对齐。",
@@ -124,14 +124,14 @@ export const projectsZh: Project[] = [
         kicker: "贡献",
         kickerKey: "Contribution",
         title: "研究 · 产品 · 设计",
-        body: ["我独立负责从一线洞察到 WhatsApp Business Account（WABA）体验交付的完整流程，涵盖用户研究、产品定义与体验设计。"]
+        body: ["我负责 WhatsApp Business Account（WABA）体验设计，先从代理人与销售团队的实际工作场景中梳理问题，再推进产品定义、核心流程设计与交付落地。"]
       },
       {
         kicker: "研究",
         kickerKey: "Research",
         title: "端到端 WhatsApp 销售",
         body: [
-          "由于 WhatsApp 在中国大陆缺乏真实的日常使用场景，我无法前往印尼现场跟访代理人，因此基于可远程获得的证据推进研究与产品判断。核心方案是将非结构化的 NLP/LLM 能力与 WhatsApp Flow 的结构化 UI 结合，嵌入从报价到出单的流程，而不是只依赖其中一种交互模式。"
+          "在无法进行印尼当地跟访、且 WhatsApp 在中国大陆并非主流工作场景的情况下，我通过 Meta 官方文档、WABA 沙盒、竞品流程和代理人业务场景资料，远程支持研究与产品判断。核心方案是将非结构化的 NLP/LLM 能力与 WhatsApp Flow 的结构化 UI 结合，嵌入从报价到出单的流程，而不是只依赖其中一种交互模式。"
         ]
       },
       {
@@ -149,7 +149,8 @@ export const projectsZh: Project[] = [
         body: ["从全渠道网关到 MCP 能力。"]
       }
     ],
-    outcome: "为印尼打造连贯的 WhatsApp 副驾驶——符合当地使用习惯，架构清晰，并可分阶段交付。",
+    outcome:
+      "这个项目将一个模糊的 AI 销售机会，转化为面向印尼代理人场景的 WhatsApp 副驾驶方案：明确了代理人主导的产品原则、报价到出单的核心流程，以及可分阶段落地的 MVP 路径，为团队后续进入开发提供了清晰依据。",
     next: "ignite"
   },
   {

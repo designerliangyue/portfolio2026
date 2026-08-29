@@ -246,6 +246,7 @@ export function CaseStudyGallery({
         }
 
         if (block.type === "video") {
+          const caption = locale === "zh" ? block.captionZh ?? block.caption : block.caption;
           return (
             <figure key={`video-${index}`}>
               <div className="relative overflow-hidden rounded-[2px] bg-ink/[0.03]">
@@ -269,9 +270,9 @@ export function CaseStudyGallery({
                   </span>
                 ) : null}
               </div>
-              {block.caption ? (
+              {caption ? (
                 <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50">
-                  {block.caption}
+                  {caption}
                 </figcaption>
               ) : null}
             </figure>

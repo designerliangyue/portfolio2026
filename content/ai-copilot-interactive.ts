@@ -82,20 +82,20 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
       {
         id: "research",
         number: "01",
-        title: "研究负责人",
+        title: "研究者",
         impact:
           "在产品于中国大陆受限的情况下远程构建论证——通过 Meta 官方文档与可运行的 WABA 沙盒验证产品假设。"
       },
       {
         id: "product",
         number: "02",
-        title: "产品策略",
+        title: "产品定义者",
         impact: "主导以代理人发起的旅程与四阶段 MVP，在 Meta 的消息规则与代理人信任之间取得平衡。"
       },
       {
         id: "design",
         number: "03",
-        title: "体验设计",
+        title: "体验设计师",
         impact: "将策略转化为 WhatsApp Flows、对话式体验，以及团队可落地的原型。"
       }
     ]

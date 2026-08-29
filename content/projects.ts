@@ -187,7 +187,7 @@ export const projects: Project[] = [
       }
     ],
     outcome:
-      "A coherent WhatsApp Co-Pilot for Indonesia — culturally grounded, architecturally explicit, ready for phased ship.",
+      "This project turned a broad AI sales opportunity into a WhatsApp Co-Pilot concept grounded in Indonesian agent workflows: defining the agent-led product principle, the core quote-to-issue journey, and a phased MVP path that gave the team a clear basis for moving into development.",
     next: "ignite"
   },
   {
