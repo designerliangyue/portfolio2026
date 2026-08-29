@@ -126,7 +126,7 @@ export const projects: Project[] = [
       }
     ],
     outcome:
-      "Ignite shipped as a unified regional product with a scalable design system, four new growth modules, and a built-in measurement loop. Most importantly, it gave the regional team a shared language for talking about market differences without fragmenting the product.",
+      "This redesign went beyond a visual refresh. It reframed Ignite as a regional product around the agent’s full working journey—from prospecting and selling to customer management, learning, and team growth—giving four markets a shared experience framework without erasing local needs. A scalable design system reduced fragmentation across market-specific releases, while behavioural data and in-app research created a repeatable way to validate problems, assess value, and set priorities. The result was not only a more complete product, but a shared operating language for deciding what the regional platform should do next.",
     next: "cmb-cloud"
   },
   {

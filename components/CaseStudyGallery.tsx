@@ -55,6 +55,48 @@ function GridCell({
   cell: GalleryGridCell;
   locale: "en" | "zh";
 }) {
+  if (cell.kind === "measurement-loop") {
+    const steps =
+      locale === "zh"
+        ? ["发布", "使用数据分析", "应用内调研", "确定优先级", "下一模块"]
+        : ["Release", "Usage signal", "Survey", "Prioritization", "Next module"];
+    const description =
+      locale === "zh"
+        ? "上线后，我将使用数据追踪与应用内调研结合，用来识别代理人的流失节点、真实价值点，以及下一批增长模块的优先级。"
+        : "After launch, I paired usage tracking with in-app surveys to identify where agents dropped off, what they valued, and which growth modules should be prioritized next.";
+
+    return (
+      <figure className="flex h-full flex-col">
+        <div className="flex flex-1 flex-col justify-between rounded-[2px] border border-ink/10 bg-[var(--studio-card)] p-6 md:p-8">
+          <div>
+            <p className="label mb-8">{locale === "zh" ? "效果衡量闭环" : "Measurement loop"}</p>
+            <ol className="space-y-0" aria-label={locale === "zh" ? "效果衡量闭环步骤" : "Measurement loop steps"}>
+              {steps.map((step, stepIndex) => (
+                <li key={step} className="grid grid-cols-[2rem_1fr] gap-x-4">
+                  <div className="flex flex-col items-center" aria-hidden>
+                    <span className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--studio-accent)] bg-[var(--studio-accent-soft)] font-mono text-[10px] text-[var(--studio-accent)]">
+                      {String(stepIndex + 1).padStart(2, "0")}
+                    </span>
+                    {stepIndex < steps.length - 1 ? (
+                      <span className="h-7 w-px bg-ink/15" />
+                    ) : null}
+                  </div>
+                  <span className="pt-1 text-base text-ink md:text-lg">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <p className="mt-8 border-t border-ink/10 pt-6 text-sm leading-relaxed text-ink/70 md:text-base">
+            {description}
+          </p>
+        </div>
+        <figcaption className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink/50">
+          {locale === "zh" ? "效果衡量闭环" : "Measurement loop"}
+        </figcaption>
+      </figure>
+    );
+  }
+
   if (cell.kind === "placeholder") {
     return (
       <CaseStudyMediaPlaceholder

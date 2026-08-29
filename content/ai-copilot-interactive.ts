@@ -77,7 +77,7 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
     body:
       "代理人无需离开 WhatsApp——客户本就信任的应用——即可完成从报价到成交的全流程，并有 7×24 小时在线的 AI 助手支持。无需切换到 Ignite，无需离开聊天。",
     chips: ["7×24 在线助手", "原生于 WhatsApp", "零场景切换"],
-    rolesLabel: "三种角色，一条责任链",
+    rolesLabel: "三种角色，覆盖完整流程",
     roles: [
       {
         id: "research",

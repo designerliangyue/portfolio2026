@@ -71,7 +71,7 @@ const zh: MoreWorkContent = {
       title: "2020 年前的数字产品",
       meta: "2015 — 2019 · UI / UX 设计师",
       blurb:
-        "职业早期横跨移动应用、企业后台与网站的作品——正是这份广度，后来收敛为专注、以研究为主导的产品设计。",
+        "职业早期横跨移动应用、企业后台与网站的作品，这些跨领域经验逐渐沉淀为以研究为基础的产品设计能力。",
       tags: ["移动", "数据后台", "Web", "企业"],
       image: "/images/digital-products/engineering-1.webp",
       href: DP_HREF

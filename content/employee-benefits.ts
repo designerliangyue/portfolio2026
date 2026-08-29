@@ -120,7 +120,7 @@ const zh: EBContent = {
     "制作可交互原型并进行测试。"
   ],
   usersLabel: "理解用户",
-  usersTitle: "三类受众，一条共同的福利旅程",
+  usersTitle: "三类用户，一套完整的福利体验",
   usersIntro:
     "以用户画像为指引，我将保险方、HR 管理员与员工的需求提炼为三大核心体验支柱——每个界面都针对该角色真实的工作方式进行优化。",
   pillarsImage: `${IMG}/pillars.webp`,
@@ -132,7 +132,7 @@ const zh: EBContent = {
   panels: [
     {
       title: "保险方（经纪）面板",
-      points: ["高密度数据，快速可操作", "减少手动录入错误"],
+      points: ["高密度数据与高效操作", "减少手动录入错误"],
       image: `${IMG}/insurer.webp`
     },
     {
@@ -148,7 +148,7 @@ const zh: EBContent = {
   ],
   closingLabel: "一句话总结",
   closingText:
-    "一套尊重三种截然不同工作情境的福利系统——为保险方提供密集可操作的数据，为 HR 提供低摩擦的管理，为员工提供从容的移动优先体验。",
+    "一套适配三种不同工作场景的福利系统——为保险方提供高密度、易操作的数据，为 HR 提供顺畅的管理体验，为员工提供简洁从容的移动端体验。",
   backToWork: "← 返回全部作品"
 };
 
