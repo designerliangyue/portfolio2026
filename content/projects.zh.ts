@@ -108,8 +108,8 @@ export const projectsZh: Project[] = [
     cover: { tone: "cool", emoji: "🤖", label: "WhatsApp / AI" },
     summary: "印尼 WhatsApp 销售副驾驶——研究、产品范围与体验设计由一人牵头。",
     hero:
-      "代理人通过私人 WhatsApp 开展销售，产品就应该融入这个场景。我牵头研究、产品定义与设计，打造强化，而非取代固有工作流程的 WhatsApp AI 副驾驶。",
-    problem: "报价发生在 Ignite 应用里，信任却建立在私人聊天中。如果 AI 只存在于应用内，就会让本就容易中断的销售节奏再多一次切换。",
+      "代理人通过私人 WhatsApp 开展销售，产品就应该融入这个场景。我牵头研究、产品定义与设计，打造一个强化、而非取代既有工作流程的 WhatsApp AI 副驾驶。",
+    problem: "报价流程留在 Ignite 应用里，客户信任却建立在私人聊天中。如果 AI 只存在于应用内，就会让本就容易中断的销售节奏再多一次切换。",
     approach:
       "围绕代理人主导的销售流程，我定义了四层架构与分阶段 MVP——交接、报价、成交、反馈——并在开发前通过原型完成团队对齐。",
     metrics: [
@@ -131,7 +131,7 @@ export const projectsZh: Project[] = [
         kickerKey: "Research",
         title: "端到端 WhatsApp 销售",
         body: [
-          "在无法进行印尼当地跟访、且 WhatsApp 在中国大陆并非主流工作场景的情况下，我通过 Meta 官方文档、WABA 沙盒、竞品流程和代理人业务场景资料，远程支持研究与产品判断。核心方案是将非结构化的 NLP/LLM 能力与 WhatsApp Flow 的结构化 UI 结合，嵌入从报价到出单的流程，而不是只依赖其中一种交互模式。"
+          "在无法进行印尼当地跟访、且 WhatsApp 在中国大陆并非主流工作场景的情况下，我通过 Meta 官方文档、WABA 沙盒、竞品流程和代理人业务场景资料，远程完成研究论证与产品判断。核心方案是将非结构化的 NLP/LLM 能力与 WhatsApp Flow 的结构化 UI 结合，嵌入从报价到出单的流程，而不是只依赖其中一种交互模式。"
         ]
       },
       {
@@ -146,7 +146,7 @@ export const projectsZh: Project[] = [
         kicker: "系统设计",
         kickerKey: "System design",
         title: "四层架构",
-        body: ["从全渠道网关到 MCP 能力。"]
+        body: ["我将多渠道入口、AI 编排与保险业务能力拆解为四层结构，帮助团队把复杂系统转译成代理人可理解、可执行的体验。"]
       }
     ],
     outcome:

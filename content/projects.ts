@@ -144,9 +144,9 @@ export const projects: Project[] = [
     summary:
       "WhatsApp Sales Co-Pilot for Indonesia — research, product scope, and experience design in one lead role.",
     hero:
-      "Agents sell on private WhatsApp; the product had to meet them there. I led research, product definition, and design for a WhatsApp Business Co-Pilot that amplifies — not replaces — that habit.",
+      "Agents sell on private WhatsApp; the product had to meet them there. I led research, product definition, and design for a WhatsApp AI Co-Pilot that amplifies — not replaces — their existing workflow.",
     problem:
-      "Quoting lived in Ignite app; trust lived in private chat. AI only inside the app added another switch when momentum was already fragile.",
+      "Quoting lived in the Ignite app; trust lived in private chat. AI only inside the app added another switch when momentum was already fragile.",
     approach:
       "One agent-initiated journey, a four-layer architecture, and a phased MVP — hand-off, quote, close, signals — aligned through prototypes before build.",
     metrics: [
@@ -168,7 +168,7 @@ export const projects: Project[] = [
         kicker: "Research",
         title: "End-to-end WhatsApp sales",
         body: [
-          "WhatsApp is not usable day-to-day on the mainland. I could not shadow Indonesian agents in situ — so I built the case study through evidence I could access remotely. The product thesis: embed quote-to-issue by pairing unstructured NLP/LLM with WhatsApp Flow’s structured UI — not one mode alone."
+          "WhatsApp is not usable day-to-day on the mainland. I could not shadow Indonesian agents in situ — so I built the research case and product direction through evidence I could access remotely. The product thesis: embed quote-to-issue by pairing unstructured NLP/LLM with WhatsApp Flow’s structured UI — not one mode alone."
         ]
       },
       {
@@ -182,7 +182,7 @@ export const projects: Project[] = [
         kicker: "System design",
         title: "Four-layer architecture",
         body: [
-          "From omni-channel gateway to MCP capabilities."
+          "I translated the multi-channel entry points, AI orchestration, and insurance capabilities into four layers the team could reason about as one coherent agent experience."
         ]
       }
     ],

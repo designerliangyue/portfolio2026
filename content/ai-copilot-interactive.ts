@@ -46,28 +46,28 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
     body:
       "Agents run the full quote-to-close inside WhatsApp — the app their customers already trust — backed by a 24/7 AI assistant. No switching to Ignite, no leaving the chat.",
     chips: ["24/7 assistant", "Native to WhatsApp", "Zero context-switch"],
-    rolesLabel: "Three roles, one accountable thread",
+    rolesLabel: "Three roles, one thread from decision to delivery",
     roles: [
       {
         id: "research",
         number: "01",
         title: "Research lead",
         impact:
-          "Built the case remotely — the product is blocked on the mainland — validating the thesis through Meta documentation and a live WABA sandbox."
+          "Built the evidence base remotely, combining Meta documentation, a live WABA sandbox, and benchmark cases to ground product decisions."
       },
       {
         id: "product",
         number: "02",
         title: "Product strategist",
         impact:
-          "Owned the agent-initiated journey and four-phase MVP, balancing Meta’s messaging rules against agent trust."
+          "Defined the agent-led sales journey and four-phase MVP, clarifying where AI, WABA Flow, and human judgment each belong."
       },
       {
         id: "design",
         number: "03",
         title: "Experience designer",
         impact:
-          "Turned strategy into WhatsApp Flows, conversational UX, and prototypes the team could ship against."
+          "Translated the product logic into conversation scripts, WhatsApp Flows, and shippable prototypes the team could align around."
       }
     ]
   },
@@ -77,26 +77,26 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
     body:
       "代理人无需离开 WhatsApp——客户本就信任的应用——即可完成从报价到成交的全流程，并有 7×24 小时在线的 AI 助手支持。无需切换到 Ignite，无需离开聊天。",
     chips: ["7×24 在线助手", "原生于 WhatsApp", "零场景切换"],
-    rolesLabel: "三种角色，覆盖完整流程",
+    rolesLabel: "三重角色，串起从判断到交付的完整链路",
     roles: [
       {
         id: "research",
         number: "01",
         title: "研究者",
         impact:
-          "在产品于中国大陆受限的情况下远程构建论证——通过 Meta 官方文档与可运行的 WABA 沙盒验证产品假设。"
+          "在无法现场跟访、产品环境受限的情况下，整合 Meta 文档、WABA 沙盒与竞品案例，建立方案判断依据。"
       },
       {
         id: "product",
         number: "02",
         title: "产品定义者",
-        impact: "主导以代理人发起的旅程与四阶段 MVP，在 Meta 的消息规则与代理人信任之间取得平衡。"
+        impact: "定义由代理人主导的销售旅程与四阶段 MVP，明确 AI、WABA Flow 与人工判断各自承担的边界。"
       },
       {
         id: "design",
         number: "03",
         title: "体验设计师",
-        impact: "将策略转化为 WhatsApp Flows、对话式体验，以及团队可落地的原型。"
+        impact: "把产品逻辑落到对话脚本、WhatsApp Flow 和可交付原型中，让团队能围绕同一流程推进开发。"
       }
     ]
   }
