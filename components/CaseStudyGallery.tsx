@@ -58,12 +58,12 @@ function GridCell({
   if (cell.kind === "measurement-loop") {
     const steps =
       locale === "zh"
-        ? ["发布", "使用数据分析", "应用内调研", "确定优先级", "下一模块"]
-        : ["Release", "Usage signal", "Survey", "Prioritization", "Next module"];
+        ? ["发布", "使用数据分析", "应用内调研", "确定优先级", "持续优化"]
+        : ["Release", "Usage analysis", "In-app research", "Prioritization", "Continuous improvement"];
     const description =
       locale === "zh"
-        ? "上线后，我将使用数据追踪与应用内调研结合，用来识别代理人的流失节点、真实价值点，以及下一批增长模块的优先级。"
-        : "After launch, I paired usage tracking with in-app surveys to identify where agents dropped off, what they valued, and which growth modules should be prioritized next.";
+        ? "上线后，我结合使用数据分析和应用内调研，持续观察代理人在关键流程中的卡点，理解哪些新功能真正产生价值，并据此判断后续产品模块的优先级。"
+        : "After launch, I combined usage data analysis with in-app research to continuously observe where agents encountered friction in key flows, understand which new features were creating real value, and use those signals to prioritize future product modules.";
 
     return (
       <figure className="flex h-full flex-col">
