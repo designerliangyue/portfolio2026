@@ -67,7 +67,7 @@ export const projectsZh: Project[] = [
         ]
       },
       {
-        kicker: "工艺",
+        kicker: "高保真",
         kickerKey: "Craft",
         title: "入职、首页、购买、客户管理",
         body: [
