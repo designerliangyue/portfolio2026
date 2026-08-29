@@ -89,7 +89,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
         type: "grid",
         columns: 2,
         cells: [
-          { kind: "image", id: "usage-tracking", caption: "Usage data tracking" },
+          { kind: "image", id: "usage-tracking", caption: "Measurement loop" },
           { kind: "image", id: "usability-study", caption: "Usability study" }
         ]
       },
