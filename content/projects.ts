@@ -218,8 +218,8 @@ export const projects: Project[] = [
     ],
     crossCultural: [
       {
-        heading: "Enterprise tone for a global audience",
-        text: "Internal banking tools sit at the intersection of compliance and craft. The visual language is restrained, the IA is unforgiving — every label, status, and alert had to read identically to an engineer, a compliance officer, and a fresh hire."
+        heading: "Enterprise tone for internal bank users",
+        text: "Internal banking tools sit at the intersection of compliance, operations, and engineering. The visual language is restrained, the IA is unforgiving — every label, status, and alert had to read clearly for engineers, operators, security stakeholders, and new hires."
       },
       {
         heading: "Accessibility as a non-negotiable",
