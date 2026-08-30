@@ -6,7 +6,10 @@ import { useLocale } from "@/components/LocaleProvider";
 export function ContributionRoles() {
   const { locale } = useLocale();
   const c = contribution[locale];
-  const headlineLeading = locale === "zh" ? "leading-[0.9]" : "leading-[0.98]";
+  const headlineClassName =
+    locale === "zh"
+      ? "display-3 text-ink"
+      : "font-display tracking-tighter2 leading-[0.98] text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]";
 
   return (
     <div className="mt-12 space-y-10 md:space-y-12">
@@ -14,7 +17,7 @@ export function ContributionRoles() {
       <div className="studio-chip rounded-3xl p-6 md:p-10 lg:p-12">
         <p className="label mb-6">{c.valueLabel}</p>
         <p
-          className={`font-display tracking-tighter2 ${headlineLeading} text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]`}
+          className={headlineClassName}
           style={{ wordBreak: "normal" }}
         >
           {c.headline}

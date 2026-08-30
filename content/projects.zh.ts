@@ -25,7 +25,7 @@ export const projectsZh: Project[] = [
       { value: "4", label: "东南亚市场", note: "印尼 · 越南 · 另有 2 个" },
       { value: "25", label: "母语访谈代理人", note: "印尼 10 · 越南 15" },
       { value: "7", label: "竞品分析", note: "了解一线需求" },
-      { value: "4", label: "新模块上线", note: "Grow · 招募 · 竞赛 · 调研", placeholder: false },
+      { value: "4", label: "新模块上线", note: "在线学习 · 招募 · 竞赛 · 调研", placeholder: false },
       { value: "+__%", label: "注册完成率", note: "待填入上线数据", placeholder: true },
       { value: "__ 分", label: "改版后 NPS 提升", note: "待填入上线后数据", placeholder: true }
     ],
@@ -87,7 +87,7 @@ export const projectsZh: Project[] = [
         ],
         body: [
           "我构建了在关键事件后触发的应用内调研系统——例如完成一笔销售或结束一次培训——并结合行为数据分析，让每次版本迭代都有可衡量的反馈依据，而不只是展示最终界面。",
-          "Grow、招募与竞赛三个新模块直接来自这一反馈闭环，各自对应已记录的代理人行为。"
+          "在线学习、招募与竞赛三个新模块直接来自这一反馈闭环，各自对应已记录的代理人行为。"
         ]
       }
     ],
