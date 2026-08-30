@@ -94,6 +94,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
   if (!project) notFound();
 
   const nextProject = project.next ? projectBySlug(project.next, locale) : null;
+  const cs = t.caseStudy;
   const projectSlug = project.slug as ProjectSlug;
   const hasCrossCultural = (project.crossCultural?.length ?? 0) > 0;
   const hasStandaloneCrossCultural = hasCrossCultural && projectSlug !== "ignite";
@@ -107,7 +108,6 @@ export function CaseStudyView({ slug }: { slug: string }) {
   const visibleSections = project.sections.filter(
     (section) => !(projectSlug === "ignite" && sectionGalleryKey(section.kicker, section.kickerKey) === "Strategy")
   );
-  const cs = t.caseStudy;
 
   return (
     <article>
