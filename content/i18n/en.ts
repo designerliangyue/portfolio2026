@@ -161,7 +161,7 @@ export const en = {
     "Enterprise Banking",
     "Cross-Cultural Research",
     "Design Systems",
-    "Mobile-First SEA",
+    "SEA Product Strategy",
     "Senior Product Design"
   ]
 } as const;

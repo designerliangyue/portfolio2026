@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 export function Marquee({ items }: { items: string[] }) {
-  const loop = [...items, ...items];
+  const loop = [...items, ...items, ...items, ...items];
   return (
     <div className="marquee-ribbon relative overflow-hidden py-4">
       <motion.div
         className="flex items-center whitespace-nowrap"
-        animate={{ x: ["0%", "-50%"] }}
+        animate={{ x: ["0%", "-25%"] }}
         transition={{ duration: 32, repeat: Infinity, ease: "linear" }}
       >
         {loop.map((item, i) => (
