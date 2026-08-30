@@ -98,6 +98,12 @@ export function CaseStudyView({ slug }: { slug: string }) {
   const hasCrossCultural = (project.crossCultural?.length ?? 0) > 0;
   const hasStandaloneCrossCultural = hasCrossCultural && projectSlug !== "ignite";
   const sectionStartIndex = hasStandaloneCrossCultural ? 3 : 2;
+  const crossCulturalLabel =
+    projectSlug === "cmb-cloud"
+      ? locale === "zh"
+        ? "企业级设计决策"
+        : "Enterprise design decisions"
+      : cs.crossCultural;
   const visibleSections = project.sections.filter(
     (section) => !(projectSlug === "ignite" && sectionGalleryKey(section.kicker, section.kickerKey) === "Strategy")
   );
@@ -180,7 +186,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
               <SectionBadge index="02" />
             </div>
             <div className="case-study-main">
-              <p className="case-section-label label mb-8">{cs.crossCultural}</p>
+              <p className="case-section-label label mb-8">{crossCulturalLabel}</p>
               <div className="case-study-split">
                 {project.crossCultural!.map((cc) => (
                   <div key={cc.heading} className="studio-chip rounded-2xl p-6 md:p-8">
@@ -259,7 +265,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
                   blocks={galleryBlocks}
                   projectTitle={project.title}
                   crossCultural={project.crossCultural}
-                  crossCulturalLabel={cs.crossCultural}
+                  crossCulturalLabel={crossCulturalLabel}
                 />
               </div>
             </div>
