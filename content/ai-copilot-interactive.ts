@@ -36,6 +36,7 @@ export type ContributionContent = {
   body: string;
   chips: string[];
   rolesLabel: string;
+  rolesIntro: string;
   roles: ContributionRole[];
 };
 
@@ -47,6 +48,8 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
       "Agents run the full quote-to-close inside WhatsApp — the app their customers already trust — backed by a 24/7 AI assistant. No switching to Ignite, no leaving the chat.",
     chips: ["24/7 assistant", "Native to WhatsApp", "Zero context-switch"],
     rolesLabel: "Three roles, one thread from decision to delivery",
+    rolesIntro:
+      "I owned the WhatsApp Business Account (WABA) experience design, starting from the real working contexts of agents and sales teams before moving into product definition, core flow design, and delivery.",
     roles: [
       {
         id: "research",
@@ -78,6 +81,8 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
       "代理人无需离开 WhatsApp——客户本就信任的应用——即可完成从报价到成交的全流程，并有 7×24 小时在线的 AI 助手支持。无需切换到 Ignite，无需离开聊天。",
     chips: ["7×24 在线助手", "原生于 WhatsApp", "零场景切换"],
     rolesLabel: "三重角色，串起从判断到交付的完整链路",
+    rolesIntro:
+      "我负责 WhatsApp Business Account（WABA）的体验设计，从代理人与销售团队的真实工作场景中梳理问题，再推进产品定义、核心流程设计与交付落地。",
     roles: [
       {
         id: "research",

@@ -160,9 +160,7 @@ export const projects: Project[] = [
       {
         kicker: "Contribution",
         title: "Research · Product · Design",
-        body: [
-          "One accountable thread from field insight to a shippable WhatsApp Business Account (WABA) experience — the value it creates for agents, and the three roles behind it."
-        ]
+        body: []
       },
       {
         kicker: "Research",

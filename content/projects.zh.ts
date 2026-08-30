@@ -124,7 +124,7 @@ export const projectsZh: Project[] = [
         kicker: "贡献",
         kickerKey: "Contribution",
         title: "研究 · 产品 · 设计",
-        body: ["我负责 WhatsApp Business Account（WABA）体验设计，先从代理人与销售团队的实际工作场景中梳理问题，再推进产品定义、核心流程设计与交付落地。"]
+        body: []
       },
       {
         kicker: "研究",

@@ -6,6 +6,7 @@ import { useLocale } from "@/components/LocaleProvider";
 export function ContributionRoles() {
   const { locale } = useLocale();
   const c = contribution[locale];
+  const headlineLeading = locale === "zh" ? "leading-[0.9]" : "leading-[0.98]";
 
   return (
     <div className="mt-12 space-y-10 md:space-y-12">
@@ -13,7 +14,7 @@ export function ContributionRoles() {
       <div className="studio-chip rounded-3xl p-6 md:p-10 lg:p-12">
         <p className="label mb-6">{c.valueLabel}</p>
         <p
-          className="font-display tracking-tighter2 leading-[1.08] text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]"
+          className={`font-display tracking-tighter2 ${headlineLeading} text-ink text-[clamp(1.875rem,4.2vw,3.4rem)]`}
           style={{ wordBreak: "normal" }}
         >
           {c.headline}
@@ -33,7 +34,10 @@ export function ContributionRoles() {
 
       {/* Three roles, one accountable thread */}
       <div>
-        <p className="label mb-6">{c.rolesLabel}</p>
+        <h3 className="display-3 mb-4 text-ink">{c.rolesLabel}</h3>
+        <p className="mb-8 w-full text-base md:text-lg text-ink/70 leading-relaxed">
+          {c.rolesIntro}
+        </p>
         <div className="grid md:grid-cols-3 gap-4">
           {c.roles.map((role) => (
             <div key={role.id} className="studio-chip rounded-2xl p-6 md:p-8">
