@@ -47,7 +47,7 @@ export function Footer() {
               <div className="flex flex-col items-start gap-3 lg:items-end">
                 <a
                   href="mailto:designer.liangyue@gmail.com"
-                  className="max-w-full break-all rounded-full px-4 py-3 text-center font-mono text-[0.65rem] uppercase tracking-[0.08em] transition-opacity hover:opacity-90 sm:px-6 sm:text-xs sm:tracking-[0.16em]"
+                  className="max-w-full break-all rounded-full px-4 py-3 text-center font-mono text-[0.75rem] tracking-[0.01em] transition-opacity hover:opacity-90 sm:px-6 sm:text-sm"
                   style={{ background: "var(--studio-accent)", color: "var(--studio-card)" }}
                 >
                   designer.liangyue@gmail.com
@@ -56,7 +56,7 @@ export function Footer() {
                   href="https://www.linkedin.com/in/liang-y"
                   target="_blank"
                   rel="noreferrer"
-                  className="studio-chip max-w-full whitespace-nowrap rounded-full px-4 py-3 font-mono text-[0.65rem] uppercase tracking-[0.08em] text-ink/80 transition-colors hover:text-[var(--studio-accent)] sm:px-6 sm:text-xs sm:tracking-[0.16em]"
+                  className="studio-chip max-w-full whitespace-nowrap rounded-full px-4 py-3 font-mono text-[0.75rem] tracking-[0.01em] text-ink/80 transition-colors hover:text-[var(--studio-accent)] sm:px-6 sm:text-sm"
                 >
                   linkedin.com/in/liang-y ↗
                 </a>
@@ -72,10 +72,10 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
+          <p className={locale === "zh" ? "text-sm tracking-normal text-ink/50" : "font-mono text-xs uppercase tracking-[0.18em] text-ink/50"}>
             {t.footer.copyright(year)}
           </p>
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-ink/50">
+          <p className={locale === "zh" ? "text-sm tracking-normal text-ink/50" : "font-mono text-xs uppercase tracking-[0.18em] text-ink/50"}>
             {t.footer.updated(updated)}
           </p>
           {showBeian && (

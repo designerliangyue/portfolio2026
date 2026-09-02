@@ -82,24 +82,6 @@ export function AboutPage() {
                       <dd className="text-ink">{value}</dd>
                     </div>
                   ))}
-                  <div>
-                    <dt className="studio-label mb-1 !text-[0.65rem]">{about.resume}</dt>
-                    <dd>
-                      <Link
-                        href={about.resumeHref}
-                        className="group inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-[0.16em]"
-                        style={{ color: "var(--studio-accent)" }}
-                      >
-                        {about.resumeLink.replace("→", "").trim()}
-                        <span
-                          aria-hidden
-                          className="inline-block transition-transform duration-300 ease-swiss group-hover:translate-x-1"
-                        >
-                          →
-                        </span>
-                      </Link>
-                    </dd>
-                  </div>
                 </dl>
               </div>
             </div>

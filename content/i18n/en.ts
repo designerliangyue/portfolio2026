@@ -67,9 +67,6 @@ export const en = {
     openToValue: "Fully remote · Hybrid",
     focusAreas: "Focus areas",
     focusAreasValue: "AI experience · Fintech · Design systems",
-    resume: "Get my resume",
-    resumeLink: "Open online resume →",
-    resumeHref: "/resume",
     timeline: "Career, in four chapters",
     timelineItems: [
       {
@@ -206,9 +203,6 @@ export type Dictionary = {
     openToValue: string;
     focusAreas: string;
     focusAreasValue: string;
-    resume: string;
-    resumeLink: string;
-    resumeHref: string;
     timeline: string;
     timelineItems: readonly { period: string; role: string; note: string }[];
     education: string;
