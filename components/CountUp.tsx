@@ -5,7 +5,8 @@ import { useInView, useReducedMotion } from "framer-motion";
 
 const NUM_RE = /^(.*?)(\d[\d,]*(?:\.\d+)?)(.*)$/s;
 
-/** Counts the numeric part of `value` up from 0 when scrolled into view,
+/** Renders the real value in the initial HTML, then visually counts the
+ *  numeric part up from 0 in the browser when scrolled into view,
  *  preserving any prefix/suffix (e.g. "73.5%", "300+", "60 days").
  *  Values without a number (e.g. "+__%", "—%") render unchanged. */
 export function CountUp({ value, className }: { value: string; className?: string }) {
@@ -13,10 +14,7 @@ export function CountUp({ value, className }: { value: string; className?: strin
   const inView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });
   const reduceMotion = useReducedMotion();
 
-  const [display, setDisplay] = useState(() => {
-    const m = value.match(NUM_RE);
-    return m && !reduceMotion ? `${m[1]}0${m[3]}` : value;
-  });
+  const [display, setDisplay] = useState(value);
 
   useEffect(() => {
     const m = value.match(NUM_RE);
@@ -34,6 +32,8 @@ export function CountUp({ value, className }: { value: string; className?: strin
     const start = performance.now();
     let raf = 0;
 
+    setDisplay(`${before}0${after}`);
+
     const tick = (now: number) => {
       const p = Math.min(1, (now - start) / duration);
       const eased = 1 - Math.pow(1 - p, 3);
@@ -49,7 +49,7 @@ export function CountUp({ value, className }: { value: string; className?: strin
   }, [inView, value, reduceMotion]);
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={className} aria-label={value}>
       {display}
     </span>
   );
