@@ -8,7 +8,7 @@ const NUM_RE = /^(.*?)(\d[\d,]*(?:\.\d+)?)(.*)$/s;
 /** Renders the real value in the initial HTML, then visually counts the
  *  numeric part up from 0 in the browser when scrolled into view,
  *  preserving any prefix/suffix (e.g. "73.5%", "300+", "60 days").
- *  Values without a number (e.g. "+__%", "—%") render unchanged. */
+ *  Values without a number render unchanged. */
 export function CountUp({ value, className }: { value: string; className?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "0px 0px -80px 0px" });

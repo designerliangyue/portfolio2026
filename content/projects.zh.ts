@@ -25,9 +25,7 @@ export const projectsZh: Project[] = [
       { value: "4", label: "东南亚市场", note: "印尼 · 越南 · 另有 2 个" },
       { value: "25", label: "母语访谈代理人", note: "印尼 10 · 越南 15" },
       { value: "7", label: "竞品分析", note: "了解一线需求" },
-      { value: "4", label: "新模块上线", note: "在线学习 · 招募 · 竞赛 · 调研", placeholder: false },
-      { value: "+__%", label: "注册完成率", note: "待填入上线数据", placeholder: true },
-      { value: "__ 分", label: "改版后 NPS 提升", note: "待填入上线后数据", placeholder: true }
+      { value: "4", label: "新模块上线", note: "在线学习 · 招募 · 竞赛 · 调研", placeholder: false }
     ],
     crossCultural: [
       {
@@ -115,9 +113,7 @@ export const projectsZh: Project[] = [
     metrics: [
       { value: "3", label: "一人牵头的职能", note: "研究 · 产品 · 设计" },
       { value: "4", label: "架构层级", note: "网关 · 编排 · MCP · 领域" },
-      { value: "4", label: "MVP 发布阶段", note: "交接 → 数据反馈" },
-      { value: "+__%", label: "WABA 报价到成交", note: "上线后衡量", placeholder: true },
-      { value: "__%", label: "参与预警跟进率", note: "链接打开数据", placeholder: true }
+      { value: "4", label: "MVP 发布阶段", note: "交接 → 数据反馈" }
     ],
     sections: [
       {
@@ -176,10 +172,7 @@ export const projectsZh: Project[] = [
     metrics: [
       { value: "1", label: "统一运维控制台", note: "取代碎片化脚本与工具" },
       { value: "3", label: "情境化引导层级", note: "导览 · 提示 · 内联文档" },
-      { value: "WCAG", label: "深色模式对比标准", note: "面向长时间使用场景" },
-      { value: "—%", label: "平均事件解决时间", note: "待填入行内数据", placeholder: true },
-      { value: "—%", label: "新人上手时间", note: "待填入行内数据", placeholder: true },
-      { value: "—%", label: "深色模式眼疲劳反馈", note: "待填入内部调研", placeholder: true }
+      { value: "WCAG", label: "深色模式对比标准", note: "面向长时间使用场景" }
     ],
     crossCultural: [
       {

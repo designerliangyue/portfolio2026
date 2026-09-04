@@ -109,17 +109,6 @@ export const zh: Dictionary = {
       "协作工具：Figma · Notion · Jira · Cursor"
     ]
   },
-  resume: {
-    back: "← 返回",
-    print: "存为 PDF",
-    summaryHeading: "概述",
-    coreSkills: "核心技能",
-    experience: "工作经历",
-    education: "教育",
-    contact: "联系方式",
-    availability: "远程优先 · 接受外派",
-    focus: "方向"
-  },
   footer: {
     connect: "联系我",
     title: "一起创造更好的产品体验",
@@ -144,9 +133,9 @@ export const zh: Dictionary = {
     problem: "问题",
     approach: "我的方法",
     impact: "成果与反馈",
-    impactTitle: "真正重要的数据——有验证结果就如实呈现，没有则明确说明。",
+    impactTitle: "真正重要的数据——只展示经过验证、能支撑判断的结果。",
     impactNote:
-      "占位数值（如 +__%）表示仍待补充经过验证的上线数据。保留这些标记，是为了明确区分真实证据与未经证实的结果。",
+      "这里优先呈现已验证的调研、访谈与交付信号，避免用未经证实的指标制造结果感。",
     crossCultural: "跨文化设计决策",
     outcome: "成果",
     nextCase: "下一个案例",

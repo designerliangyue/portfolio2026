@@ -63,9 +63,7 @@ export const projects: Project[] = [
       { value: "4", label: "Southeast Asian markets", note: "ID · VN · plus 2" },
       { value: "25", label: "Agents interviewed in-language", note: "10 Indonesia · 15 Vietnam" },
       { value: "7", label: "Regional competitors audited", note: "to map field expectations" },
-      { value: "4", label: "New modules shipped", note: "Grow · Recruit · Contest · Survey", placeholder: false },
-      { value: "+__%", label: "Onboarding completion", note: "to be filled with launch data", placeholder: true },
-      { value: "__ pts", label: "NPS uplift after revamp", note: "to be filled with post-launch data", placeholder: true }
+      { value: "4", label: "New modules shipped", note: "Grow · Recruit · Contest · Survey", placeholder: false }
     ],
     crossCultural: [
       {
@@ -152,9 +150,7 @@ export const projects: Project[] = [
     metrics: [
       { value: "3", label: "Disciplines in one lead role", note: "Research · Product · Design" },
       { value: "4", label: "Architecture layers", note: "Gateway · Orchestration · MCP · Domain" },
-      { value: "4", label: "MVP release phases", note: "Hand-off → Signals" },
-      { value: "+__%", label: "Quote-to-close in WABA", note: "post-launch measurement", placeholder: true },
-      { value: "__%", label: "Engagement alert follow-through", note: "link-open signals", placeholder: true }
+      { value: "4", label: "MVP release phases", note: "Hand-off → Signals" }
     ],
     sections: [
       {
@@ -211,10 +207,7 @@ export const projects: Project[] = [
     metrics: [
       { value: "1", label: "Unified operator console", note: "replacing fragmented scripts and tools" },
       { value: "3", label: "Layers of contextual onboarding", note: "tour · tooltips · inline docs" },
-      { value: "WCAG", label: "Dark mode contrast standards", note: "for prolonged usage scenarios" },
-      { value: "—%", label: "Mean time to incident resolution", note: "to be filled with bank-side data", placeholder: true },
-      { value: "—%", label: "New hire ramp-up time", note: "to be filled with bank-side data", placeholder: true },
-      { value: "—%", label: "Reported eye fatigue (dark mode)", note: "to be filled with internal survey", placeholder: true }
+      { value: "WCAG", label: "Dark mode contrast standards", note: "for prolonged usage scenarios" }
     ],
     crossCultural: [
       {

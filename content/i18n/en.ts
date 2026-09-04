@@ -108,17 +108,6 @@ export const en = {
       "Collaboration tools: Figma · Notion · Jira · Cursor"
     ]
   },
-  resume: {
-    back: "← Back",
-    print: "Save as PDF",
-    summaryHeading: "Summary",
-    coreSkills: "Core skills",
-    experience: "Experience",
-    education: "Education",
-    contact: "Contact",
-    availability: "Remote-first · Open to relocation",
-    focus: "Focus"
-  },
   footer: {
     connect: "Let's connect",
     title: "Designing what's next, together.",
@@ -143,9 +132,9 @@ export const en = {
     problem: "The problem",
     approach: "My approach",
     impact: "Impact & signals",
-    impactTitle: "The numbers that matter — concrete where available, honest where not.",
+    impactTitle: "The numbers that matter — verified signals that support product judgment.",
     impactNote:
-      "Placeholder values (e.g. +__%) mark KPIs to be filled with verified launch data — kept visible to signal evidence orientation rather than vanity metrics.",
+      "This section prioritizes validated research, delivery, and feedback signals instead of using unverified metrics to imply impact.",
     crossCultural: "Cross-cultural design decisions",
     outcome: "Outcome",
     nextCase: "Next case",
@@ -209,17 +198,6 @@ export type Dictionary = {
     educationItems: readonly { degree: string; school: string; detail: string }[];
     skills: string;
     skillItems: readonly string[];
-  };
-  resume: {
-    back: string;
-    print: string;
-    summaryHeading: string;
-    coreSkills: string;
-    experience: string;
-    education: string;
-    contact: string;
-    availability: string;
-    focus: string;
   };
   footer: {
     connect: string;
