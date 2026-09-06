@@ -14,7 +14,7 @@ export const en = {
     ],
     heroSerif: ["culture", "technology"],
     lede:
-      "I'm Liang Yue. Over the last 10 years I've built products for users across Southeast Asia, led design systems for enterprise fintech, and most recently shaped AI experiences for insurance professionals. This site is a curated selection of three case studies built for Senior Product Design roles.",
+      "I'm Liang Yue, a Senior Product Designer with 10 years of experience turning complex problems into clear, usable, and shippable product experiences. I work across the full product process — from research and product definition to interaction design, design systems, delivery, and iteration.",
     based: "Based",
     basedValue: "Remote-first",
     focus: "Focus",
@@ -32,7 +32,7 @@ export const en = {
     workTitle: ["Strategic foresight.", "Cross-cultural scale.", "Enterprise depth."],
     workSerif: ["Cross-cultural scale."],
     workLede:
-      "Three projects, one through-line: an AI Co-Pilot that required me to define the product before designing it — grounded in four years of cross-cultural research across Southeast Asia, and proven at enterprise depth inside one of China's largest banks.",
+      "Three projects show how I work at different scales: defining and launching an AI sales product, redesigning a regional insurance platform through in-language research, and translating private-cloud operations into an enterprise system.",
     aboutLabel: "About",
     aboutTitle: [
       "A results-focused designer who merges reliability with",
@@ -44,7 +44,7 @@ export const en = {
       "."
     ],
     aboutLede:
-      "My work sits at the intersection of cross-cultural research, enterprise complexity, and the new design space opened up by AI. I care about evidence, craft, and shipping things that people can actually live inside.",
+      "I work from ambiguity to delivery: establish the evidence boundary, align product and engineering around the decision, then build the flows and systems needed to ship.",
     aboutLink: "Read full background →"
   },
   about: {
@@ -53,13 +53,13 @@ export const en = {
     title: ["Liang Yue.", "A senior designer", "built across borders."],
     titleSerif: "A senior designer",
     tagline:
-      "Merging reliability with innovation — a results-focused designer grounded in data and real-world usability.",
+      "I define complex product problems, make the evidence and trade-offs visible, and carry the experience through delivery with remote product and engineering teams.",
     background: "Background",
     backgroundParagraphs: [
-      "My journey began in Landscape Architecture, where I learned to design spaces that inspire and connect people. Today, I bring that same passion to digital design, crafting experiences that are intuitive, engaging, and meaningful. Over the past 10 years, I've worked across insurtech, cloud computing, banking, and service industries, creating products that solve real problems for real users.",
-      "For me, design is more than pixels and prototypes — it's about understanding people and telling their stories through thoughtful, user-centered solutions.",
-      "In the age of AI, I believe design plays a critical role in ensuring technology remains human-centered, ethical, and accessible. I've worked on AI-enhanced interfaces, leveraging data to create intuitive and inclusive experiences that empower users.",
-      "I'm exploring Senior Product Designer opportunities with a strong preference for fully remote collaboration — and I'm looking for a team where evidence, craft, and care all sit at the same table."
+      "Over the past 10 years, I have designed across insurtech, banking, cloud computing, and enterprise SaaS. The common thread is complexity: multiple users, regulated workflows, regional variation, or technical systems that have to become understandable without becoming simplistic.",
+      "I work end to end. I frame the product question, separate direct research from indirect evidence, map the operating model, and turn the decision into flows, prototypes, interface systems, and production-ready handoff. The AI Sales Co-Pilot shows that process from an ambiguous opportunity to three launched WhatsApp workflows.",
+      "Remote collaboration is part of the practice, not a location preference. I make assumptions, ownership, open questions, and interaction logic visible so product, engineering, and operations can make decisions asynchronously and challenge them early.",
+      "My first degree was in Landscape Architecture. It trained me to think in systems, movement, and long-lived environments—an approach I now apply to digital products used repeatedly, under real operational constraints."
     ],
     languages: "Languages",
     languagesValue: "English (working) · Chinese (native)",
@@ -67,6 +67,7 @@ export const en = {
     openToValue: "Fully remote · Hybrid",
     focusAreas: "Focus areas",
     focusAreasValue: "AI experience · Fintech · Design systems",
+    proof: "Selected evidence",
     timeline: "Career, in four chapters",
     timelineItems: [
       {
@@ -77,7 +78,7 @@ export const en = {
       {
         period: "2019 — 2021",
         role: "UI/UX Designer · China Merchants Bank",
-        note: "Internal private-cloud platform — enterprise IA and a WCAG-grade dark mode."
+        note: "Internal private-cloud platform — enterprise IA and a dark mode checked against WCAG contrast criteria."
       },
       {
         period: "2017 — 2019",
@@ -100,12 +101,12 @@ export const en = {
     ],
     skills: "Skills",
     skillItems: [
-      "User research & behavior analysis",
-      "AI-enhanced design solutions",
-      "Data-driven design & A/B testing",
-      "Wireframing & prototyping",
+      "Product discovery & evidence synthesis",
+      "AI and conversational product design",
+      "Complex workflows & information architecture",
+      "Prototyping & production handoff",
       "Design systems & component libraries",
-      "Collaboration tools: Figma · Notion · Jira · Cursor"
+      "Remote cross-functional collaboration"
     ]
   },
   footer: {
@@ -128,6 +129,12 @@ export const en = {
     period: "Period",
     role: "Role",
     market: "Market",
+    status: "Status",
+    team: "Team",
+    scope: "My scope",
+    constraints: "Constraints",
+    quickNav: "Case map",
+    evidence: "Delivery & evidence",
     overview: "Overview",
     problem: "The problem",
     approach: "My approach",
@@ -198,6 +205,7 @@ export type Dictionary = {
     educationItems: readonly { degree: string; school: string; detail: string }[];
     skills: string;
     skillItems: readonly string[];
+    proof: string;
   };
   footer: {
     connect: string;
@@ -213,6 +221,12 @@ export type Dictionary = {
     period: string;
     role: string;
     market: string;
+    status: string;
+    team: string;
+    scope: string;
+    constraints: string;
+    quickNav: string;
+    evidence: string;
     overview: string;
     problem: string;
     approach: string;

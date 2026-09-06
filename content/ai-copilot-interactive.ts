@@ -56,7 +56,7 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
         number: "01",
         title: "Research lead",
         impact:
-          "Built the evidence base remotely, combining Meta documentation, a live WABA sandbox, and benchmark cases to ground product decisions."
+          "Built the evidence base remotely through Meta documentation, benchmark flows, a live WABA environment, and the Indonesian agent workflow."
       },
       {
         id: "product",
@@ -70,7 +70,7 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
         number: "03",
         title: "Experience designer",
         impact:
-          "Translated the product logic into conversation scripts, WhatsApp Flows, and shippable prototypes the team could align around."
+          "Translated the product logic into conversation scripts, WhatsApp Flows, and production prototypes used to deliver the launched experience."
       }
     ]
   },
@@ -89,7 +89,7 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
         number: "01",
         title: "研究者",
         impact:
-          "在无法现场跟访、产品环境受限的情况下，整合 Meta 文档、WABA 沙盒与竞品案例，建立方案判断依据。"
+          "通过 Meta 文档、竞品流程、可运行的 WABA 环境与印尼代理人工作流程，远程建立方案判断依据。"
       },
       {
         id: "product",
@@ -101,7 +101,7 @@ export const contribution: Record<"en" | "zh", ContributionContent> = {
         id: "design",
         number: "03",
         title: "体验设计师",
-        impact: "把产品逻辑落到对话脚本、WhatsApp Flow 和可交付原型中，让团队能围绕同一流程推进开发。"
+        impact: "把产品逻辑落到对话脚本、WhatsApp Flow 和生产原型中，用于交付已经上线的体验。"
       }
     ]
   }

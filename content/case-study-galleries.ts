@@ -112,7 +112,7 @@ export const sectionGalleries: Record<ProjectSlug, Record<string, GalleryBlock[]
   "ai-copilot": {
     Research: [],
     Product: [
-      { type: "label", text: "Live demos · test phase", textZh: "测试阶段的录屏" },
+      { type: "label", text: "Launched flows · product demos", textZh: "已上线流程 · 产品演示" },
       {
         type: "video",
         src: "/images/ai-copilot/performance-inquiry.mp4",

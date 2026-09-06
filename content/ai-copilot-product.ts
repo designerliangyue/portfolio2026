@@ -1,7 +1,7 @@
 export type FlowStepType = "system" | "agent" | "customer" | "decision" | "end";
 
 export const productScope = {
-  title: "Phases breakdown",
+  title: "Release phases",
   phases: [
     {
       phase: "I",
@@ -49,7 +49,7 @@ export const productScope = {
       {
         label: "Quote & fulfilment",
         steps: [
-          { type: "customer", text: "Agent interact with WABA to get quote" },
+          { type: "customer", text: "Agent interacts with WABA to generate a quote" },
           { type: "system", text: "WABA: Digital quote + Secured Application Links" },
           { type: "agent", text: "Agent forwards link to customer" },
           { type: "system", text: "WABA: Customer clicks → sync behaviour & notify agent" },

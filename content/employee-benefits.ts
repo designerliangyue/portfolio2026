@@ -16,6 +16,12 @@ export type EBContent = {
   roleItems: string[];
   respLabel: string;
   respItems: string[];
+  evidenceLabel: string;
+  evidenceTitle: string;
+  evidenceItems: string[];
+  journeyLabel: string;
+  journeyTitle: string;
+  journeySteps: { role: string; action: string; handoff: string }[];
   usersLabel: string;
   usersTitle: string;
   usersIntro: string;
@@ -41,7 +47,8 @@ const en: EBContent = {
   meta: [
     { label: "Period", value: "2022" },
     { label: "Role", value: "UX Researcher · Product Designer" },
-    { label: "Scope", value: "Web SaaS · Multi-stakeholder" }
+    { label: "Scope", value: "Web SaaS · Multi-stakeholder" },
+    { label: "Status", value: "Condensed case · Product design" }
   ],
   coverImage: `${IMG}/cover.webp`,
   overviewLabel: "Overview",
@@ -52,9 +59,23 @@ const en: EBContent = {
   roleItems: ["UX Researcher", "Product Designer"],
   respLabel: "Responsibilities",
   respItems: [
-    "Conducted user interviews with all three stakeholder groups to identify pain points.",
+    "Synthesised stakeholder needs across insurers, HR administrators, and employees.",
     "Created user flows and wireframes to balance simplicity for employees with advanced functionality for HR and insurers.",
-    "Prototyped and tested interactive components."
+    "Created interactive prototypes for the core components and cross-role journey."
+  ],
+  evidenceLabel: "Design artifacts",
+  evidenceTitle: "From stakeholder model to interactive prototype",
+  evidenceItems: [
+    "Stakeholder models connected the needs of insurers, HR administrators, and employees across one benefit journey.",
+    "A shared feature map and role-specific flows aligned the three product surfaces before detailed design.",
+    "Wireframes and interactive prototypes translated the structure into reviewable end-to-end experiences."
+  ],
+  journeyLabel: "Cross-role journey",
+  journeyTitle: "One benefit journey, with ownership passed between three surfaces",
+  journeySteps: [
+    { role: "Insurer / broker", action: "Configure plans, eligibility, and service rules", handoff: "Publishes the benefit structure HR can administer" },
+    { role: "HR administrator", action: "Manage employee and family enrolment", handoff: "Makes the correct coverage available to each employee" },
+    { role: "Employee", action: "Use benefits and follow claim status", handoff: "Creates service and claim information visible to the responsible teams" }
   ],
   usersLabel: "Understand the users",
   usersTitle: "Three audiences, one shared benefit journey",
@@ -92,7 +113,7 @@ const en: EBContent = {
   ],
   closingLabel: "In short",
   closingText:
-    "A single benefits system that respects three very different working contexts — dense actionability for insurers, low-friction administration for HR, and a calm mobile-first experience for employees.",
+    "The design connected three working contexts through one benefits journey: insurers configured and monitored the service, HR managed enrolment and families, and employees accessed benefits and claim status. The aligned product structure and interactive prototype gave the three surfaces one coherent experience foundation.",
   backToWork: "← Back to all work"
 };
 
@@ -104,7 +125,8 @@ const zh: EBContent = {
   meta: [
     { label: "周期", value: "2022" },
     { label: "角色", value: "用户研究 · 产品设计" },
-    { label: "范围", value: "Web SaaS · 多方角色" }
+    { label: "范围", value: "Web SaaS · 多方角色" },
+    { label: "状态", value: "精简案例 · 产品设计" }
   ],
   coverImage: `${IMG}/cover.webp`,
   overviewLabel: "概览",
@@ -115,9 +137,23 @@ const zh: EBContent = {
   roleItems: ["用户研究", "产品设计"],
   respLabel: "职责",
   respItems: [
-    "对三类角色分别进行用户访谈，识别各自的痛点。",
+    "整合保险方、HR 管理员与员工三类角色的需求。",
     "绘制用户流程与线框，在员工端的简洁与 HR／保险端的高级功能之间取得平衡。",
-    "制作可交互原型并进行测试。"
+    "为核心组件与跨角色旅程制作可交互原型。"
+  ],
+  evidenceLabel: "设计产出",
+  evidenceTitle: "从角色模型到可交互原型",
+  evidenceItems: [
+    "角色模型把保险方、HR 管理员与员工的需求连接到同一条福利旅程中。",
+    "共享功能地图与分角色流程在详细设计前对齐了三个产品界面的结构。",
+    "线框与可交互原型将产品结构转化为可以评审的端到端体验。"
+  ],
+  journeyLabel: "跨角色旅程",
+  journeyTitle: "一条福利旅程，在三个界面之间传递责任",
+  journeySteps: [
+    { role: "保险方／经纪", action: "配置计划、资格与服务规则", handoff: "发布可由 HR 管理的福利结构" },
+    { role: "HR 管理员", action: "管理员工与家属参保", handoff: "让每位员工获得正确的保障范围" },
+    { role: "员工", action: "使用福利并跟进理赔状态", handoff: "形成可供责任团队处理的服务与理赔信息" }
   ],
   usersLabel: "理解用户",
   usersTitle: "三类用户，一套完整的福利体验",
@@ -148,7 +184,7 @@ const zh: EBContent = {
   ],
   closingLabel: "一句话总结",
   closingText:
-    "一套适配三种不同工作场景的福利系统——为保险方提供高密度、易操作的数据，为 HR 提供顺畅的管理体验，为员工提供简洁从容的移动端体验。",
+    "设计通过一条福利旅程连接三种工作场景：保险方配置并监控服务，HR 管理参保与家属，员工使用福利并查看理赔状态。完成对齐的产品结构与可交互原型，为三个产品界面建立了一致的体验基础。",
   backToWork: "← 返回全部作品"
 };
 

@@ -12,7 +12,7 @@ export type CaseStudySection = {
   title: string;
   body: string[];
   bullets?: { heading: string; text: string }[];
-  stats?: { value: string; label: string }[];
+  stats?: { value: string; label: string; note?: string }[];
 };
 
 export type Project = {
@@ -22,7 +22,10 @@ export type Project = {
   subtitle: string;
   period: string;
   role: string;
+  status: string;
   team?: string;
+  scope: string;
+  constraints: string;
   industry: string;
   market: string;
   tags: string[];
@@ -35,6 +38,7 @@ export type Project = {
   crossCultural?: { heading: string; text: string }[];
   sections: CaseStudySection[];
   outcome: string;
+  evidence: string[];
   next?: string;
 };
 
@@ -46,7 +50,10 @@ export const projects: Project[] = [
     subtitle: "Reimagining an end-to-end insurance platform for Southeast Asia",
     period: "2022 — 2024",
     role: "UX Researcher · Product Designer (end-to-end)",
-    team: "Cross-regional team across SG, ID, VN, MY",
+    status: "Live product · Ongoing releases",
+    team: "Remote cross-functional team",
+    scope: "Research synthesis, product flows, interaction design, UI system, and delivery",
+    constraints: "Four markets, local regulation and language variation, remote research",
     industry: "Insurtech · SaaS · Mobile",
     market: "4 Southeast Asian countries · ID, VN, MY, TH",
     tags: ["UX Research", "Mobile App", "Design System", "Cross-cultural"],
@@ -72,7 +79,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Specialism, not breadth",
-        text: "Most agents specialise in only 2–3 product types. The previous homepage showed everything to everyone. The new homepage learns the agent's specialism and prioritises the products they actually sell — a small interaction model change with outsized retention impact."
+        text: "Most agents specialise in only 2–3 product types. The previous homepage showed everything to everyone. The new homepage prioritises the products relevant to each agent’s specialism, reducing the effort needed to find what they sell most often."
       },
       {
         heading: "One system, four flavours",
@@ -96,25 +103,25 @@ export const projects: Project[] = [
         kicker: "Strategy",
         title: "From scattered tools to a single agent surface",
         body: [
-          "I reframed the brief from \"redesign the app\" to \"design the agent's working day.\" That shifted the IA from product-led to journey-led: prospecting → matching → selling → managing → growing.",
-          "Each surface inherits a clear principle: prospect screens optimise for speed, sell screens optimise for confidence, manage screens optimise for control."
+          "The interviews showed that agents did not experience their work as a catalogue of insurance products. They moved through a day of prospecting, matching, selling, managing customers, and growing their teams. I therefore reframed the brief from \"redesign the app\" to \"design the agent’s working day.\"",
+          "That decision shifted the information architecture from product-led to journey-led. It meant giving up a single catalogue-first homepage, but it let each surface optimise for its real task: speed in prospecting, confidence in selling, and control in customer management."
         ]
       },
       {
         kicker: "Craft",
         title: "Onboarding, homepage, purchase, customer management",
         body: [
-          "Onboarding moved from a long web form to a streamlined mobile-native sequence. The homepage shifted from a passive product list to an informative, personal dashboard. The purchase flow was streamlined with a clearer information architecture. Customer management gained richer profiles and contextual actions.",
-          "All four flows ship against the same regional design system, so a country-specific change in Vietnam does not silently break Indonesia."
+          "The before-and-after screens below show where the strategy changed the product: a shorter mobile-native onboarding sequence, a homepage prioritising each agent’s specialism, a clearer purchase structure, and customer profiles with actions in context.",
+          "All four flows shipped against one regional design system. Market-level variants handle language, product classification, and regulatory content without turning each country into a separate product."
         ]
       },
       {
         kicker: "Iteration",
         title: "Designing the feedback loop",
         stats: [
-          { value: "60 days", label: "Survey window after new version launched" },
-          { value: "300+", label: "Responses received" },
-          { value: "73.5%", label: "Satisfaction rate" },
+          { value: "60 days", label: "Post-launch survey window" },
+          { value: "300+", label: "In-app survey responses" },
+          { value: "73.5%", label: "Reported satisfaction" },
           { value: "67", label: "NPS score" }
         ],
         body: [
@@ -125,6 +132,11 @@ export const projects: Project[] = [
     ],
     outcome:
       "This redesign went beyond a visual refresh. It reframed Ignite as a regional product around the agent’s full working journey—from prospecting and selling to customer management, learning, and team growth—giving four markets a shared experience framework without erasing local needs. A scalable design system reduced fragmentation across market-specific releases, while behavioural data and in-app research created a repeatable way to validate problems, assess value, and set priorities. The result was not only a more complete product, but a shared operating language for deciding what the regional platform should do next.",
+    evidence: [
+      "Four product modules shipped on the shared regional design system: Grow, Recruitment, Contest, and Survey.",
+      "A 60-day in-app survey collected 300+ responses, with 73.5% reported satisfaction and an NPS score of 67.",
+      "These are product-feedback signals, not revenue impact or outcomes attributed to design alone."
+    ],
     next: "cmb-cloud"
   },
   {
@@ -135,6 +147,10 @@ export const projects: Project[] = [
       "WhatsApp-native conversational commerce for Indonesian insurance agents",
     period: "2025 — 2026",
     role: "Lead Product Strategy & Design",
+    status: "Launched · Three production flows",
+    team: "Product, engineering, and insurance operations partners",
+    scope: "Research direction, product definition, conversational UX, system model, and production prototypes",
+    constraints: "Remote access to Indonesian agents, Meta messaging rules, and high-stakes insurance steps",
     industry: "AI · Insurtech · Conversational commerce",
     market: "Indonesia",
     tags: ["AI Experience", "WhatsApp", "Product Strategy", "Cross-cultural"],
@@ -146,11 +162,11 @@ export const projects: Project[] = [
     problem:
       "Quoting lived in the Ignite app; trust lived in private chat. AI only inside the app added another switch when momentum was already fragile.",
     approach:
-      "One agent-initiated journey, a four-layer architecture, and a phased MVP — hand-off, quote, close, signals — aligned through prototypes before build.",
+      "I defined one agent-initiated journey and a phased release — hand-off, quote, close, and signals — then translated it into conversational flows, a four-layer system model, and production prototypes with the delivery team.",
     metrics: [
-      { value: "3", label: "Disciplines in one lead role", note: "Research · Product · Design" },
-      { value: "4", label: "Architecture layers", note: "Gateway · Orchestration · MCP · Domain" },
-      { value: "4", label: "MVP release phases", note: "Hand-off → Signals" }
+      { value: "3", label: "Core production flows delivered", note: "Performance · Marketing assets · Quoting" },
+      { value: "4", label: "System layers aligned", note: "Gateway · Orchestration · MCP · Domain" },
+      { value: "4", label: "Release phases defined", note: "Hand-off → Signals" }
     ],
     sections: [
       {
@@ -162,14 +178,16 @@ export const projects: Project[] = [
         kicker: "Research",
         title: "End-to-end WhatsApp sales",
         body: [
-          "WhatsApp is not usable day-to-day on the mainland. I could not shadow Indonesian agents in situ — so I built the research case and product direction through evidence I could access remotely. The product thesis: embed quote-to-issue by pairing unstructured NLP/LLM with WhatsApp Flow’s structured UI — not one mode alone."
+          "WhatsApp is not usable day-to-day on the mainland, so I could not shadow Indonesian agents in situ. I combined Meta documentation, benchmark services, a live WABA environment, and the existing agent workflow to test one question: which parts of quote-to-issue benefit from conversation, and which require structure?",
+          "The answer was a hybrid model. Free text supports flexible requests; WhatsApp Flows handle precise data capture; explicit agent confirmation protects high-stakes steps. The diagrams below show the evidence and interaction split behind that decision."
         ]
       },
       {
         kicker: "Product",
         title: "Scope & phases",
         body: [
-          "North star: empowerment without displacement. Phases breakdown, User flow, and WABA screens below — aligned to the WhatsApp MVP programme for Indonesia."
+          "The product principle was empowerment without displacement: WABA provides tools, while the agent remains the visible owner of the customer relationship. That ruled out a fully autonomous bot and shaped the hand-off points in the flow below.",
+          "I divided delivery into four phases so the team could launch useful agent tasks first, then extend toward quoting, assisted closing, and engagement signals. The three product demos show the launched performance, marketing-asset, and quoting flows."
         ]
       },
       {
@@ -181,7 +199,12 @@ export const projects: Project[] = [
       }
     ],
     outcome:
-      "This project turned a broad AI sales opportunity into a WhatsApp Co-Pilot concept grounded in Indonesian agent workflows: defining the agent-led product principle, the core quote-to-issue journey, and a phased MVP path that gave the team a clear basis for moving into development.",
+      "The WhatsApp AI Co-Pilot launched with production flows for performance inquiry, marketing-asset generation, and conversational quoting. The work turned a broad AI opportunity into an agent-led product model, a quote-to-issue journey, and a phased system the team can extend without displacing the agent-customer relationship.",
+    evidence: [
+      "Launched production flows: performance inquiry, marketing-asset generation, and conversational quoting.",
+      "Delivery evidence includes conversation scripts, WhatsApp Flows, a quote-to-issue journey, system architecture, and production prototypes.",
+      "Research was remote and indirect: Meta documentation, benchmark services, a live WABA environment, existing workflows, and partner input—not direct in-market agent interviews."
+    ],
     next: "ignite"
   },
   {
@@ -191,9 +214,12 @@ export const projects: Project[] = [
     subtitle: "A unified internal cloud platform for one of China's largest retail banks",
     period: "2020",
     role: "Lead UI/UX Designer",
+    status: "Delivered · Internal enterprise platform",
     team: "Bank-side engineers, ops, and security stakeholders",
+    scope: "Enterprise IA, operator workflows, interaction design, visual system, and handoff",
+    constraints: "Dense technical data, long sessions, security requirements, and legacy workflows",
     industry: "Enterprise · Fintech · PaaS",
-    market: "Internal platform, bank-wide",
+    market: "Internal private-cloud platform",
     tags: ["Design System", "Enterprise UX", "Accessibility", "Dark Mode"],
     cover: { tone: "neutral", emoji: "☁️", label: "Enterprise / Bank" },
     summary:
@@ -201,13 +227,13 @@ export const projects: Project[] = [
     hero:
       "Banking infrastructure people stare at the same screens for hours. The job here was to honour the complexity of the work while giving operators a calm, legible, and dependable interface to live inside.",
     problem:
-      "CMB's internal teams managed the bank's private cloud through a scattered set of scripts, legacy dashboards, and tribal knowledge. This created slow incident resolution, costly onboarding for new hires, and growing operational risk as the cloud footprint expanded.",
+      "CMB's internal teams managed the bank's private cloud through a scattered set of scripts, legacy dashboards, and undocumented operational knowledge. The fragmented workflow made system state harder to understand, increased the learning burden for new hires, and introduced risk as the cloud footprint expanded.",
     approach:
-      "I led UX from competitive analysis through delivery. I translated heavily-technical internal tasks into user-centric flows, built a holistic design system, and shipped a unified operator console with three layers of contextual onboarding and a system-wide dark mode engineered to WCAG contrast standards.",
+      "I led UX from competitive analysis through delivery. I translated highly technical internal tasks into operator workflows, built a shared design system, and delivered a unified console with three layers of contextual onboarding and a system-wide dark mode checked against WCAG contrast criteria.",
     metrics: [
       { value: "1", label: "Unified operator console", note: "replacing fragmented scripts and tools" },
       { value: "3", label: "Layers of contextual onboarding", note: "tour · tooltips · inline docs" },
-      { value: "WCAG", label: "Dark mode contrast standards", note: "for prolonged usage scenarios" }
+      { value: "WCAG", label: "Contrast criteria checked", note: "across light and dark component states" }
     ],
     crossCultural: [
       {
@@ -216,7 +242,7 @@ export const projects: Project[] = [
       },
       {
         heading: "Accessibility as a non-negotiable",
-        text: "I did not treat dark mode as a colour inversion. Contrast ratios were tuned to WCAG, semantic colours for alerts and data visualisations were redefined for darkness, and component states stayed unambiguous in both themes."
+        text: "I did not treat dark mode as a colour inversion. I checked contrast against WCAG criteria, redefined semantic colours for alerts and data visualisations, and reviewed component states across both themes."
       }
     ],
     sections: [
@@ -224,14 +250,29 @@ export const projects: Project[] = [
         kicker: "Foundation",
         title: "Unified Dashboard, Interactive Tables",
         body: [
-          "The dashboard collapses fragmented status, alerts and quick actions into one real-time surface. Tables are interactive primitives, not static reports, so operators can move from \"I see a problem\" to \"I'm taking action\" without leaving context."
+          "Operators previously moved between scripts, legacy dashboards, and undocumented knowledge to understand system state. The unified dashboard brings status, alerts, and related actions into one surface while preserving the information density required for operations.",
+          "Tables were designed as working interfaces rather than static reports: an operator can identify an issue, inspect its context, and begin the relevant action without navigating to a separate tool."
+        ]
+      },
+      {
+        kicker: "Workflow",
+        title: "From detecting a problem to acting in context",
+        body: [
+          "I used one recurring operator task to organise the console: detect an abnormal state, understand its scope, inspect the affected resource, and begin the relevant action without losing context.",
+          "The dashboard establishes severity and system state; the interactive table preserves filters and exposes the affected resource; the detail layer keeps history, dependencies, and the next action together. This sequence became the information-architecture spine rather than treating each screen as a separate feature."
+        ],
+        bullets: [
+          { heading: "Detect", text: "Prioritised status and alerts make abnormal conditions visible." },
+          { heading: "Understand", text: "Context, dependencies, and history clarify the affected scope." },
+          { heading: "Act", text: "Related actions begin from the same working context instead of another tool." }
         ]
       },
       {
         kicker: "Onboarding",
         title: "Three layers of progressive guidance",
         body: [
-          "First-time login starts with a brief interactive tour of the main dashboard sections. Feature-specific tooltips appear the first time an operator encounters a complex feature. And every workflow has inline \"Learn More\" and question-mark affordances that open task-specific documentation in a side panel — no context switch, no lost work."
+          "New and occasional users needed help, but permanent instructions would slow experienced operators and compete with dense operational data. I separated guidance into three layers based on when it is needed.",
+          "A short tour explains the overall dashboard, contextual tooltips introduce complex features on first use, and inline documentation supports task-specific questions without sending the operator away from the current workflow."
         ]
       },
       {
@@ -243,7 +284,12 @@ export const projects: Project[] = [
       }
     ],
     outcome:
-      "The platform consolidated years of accumulated complexity into one coherent operator console, with a design system that can grow with the bank. It's the project that taught me how to design enterprise-grade products — and how to lead a design system that survives stakeholder change."
+      "I delivered a coherent private-cloud console spanning the information architecture, operator workflows, interactive table patterns, progressive onboarding, and a shared light/dark component system. Together, these artifacts gave product and engineering one consistent foundation for extending complex operational workflows.",
+    evidence: [
+      "One unified console connected system status, alerts, context, and related actions.",
+      "Three guidance layers were specified for new, occasional, and experienced operators.",
+      "Light and dark component states, semantic status colours, and contrast checks were documented for engineering handoff."
+    ]
   }
 ];
 

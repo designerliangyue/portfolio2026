@@ -41,7 +41,7 @@ components/
 | 02 | **AI Sales Co-Pilot** — Insurance, Lead role | Forward-looking AI strategy, human-in-the-loop principles |
 | 03 | **CMB Private Cloud** — Enterprise banking | Design system, accessibility, dark mode craft |
 
-Each case study includes a structured **Impact & signals** section with both concrete data (markets, interviews, modules) and visible placeholder KPIs (e.g. `+__%`) to be filled with verified launch data — kept visible to signal evidence orientation rather than vanity metrics.
+Each case study includes a structured **Impact & signals** section using verified research, delivery, and feedback evidence. Unverified business metrics are omitted rather than displayed as placeholders.
 
 ## Local development
 

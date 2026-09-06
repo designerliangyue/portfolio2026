@@ -14,10 +14,6 @@ export function Footer() {
     setShowBeian(host === "yue-design.studio" || host.endsWith(".yue-design.studio"));
   }, []);
   const year = new Date().getFullYear();
-  const updated = new Date().toLocaleDateString(locale === "zh" ? "zh-CN" : "en-GB", {
-    month: "short",
-    year: "numeric"
-  });
 
   return (
     <footer className="mt-16">
@@ -74,9 +70,6 @@ export function Footer() {
         <div className="mt-8 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
           <p className={locale === "zh" ? "text-sm tracking-normal text-ink/50" : "font-mono text-xs uppercase tracking-[0.18em] text-ink/50"}>
             {t.footer.copyright(year)}
-          </p>
-          <p className={locale === "zh" ? "text-sm tracking-normal text-ink/50" : "font-mono text-xs uppercase tracking-[0.18em] text-ink/50"}>
-            {t.footer.updated(updated)}
           </p>
           {showBeian && (
             <div className="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">

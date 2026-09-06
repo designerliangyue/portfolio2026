@@ -145,7 +145,7 @@ git push
 
 - `title` / `subtitle` / `summary` — 列表与头部
 - `hero` / `problem` / `approach` / `outcome` — 案例叙事
-- `metrics` — 数据指标（`placeholder: true` 表示待填真实数据，显示成 `+__%`）
+- `metrics` — 已验证的调研、交付或反馈证据；不要添加待填百分比或未经确认的业务指标
 - `stats` — 章节内的大数字（可选，仅部分章节有）
 - `sections` — 各章节 `kicker`（需与 `case-study-galleries.ts` 的 key 对应）
 

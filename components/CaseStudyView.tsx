@@ -11,6 +11,7 @@ import type { ProjectSlug } from "@/content/images";
 import { ContributionRoles } from "@/components/case-study/ContributionRoles";
 import { Reveal } from "@/components/Reveal";
 import { CountUp } from "@/components/CountUp";
+import { CaseStudyNavigator } from "@/components/CaseStudyNavigator";
 
 function SectionBadge({ index }: { index: string }) {
   return (
@@ -28,14 +29,24 @@ function DiagramSvg({ src, alt }: { src: string; alt: string }) {
   const localizedSrc = locale === "zh" ? src.replace(/\.svg$/, ".zh.svg") : src;
   return (
     <figure className="mt-12">
-      <div className="-mx-6 overflow-x-auto px-6 md:mx-0 md:overflow-visible md:px-0">
-        {/* On mobile the diagram keeps a legible min width and scrolls horizontally */}
+      <div className="hidden md:block">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={localizedSrc} alt={alt} className="w-full min-w-[1040px] md:min-w-0" />
+        <img src={localizedSrc} alt={alt} className="w-full" />
       </div>
-      <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink/40 md:hidden">
-        {locale === "zh" ? "滑动查看 →" : "Scroll to read →"}
-      </figcaption>
+      <div className="md:hidden">
+        <div className="mb-3 flex items-center justify-between gap-4 px-1">
+          <span className="studio-label !text-[0.62rem]">
+            {locale === "zh" ? "完整图表" : "Full diagram"}
+          </span>
+          <span className="font-mono text-[0.62rem] uppercase tracking-[0.12em] text-ink/50">
+            {locale === "zh" ? "左右滑动查看 ↔" : "Swipe to explore ↔"}
+          </span>
+        </div>
+        <div className="overflow-x-auto rounded-2xl border border-ink/10 bg-[var(--studio-card)] shadow-sm">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={localizedSrc} alt={alt} className="w-[54rem] max-w-none" />
+        </div>
+      </div>
     </figure>
   );
 }
@@ -69,7 +80,7 @@ function CaseStudyInteractive({
       return (
         <DiagramSvg
           src="/images/ai-copilot/product-scope.svg"
-          alt="Phases breakdown across four phases, and the user flow from lead acquisition to policy issued."
+          alt="Four release phases and the user flow from lead acquisition to policy issuance."
         />
       );
     case "System design":
@@ -105,12 +116,22 @@ export function CaseStudyView({ slug }: { slug: string }) {
         ? "企业级设计决策"
         : "Enterprise design decisions"
       : cs.crossCultural;
-  const visibleSections = project.sections.filter(
-    (section) => !(projectSlug === "ignite" && sectionGalleryKey(section.kicker, section.kickerKey) === "Strategy")
-  );
+  const visibleSections = project.sections;
+  const caseNav = [
+    { href: "#overview", label: cs.overview },
+    ...(hasStandaloneCrossCultural
+      ? [{ href: "#decisions", label: crossCulturalLabel }]
+      : []),
+    ...visibleSections.map((section, index) => ({
+      href: `#section-${index + 1}`,
+      label: section.kicker
+    })),
+    { href: "#outcome", label: cs.outcome }
+  ];
 
   return (
     <article>
+      <CaseStudyNavigator label={cs.quickNav} items={caseNav} />
       <section className="container-grid pt-12 md:pt-20 pb-16 md:pb-24">
         <Link
           href="/#work"
@@ -141,7 +162,8 @@ export function CaseStudyView({ slug }: { slug: string }) {
             [
               [cs.period, project.period],
               [cs.role, project.role],
-              [cs.market, project.market]
+              [cs.market, project.market],
+              [cs.status, project.status]
             ] as const
           ).map(([label, value]) => (
             <p key={label} className="studio-chip inline-flex items-baseline gap-2 rounded-full px-4 py-2">
@@ -150,13 +172,31 @@ export function CaseStudyView({ slug }: { slug: string }) {
             </p>
           ))}
         </div>
+
+        <dl className="mt-6 grid gap-3 md:grid-cols-3">
+          {project.team ? (
+            <div className="studio-chip rounded-2xl p-5">
+              <dt className="studio-label !text-[0.65rem]">{cs.team}</dt>
+              <dd className="mt-2 text-sm leading-relaxed text-ink/75">{project.team}</dd>
+            </div>
+          ) : null}
+          <div className="studio-chip rounded-2xl p-5">
+            <dt className="studio-label !text-[0.65rem]">{cs.scope}</dt>
+            <dd className="mt-2 text-sm leading-relaxed text-ink/75">{project.scope}</dd>
+          </div>
+          <div className="studio-chip rounded-2xl p-5">
+            <dt className="studio-label !text-[0.65rem]">{cs.constraints}</dt>
+            <dd className="mt-2 text-sm leading-relaxed text-ink/75">{project.constraints}</dd>
+          </div>
+        </dl>
+
       </section>
 
       <section className="container-grid pb-16 md:pb-24">
         <ProjectCover project={project} variant="hero" className="rounded-3xl" />
       </section>
 
-      <section className="container-grid py-16 md:py-24">
+      <section id="overview" className="container-grid scroll-mt-24 py-16 md:py-24">
         <div className="swiss-grid">
           <div className="case-study-index">
             <SectionBadge index="01" />
@@ -180,7 +220,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
       </section>
 
       {hasStandaloneCrossCultural ? (
-        <section className="container-grid py-16 md:py-24 border-t border-ink/10">
+        <section id="decisions" className="container-grid scroll-mt-24 py-16 md:py-24 border-t border-ink/10">
           <div className="swiss-grid">
             <div className="case-study-index">
               <SectionBadge index="02" />
@@ -212,7 +252,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
 
         return (
           <Reveal key={`${galleryKey}-${i}`}>
-          <section className="container-grid py-16 md:py-24 border-t border-ink/10">
+          <section id={`section-${i + 1}`} className="container-grid scroll-mt-24 py-16 md:py-24 border-t border-ink/10">
             <div className="swiss-grid">
               <div className="case-study-index">
                 <SectionBadge index={String(i + sectionStartIndex).padStart(2, "0")} />
@@ -228,7 +268,8 @@ export function CaseStudyView({ slug }: { slug: string }) {
                         <dt className="display-3 leading-none" style={{ color: "var(--studio-accent)" }}>
                           <CountUp value={s.value} />
                         </dt>
-                        <dd className="mt-3 text-sm text-ink/60 leading-snug">{s.label}</dd>
+                        <dd className="mt-3 text-sm leading-snug text-ink/60">{s.label}</dd>
+                        {s.note ? <dd className="mt-2 text-xs leading-relaxed text-ink/45">{s.note}</dd> : null}
                       </div>
                     ))}
                   </dl>
@@ -274,7 +315,7 @@ export function CaseStudyView({ slug }: { slug: string }) {
         );
       })}
 
-      <section className="container-grid py-16 md:py-24 border-t border-ink/10">
+      <section id="outcome" className="container-grid scroll-mt-24 py-16 md:py-24 border-t border-ink/10">
         <div className="swiss-grid">
           <div className="case-study-index">
             <SectionBadge index={String(sectionStartIndex + visibleSections.length).padStart(2, "0")} />

@@ -5,13 +5,20 @@ import Image from "next/image";
 import { useLocale } from "@/components/LocaleProvider";
 import { getDigitalProducts } from "@/content/digital-products";
 import { Reveal } from "@/components/Reveal";
+import { CaseStudyNavigator } from "@/components/CaseStudyNavigator";
 
 export function DigitalProductsView() {
   const { locale } = useLocale();
   const c = getDigitalProducts(locale);
+  const navItems = [
+    { href: "#overview", label: locale === "zh" ? "概览" : "Overview" },
+    ...c.categories.map((category, index) => ({ href: `#category-${index + 1}`, label: category.label })),
+    { href: "#outcome", label: c.closingLabel }
+  ];
 
   return (
     <article className="container-grid py-12 md:py-20">
+      <CaseStudyNavigator label={locale === "zh" ? "案例目录" : "Case map"} items={navItems} />
       <Link
         href="/#work"
         className="studio-chip inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
@@ -20,7 +27,7 @@ export function DigitalProductsView() {
       </Link>
 
       {/* Header */}
-      <header className="mt-10 md:mt-14">
+      <header id="overview" className="scroll-mt-24 mt-10 md:mt-14">
         <p
           className="studio-label inline-flex items-center gap-2 rounded-full px-4 py-2"
           style={{ background: "var(--studio-accent-soft)" }}
@@ -47,9 +54,9 @@ export function DigitalProductsView() {
       </header>
 
       {/* Categories */}
-      {c.categories.map((cat) => (
+      {c.categories.map((cat, categoryIndex) => (
         <Reveal key={cat.label}>
-          <section className="mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
+          <section id={`category-${categoryIndex + 1}`} className="scroll-mt-24 mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
             <p className="label mb-8">{cat.label}</p>
             <div className="space-y-6">
               {cat.projects.map((p) => (
@@ -84,7 +91,7 @@ export function DigitalProductsView() {
 
       {/* Closing */}
       <Reveal>
-        <section className="mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
+        <section id="outcome" className="scroll-mt-24 mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
           <p className="label mb-8">{c.closingLabel}</p>
           <p className="display-3 text-ink">{c.closingText}</p>
         </section>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useLocale } from "@/components/LocaleProvider";
 import { getEmployeeBenefits } from "@/content/employee-benefits";
 import { Reveal } from "@/components/Reveal";
+import { CaseStudyNavigator } from "@/components/CaseStudyNavigator";
 
 function Shot({ src, alt }: { src: string; alt: string }) {
   return (
@@ -24,9 +25,17 @@ function Shot({ src, alt }: { src: string; alt: string }) {
 export function EmployeeBenefitsView() {
   const { locale } = useLocale();
   const c = getEmployeeBenefits(locale);
+  const navItems = [
+    { href: "#overview", label: c.overviewLabel },
+    { href: "#evidence-boundary", label: c.evidenceLabel },
+    { href: "#users", label: c.usersLabel },
+    { href: "#solutions", label: c.solutionsLabel },
+    { href: "#outcome", label: c.closingLabel }
+  ];
 
   return (
     <article className="container-grid py-12 md:py-20">
+      <CaseStudyNavigator label={locale === "zh" ? "案例目录" : "Case map"} items={navItems} />
       <Link
         href="/#work"
         className="studio-chip inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 font-mono text-xs uppercase tracking-[0.18em] text-ink/80 transition-colors hover:text-[var(--studio-accent)]"
@@ -73,7 +82,7 @@ export function EmployeeBenefitsView() {
 
       {/* Overview */}
       <Reveal>
-        <section className="mt-16 md:mt-24">
+        <section id="overview" className="scroll-mt-24 mt-16 md:mt-24">
           <p className="label mb-8">{c.overviewLabel}</p>
           <p className="display-3 text-ink">{c.overview}</p>
 
@@ -105,19 +114,83 @@ export function EmployeeBenefitsView() {
         </section>
       </Reveal>
 
+      <Reveal>
+        <section id="evidence-boundary" className="scroll-mt-24 mt-16 border-t border-ink/10 pt-16 md:mt-24 md:pt-24">
+          <p className="label mb-8">{c.evidenceLabel}</p>
+          <h2 className="display-3 mb-8">{c.evidenceTitle}</h2>
+          <div className="studio-chip rounded-2xl p-6 md:p-8">
+            <ul className="space-y-4">
+              {c.evidenceItems.map((item) => (
+                <li key={item} className="flex gap-3 text-ink/75 leading-relaxed">
+                  <span aria-hidden className="mt-2 h-2 w-2 shrink-0 rounded-full" style={{ background: "var(--studio-accent)" }} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </Reveal>
+
       {/* Understand the users */}
       <Reveal>
-        <section className="mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
+        <section id="users" className="scroll-mt-24 mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
           <p className="label mb-8">{c.usersLabel}</p>
           <h2 className="display-3 mb-6">{c.usersTitle}</h2>
           <p className="lede-fill">{c.usersIntro}</p>
-          <Shot src={c.pillarsImage} alt={c.usersTitle} />
+          <div className="mt-10 overflow-hidden rounded-3xl border border-ink/10 bg-[var(--studio-card)] shadow-sm">
+            <div className="p-5 md:p-7">
+              <p className="studio-label !text-[0.65rem]">{c.journeyLabel}</p>
+              <h3 className="mt-3 text-2xl font-medium text-ink md:text-3xl">{c.journeyTitle}</h3>
+            </div>
+            <div className="px-5 pb-5 md:px-7 md:pb-7">
+              <Image
+                src={c.pillarsImage}
+                alt={c.usersTitle}
+                width={1800}
+                height={1200}
+                sizes="(max-width: 1024px) 100vw, 1100px"
+                className="h-auto w-full rounded-2xl"
+              />
+            </div>
+            <div className="relative px-5 pb-6 md:px-7 md:pb-7">
+              <div
+                aria-hidden
+                className="absolute left-[17%] right-[17%] top-5 hidden h-px md:block"
+                style={{ background: "linear-gradient(90deg, #d47ae8, #6964ec, #2699e8)" }}
+              />
+            <ol className="relative grid gap-3 md:grid-cols-3 md:gap-6">
+              {c.journeySteps.map((step, index) => (
+                <li
+                  key={step.role}
+                  className="grid grid-cols-[2.5rem_1fr] gap-x-3 rounded-2xl border border-ink/10 bg-paper/85 p-4 md:block md:border-0 md:bg-transparent md:p-0 md:text-center md:shadow-none"
+                >
+                  <span
+                    className="row-span-3 flex h-10 w-10 items-center justify-center rounded-full border bg-[var(--studio-card)] font-mono text-xs md:relative md:z-10 md:mx-auto"
+                    style={{ borderColor: ["#d47ae8", "#6964ec", "#2699e8"][index], color: ["#b94ccc", "#5752d7", "#1686d1"][index] }}
+                  >
+                    0{index + 1}
+                  </span>
+                  <div className="md:mt-4">
+                    <p className="studio-label !text-[0.58rem]" style={{ color: ["#b94ccc", "#5752d7", "#1686d1"][index] }}>
+                      {step.role}
+                    </p>
+                    <h4 className="mt-2 text-base font-medium leading-snug text-ink md:text-lg">{step.action}</h4>
+                  </div>
+                  <p className="mt-2 text-sm leading-relaxed text-ink/55 md:mx-auto md:max-w-64">
+                    <span aria-hidden className="mr-1" style={{ color: ["#b94ccc", "#5752d7", "#1686d1"][index] }}>→</span>
+                    {step.handoff}
+                  </p>
+                </li>
+              ))}
+            </ol>
+            </div>
+          </div>
         </section>
       </Reveal>
 
       {/* Design solutions */}
       <Reveal>
-        <section className="mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
+        <section id="solutions" className="scroll-mt-24 mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
           <p className="label mb-8">{c.solutionsLabel}</p>
           <h2 className="display-3 mb-10">{c.solutionsTitle}</h2>
 
@@ -150,7 +223,7 @@ export function EmployeeBenefitsView() {
 
       {/* Closing */}
       <Reveal>
-        <section className="mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
+        <section id="outcome" className="scroll-mt-24 mt-16 md:mt-24 border-t border-ink/10 pt-16 md:pt-24">
           <p className="label mb-8">{c.closingLabel}</p>
           <p className="display-3 text-ink">{c.closingText}</p>
         </section>
