@@ -67,28 +67,27 @@ export const en = {
     openToValue: "Fully remote · Hybrid",
     focusAreas: "Focus areas",
     focusAreasValue: "AI experience · Fintech · Design systems",
-    proof: "Selected evidence",
     timeline: "Career, in four chapters",
     timelineItems: [
       {
         period: "2021 — 2026",
         role: "Senior Product Designer · Igloo Insurance",
-        note: "AI sales co-pilots, operational analytics, and a regional design system across Southeast Asia."
+        note: "Led end-to-end product design for insurance sales platforms across Southeast Asia — spanning regional research, AI-assisted selling, multi-role SaaS, design systems, and delivery with remote product and engineering teams."
       },
       {
         period: "2019 — 2021",
         role: "UI/UX Designer · China Merchants Bank",
-        note: "Internal private-cloud platform — enterprise IA and a dark mode checked against WCAG contrast criteria."
+        note: "Translated private-cloud operations into a unified enterprise console, including information architecture, operator workflows, interactive tables, progressive onboarding, and a shared light/dark component system."
       },
       {
         period: "2017 — 2019",
         role: "UI/UX Designer · JINGWEI Technology",
-        note: "End-to-end product consulting for manufacturing — MVP scope through production specs."
+        note: "Delivered end-to-end product consulting for manufacturing clients, from ambiguous business requirements and MVP scope to flows, prototypes, interface systems, and production specifications."
       },
       {
         period: "2016 — 2017",
         role: "Graphic & UI Designer · UnitedStack",
-        note: "UI and visual identity systems across web and mobile product lines."
+        note: "Designed web and mobile product interfaces alongside visual identity systems, maintaining consistency across product and brand touchpoints."
       }
     ],
     education: "Education",
@@ -205,7 +204,6 @@ export type Dictionary = {
     educationItems: readonly { degree: string; school: string; detail: string }[];
     skills: string;
     skillItems: readonly string[];
-    proof: string;
   };
   footer: {
     connect: string;

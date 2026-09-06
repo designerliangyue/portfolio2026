@@ -91,36 +91,7 @@ export function AboutPage() {
 
       <Reveal>
         <section className="mt-16 md:mt-24">
-          <SectionBadge index="02" label={about.proof} />
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {(
-              locale === "zh"
-                ? [
-                    ["AI 销售副驾驶", "从模糊机会到三项生产流程上线", "/work/ai-copilot"],
-                    ["Ignite", "远程研究、四市场产品架构与上线后反馈", "/work/ignite"],
-                    ["招行私有云", "企业信息架构、运维流程与工程交付", "/work/cmb-cloud"]
-                  ]
-                : [
-                    ["AI Sales Co-Pilot", "From an ambiguous opportunity to three launched production flows", "/work/ai-copilot"],
-                    ["Ignite", "Remote research, a four-market product system, and post-launch feedback", "/work/ignite"],
-                    ["CMB Private Cloud", "Enterprise IA, operator workflows, and engineering handoff", "/work/cmb-cloud"]
-                  ]
-            ).map(([title, note, href]) => (
-              <Link key={href} href={href} className="studio-chip group rounded-2xl p-6 transition-transform hover:-translate-y-1">
-                <h3 className="text-xl font-medium text-ink">{title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink/65">{note}</p>
-                <span className="mt-5 inline-block font-mono text-xs uppercase tracking-[0.16em]" style={{ color: "var(--studio-accent)" }}>
-                  {locale === "zh" ? "查看案例 →" : "View evidence →"}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      </Reveal>
-
-      <Reveal>
-        <section className="mt-16 md:mt-24">
-          <SectionBadge index="03" label={about.timeline} />
+          <SectionBadge index="02" label={about.timeline} />
           <ol className="mt-8 space-y-4">
             {about.timelineItems.map((item) => (
               <li
@@ -138,7 +109,7 @@ export function AboutPage() {
 
       <Reveal>
         <section className="mt-16 md:mt-24">
-          <SectionBadge index="04" label={about.education} />
+          <SectionBadge index="03" label={about.education} />
           <div className="mt-8 space-y-4">
             {about.educationItems.map((item) => (
               <div key={item.degree} className="studio-chip rounded-2xl p-6 md:p-8">
@@ -155,7 +126,7 @@ export function AboutPage() {
 
       <Reveal>
         <section className="mt-16 md:mt-24 pb-8">
-          <SectionBadge index="05" label={about.skills} />
+          <SectionBadge index="04" label={about.skills} />
           <ul className="mt-8 flex flex-wrap gap-3">
             {about.skillItems.map((skill) => (
               <li
