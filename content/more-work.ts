@@ -24,7 +24,7 @@ const DP_HREF = "/work/digital-products";
 const en: MoreWorkContent = {
   label: "More work",
   title: "Further projects, in brief",
-  lede: "Selected earlier work presented as concise case summaries, with the evidence boundary stated on each page.",
+  lede: "Selected earlier work presented as concise case summaries — spanning multi-stakeholder SaaS, mobile apps, enterprise dashboards, and websites.",
   cta: "View case",
   items: [
     {
@@ -53,7 +53,7 @@ const en: MoreWorkContent = {
 const zh: MoreWorkContent = {
   label: "更多作品",
   title: "其他项目一览",
-  lede: "精选早期项目以精简案例呈现，并在每个页面说明现有证据边界。",
+  lede: "精选早期项目以精简案例呈现，覆盖多角色 SaaS、移动应用、企业后台与网站。",
   cta: "查看案例",
   items: [
     {

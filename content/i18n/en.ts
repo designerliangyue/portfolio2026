@@ -32,7 +32,7 @@ export const en = {
     workTitle: ["Strategic foresight.", "Cross-cultural scale.", "Enterprise depth."],
     workSerif: ["Cross-cultural scale."],
     workLede:
-      "Three projects show how I work at different scales: defining and launching an AI sales product, redesigning a regional insurance platform through in-language research, and translating private-cloud operations into an enterprise system.",
+      "Three projects show how I work at different scales: defining and launching an AI sales product, redesigning a regional insurance platform through remote research across four markets, and translating private-cloud operations into an enterprise system.",
     aboutLabel: "About",
     aboutTitle: [
       "A results-focused designer who merges reliability with",
