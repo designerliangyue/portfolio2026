@@ -8,6 +8,7 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 export function Nav() {
   const { t, name } = useLocale();
   const [menuOpen, setMenuOpen] = useState(false);
+  const compactName = name.split(" · ")[0];
 
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-paper/85 backdrop-blur">
@@ -19,7 +20,10 @@ export function Nav() {
               fill="var(--studio-accent)"
             />
           </svg>
-          <span className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.22em] text-ink">
+          <span className="whitespace-nowrap font-mono text-xs uppercase tracking-[0.22em] text-ink sm:hidden">
+            {compactName}
+          </span>
+          <span className="hidden whitespace-nowrap font-mono text-xs uppercase tracking-[0.22em] text-ink sm:inline">
             {name}
           </span>
         </Link>

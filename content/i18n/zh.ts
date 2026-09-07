@@ -8,7 +8,7 @@ export const zh: Dictionary = {
     contact: "联系"
   },
   home: {
-    heroLabel: "高级产品设计师 · 远程优先",
+    heroLabel: "高级产品设计师 · 接受调动",
     heroTitle: [
       "在文化与技术的",
       "交界处，",
