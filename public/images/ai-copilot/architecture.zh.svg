@@ -58,15 +58,15 @@
   <rect x="868" y="360" width="252" height="222" rx="18" fill="#f6f1e7" stroke="#e5ddca"/>
   <text x="896" y="398" class="num" font-size="13">04</text>
   <text x="896" y="428" class="ttl" font-size="18">服务编排</text>
-  <text x="896" y="462" class="bd" font-size="13">把后端能力包装成代理人</text>
-  <text x="896" y="484" class="bd" font-size="13">能理解的任务和反馈。</text>
+  <text x="896" y="462" class="bd" font-size="13">把后端能力包装成</text>
+  <text x="896" y="484" class="bd" font-size="13">代理人能理解的任务和反馈。</text>
   <text x="896" y="524" class="lbl" font-size="10">PRODUCT · POLICY · CUSTOMER</text>
 
   <line x1="592" y1="582" x2="592" y2="620" stroke="#b6552f" stroke-width="2" marker-end="url(#arrow)"/>
 
   <rect x="64" y="650" width="1056" height="136" rx="18" fill="#fff8ef" stroke="#d7835f" stroke-width="1.5"/>
   <text x="92" y="688" class="lbl" font-size="10">EXPERIENCE OUTPUT</text>
-  <text x="92" y="722" class="hd" font-size="20">一个一致的 WhatsApp 副驾驶体验</text>
+  <text x="92" y="722" class="hd" font-size="20">一个一致的 AI 副驾驶体验</text>
   <text x="92" y="752" class="bd" font-size="13.5">代理人看到的是清晰任务；系统复杂度被隐藏在体验层之后。</text>
   <g>
     <rect x="720" y="680" width="150" height="34" rx="10" fill="#fffdf8" stroke="#e5ddca"/>
